@@ -1,0 +1,113 @@
+.execution-map {
+  padding: 1.5rem 0 1rem; /* Increased top padding for icons/glows */
+  margin: 0.5rem 0;
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
+.map-nodes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  gap: 0;
+  flex-wrap: nowrap; /* Prevent any wrapping */
+}
+
+.map-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+  position: relative;
+  min-width: 60px; /* Ensure nodes don't squish too much */
+}
+
+.node-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.node-label {
+  font-size: 0.48rem;
+  text-align: center;
+  color: var(--text-dim);
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  width: 100%;
+  line-height: 1.1;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.node-connector {
+  position: absolute;
+  top: 16px;
+  left: calc(10% + 16px);
+  right: calc(10% + 16px);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+}
+
+/* Status: Active */
+.map-node.active .node-icon-wrapper {
+  color: #fff;
+  border-color: currentColor;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px currentColor;
+}
+
+.map-node.active .node-glow {
+  opacity: 0.4;
+}
+
+.map-node.active .node-label {
+  color: #fff;
+  opacity: 1;
+}
+
+/* Status: Completed */
+.map-node.completed .node-icon-wrapper {
+  color: var(--status-done);
+  border-color: var(--status-done);
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.map-node.completed .node-label {
+  color: var(--text-muted);
+}
+
+/* Links */
+.node-link {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.04);
+  position: relative;
+  margin-top: -1.75rem; /* Aligns with icon centers while labels are below */
+  z-index: 1;
+  min-width: 10px;
+}
+
+.link-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  transition: width 0.8s ease;
+}
+
+.node-link.active .link-progress {
+  width: 100%;
+}

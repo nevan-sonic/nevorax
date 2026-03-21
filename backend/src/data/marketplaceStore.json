@@ -1,0 +1,2110 @@
+[
+  {
+    "id": "OrchestratorAgent",
+    "name": "OrchestratorAgent",
+    "reputation": 97.43,
+    "reputationScore": 0.9743,
+    "costMultiplier": 1,
+    "mode": "ORCHESTRATOR",
+    "chain": "Sepolia",
+    "services": [
+      "orchestration"
+    ],
+    "totalEarned": 0.25,
+    "tasksCompleted": 5,
+    "taskHistory": [
+      {
+        "taskId": "774fe74c-5f51-443e-b113-a5a1c7e6e060",
+        "service": "orchestration",
+        "amount": 0.05,
+        "txHash": "INTERNAL_LEDGER",
+        "subTxHash": null,
+        "reputationDelta": 0.01,
+        "timestamp": 1774071776616
+      },
+      {
+        "taskId": "33a97e36-2c0f-4da7-ab8d-297b3e02161a",
+        "service": "orchestration",
+        "amount": 0.05,
+        "txHash": "INTERNAL_LEDGER",
+        "subTxHash": null,
+        "reputationDelta": 0.01,
+        "timestamp": 1774071893319
+      },
+      {
+        "taskId": "c80d6526-7e9d-436a-ace7-2004e53efff5",
+        "service": "orchestration",
+        "amount": 0.05,
+        "txHash": "INTERNAL_LEDGER",
+        "subTxHash": null,
+        "reputationDelta": 0,
+        "timestamp": 1774073012204
+      },
+      {
+        "taskId": "277dc1f9-ac18-4a6f-bdbe-0d7717992c77",
+        "service": "orchestration",
+        "amount": 0.05,
+        "txHash": "INTERNAL_LEDGER",
+        "subTxHash": null,
+        "reputationDelta": 0.02,
+        "timestamp": 1774073508625
+      },
+      {
+        "taskId": "6d6de7b9-dc38-4905-a77e-ededbde55039",
+        "service": "orchestration",
+        "amount": 0.05,
+        "txHash": "INTERNAL_LEDGER",
+        "subTxHash": null,
+        "reputationDelta": 0.01,
+        "timestamp": 1774074319201
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0.25
+  },
+  {
+    "id": "Market_Data_1",
+    "name": "Market Data 1",
+    "reputation": 97.33,
+    "reputationScore": 0.9733,
+    "costMultiplier": 1.5,
+    "mode": "HIGH_RES",
+    "chain": "Sepolia",
+    "services": [
+      "market_data"
+    ],
+    "totalEarned": 1.614326,
+    "tasksCompleted": 16,
+    "taskHistory": [
+      {
+        "taskId": "16e6c195-6b1b-4014-9c89-97f95911712c",
+        "service": "market_data",
+        "amount": 0.079408,
+        "txHash": null,
+        "subTxHash": "0x99a7962f2f95d50cb7d6b954ef501c75351ead498418153364a903bfed75846b",
+        "reputationDelta": 0.33,
+        "timestamp": 1773892292941
+      },
+      {
+        "taskId": "04b88922-5802-480a-9526-2522df363878",
+        "service": "market_data",
+        "amount": 0.158675,
+        "txHash": null,
+        "subTxHash": "0x09c23a403f816bb264ef17ed1f0cc7c9cfa3f3389980ccedbadb9750154c5ec6",
+        "reputationDelta": 0.3,
+        "timestamp": 1773897546659
+      },
+      {
+        "taskId": "c25c770e-70fd-4827-a2a6-677abb708849",
+        "service": "market_data",
+        "amount": 0.089391,
+        "txHash": null,
+        "subTxHash": "0x7ee9d3b92f374fa5e54840dbd85ed3e53be32138c2e78a036e6b71151e814a55",
+        "reputationDelta": 0.27,
+        "timestamp": 1773898495945
+      },
+      {
+        "taskId": "aa39a7dd-7d50-4165-ac41-57507526ec23",
+        "service": "market_data",
+        "amount": 0.047391,
+        "txHash": null,
+        "subTxHash": "0xb920bbb7b512f45c6adf8951373b24bb8b1d1d80de25353d07e66c5e24df8998",
+        "reputationDelta": 0.33,
+        "timestamp": 1773898566647
+      },
+      {
+        "taskId": "954ea98f-1432-4a8e-813a-fa6387c0afd5",
+        "service": "market_data",
+        "amount": 0.187196,
+        "txHash": null,
+        "subTxHash": "0x03669eeee8f1dade0c5104e22578081f32e6285fffceaf336752af32c0b7e564",
+        "reputationDelta": 0.37,
+        "timestamp": 1773898567974
+      },
+      {
+        "taskId": "d5431cf0-b0d5-4cf6-9d4d-5f7a19f10d52",
+        "service": "market_data",
+        "amount": 0.1365,
+        "txHash": null,
+        "subTxHash": "0xaa720ad2553074545ad497bcacb6228f14ef0ec7d5063063f058c8f295af4985",
+        "reputationDelta": 0.37,
+        "timestamp": 1773900371409
+      },
+      {
+        "taskId": "96452b7a-6786-45b1-bca3-319cf60dabe3",
+        "service": "market_data",
+        "amount": 0.101296,
+        "txHash": null,
+        "subTxHash": "0x1232e350053fcb3575dabc9c4b77fd1142065ca734963c97ffd0d5c5150c88c9",
+        "reputationDelta": 0.33,
+        "timestamp": 1773901566014
+      },
+      {
+        "taskId": "2f746d15-ed1b-4db5-b30d-7b2688aedd5a",
+        "service": "market_data",
+        "amount": 0.079661,
+        "txHash": null,
+        "subTxHash": "0x2dcce6ed08b55e0e38009c30537fb3c667f0433065759b5085480dcac4c9fe64",
+        "reputationDelta": 0.21,
+        "timestamp": 1773903309885
+      },
+      {
+        "taskId": "351e49ce-c433-4daf-bfe5-69429e877861",
+        "service": "market_data",
+        "amount": 0.075319,
+        "txHash": null,
+        "subTxHash": "0xd782c46c789d56e4e79fa4dea5e9cc912fe2bbe08062e8e0ff68fa9b6b3ed027",
+        "reputationDelta": 0.02,
+        "timestamp": 1773904744443
+      },
+      {
+        "taskId": "c8d3453b-30b1-4090-a5bc-7a8abc03cb19",
+        "service": "market_data",
+        "amount": 0.084691,
+        "txHash": null,
+        "subTxHash": "0xc3b2f71a4d5192d1b850325a341d97a5173ffcb11f5d0710f5b01f7e491c687e",
+        "reputationDelta": -0.5,
+        "timestamp": 1773984366829
+      },
+      {
+        "taskId": "e5783d42-1c5f-4b68-aadb-b62fbbe06f90",
+        "service": "market_data",
+        "amount": 0.064921,
+        "txHash": null,
+        "subTxHash": "0x370238b9591a658d509ef0358500f009d38c16f415cf35cb6be95145ccc09a72",
+        "reputationDelta": -0.64,
+        "timestamp": 1773984930332
+      },
+      {
+        "taskId": "8d045286-69a9-463d-9b3e-4cf84d7bb280",
+        "service": "market_data",
+        "amount": 0.076123,
+        "txHash": null,
+        "subTxHash": "0x1298d19a5486b4a66d32b6216964471cfc5bfaaf6f13fa7c73cf5f4d8335b7f2",
+        "reputationDelta": 0.06,
+        "timestamp": 1773986257378
+      },
+      {
+        "taskId": "b636665f-1b0c-4437-8e46-857597e619ae",
+        "service": "market_data",
+        "amount": 0.138911,
+        "txHash": null,
+        "subTxHash": "0xbdd030bbfcaae6417b952274519c4b40cd21ea28b2bc76b43f397839865ed244",
+        "reputationDelta": -0.09,
+        "timestamp": 1774022508375
+      },
+      {
+        "taskId": "bb19bf8d-a65a-4f08-b11a-c863863a929d",
+        "service": "market_data",
+        "amount": 0.079492,
+        "txHash": null,
+        "subTxHash": "0x4dbdc3acd03b5481dc2b91fcf5b21a18a337950d49fcdae9b40b13a04b5bb614",
+        "reputationDelta": 0.08,
+        "timestamp": 1774067434567
+      },
+      {
+        "taskId": "774fe74c-5f51-443e-b113-a5a1c7e6e060",
+        "service": "market_data",
+        "amount": 0.067619,
+        "txHash": null,
+        "subTxHash": "0x1d78b488ec7def628008e8c954387df81fb3dc7d3a46db6ac7040a552c48b951",
+        "reputationDelta": 0.05,
+        "timestamp": 1774071776440
+      },
+      {
+        "taskId": "33a97e36-2c0f-4da7-ab8d-297b3e02161a",
+        "service": "market_data",
+        "amount": 0.155,
+        "txHash": null,
+        "subTxHash": "0x5ab7ba959a37c49c3a6c42255261eb7a6eac567fe61dfadc68317a63cc468175",
+        "reputationDelta": -1.57,
+        "timestamp": 1774071893271
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 1.6143
+  },
+  {
+    "id": "Market_Data_2",
+    "name": "Market Data 2",
+    "reputation": 81.26,
+    "reputationScore": 0.8126,
+    "costMultiplier": 0.7,
+    "mode": "QUICK",
+    "chain": "Sepolia",
+    "services": [
+      "market_data"
+    ],
+    "totalEarned": 1.181118,
+    "tasksCompleted": 11,
+    "taskHistory": [
+      {
+        "taskId": "5ff2fed7-7108-4c91-a12e-8b879d3391b0",
+        "service": "market_data",
+        "amount": 0.045463,
+        "txHash": null,
+        "subTxHash": "0x1f96bdfda866bbe3469d1808ab45859f17fa3caf0020e0876bd873f56a6c6445",
+        "reputationDelta": 0.2,
+        "timestamp": 1773869248289
+      },
+      {
+        "taskId": "aaf1a445-2f43-42e8-bb14-2a5597b6b88e",
+        "service": "market_data",
+        "amount": 0.149999,
+        "txHash": null,
+        "subTxHash": "0x965b466a26201c80ef78f07148dcc6f3a7dd6508419522d54ab53de6813cb416",
+        "reputationDelta": 0.24,
+        "timestamp": 1773898522741
+      },
+      {
+        "taskId": "06ccb801-7a1c-416c-aeea-7c4c63c968d6",
+        "service": "market_data",
+        "amount": 0.081371,
+        "txHash": null,
+        "subTxHash": "0x014f5c683a1dedda0a56db043db38b575fcf27d7a053b0843dc684ae54ba17de",
+        "reputationDelta": 0.24,
+        "timestamp": 1773899848207
+      },
+      {
+        "taskId": "200971c0-7856-4bb3-9d0b-0d9b163713eb",
+        "service": "market_data",
+        "amount": 0.115431,
+        "txHash": null,
+        "subTxHash": "0x724b911b204463cf60e7c1dc37a7a83c08c60bf9b8bfdaf664893c8f9d0216a8",
+        "reputationDelta": 0.27,
+        "timestamp": 1773901689579
+      },
+      {
+        "taskId": "3dde2262-197e-485c-9417-0e78dda78cfa",
+        "service": "market_data",
+        "amount": 0.069995,
+        "txHash": null,
+        "subTxHash": "0xbbf852daa0fdb802861444da44e504b8c213d91d58d6cab4c4c755867b2361ce",
+        "reputationDelta": 0.19,
+        "timestamp": 1773904890375
+      },
+      {
+        "taskId": "e14531c8-0c81-407e-85c2-d5282f93d068",
+        "service": "market_data",
+        "amount": 0.164511,
+        "txHash": null,
+        "subTxHash": "0x36b1d037dd590b8e899677e2cceea640d350ccca51d3054e5fc2ae42328e64ee",
+        "reputationDelta": -1.5,
+        "timestamp": 1773983330566
+      },
+      {
+        "taskId": "9484c992-80d7-43dc-bea2-06cc536ba2d1",
+        "service": "market_data",
+        "amount": 0.1235,
+        "txHash": null,
+        "subTxHash": "0x518889d5b6872a8b5de757ff58491899c0f62ca4eb277de7a8357801a44f3df4",
+        "reputationDelta": null,
+        "timestamp": 1773984824920
+      },
+      {
+        "taskId": "cc652131-bebe-4a56-99e9-53228bfd7ee4",
+        "service": "market_data",
+        "amount": 0.129999,
+        "txHash": null,
+        "subTxHash": "0x8acaeb98b3fba8360bccaad6239f8002a83b3a396b34f9cfb3c1628aa16309ae",
+        "reputationDelta": -0.13,
+        "timestamp": 1774021357601
+      },
+      {
+        "taskId": "b95e730b-09e1-4b88-a551-9e767af07985",
+        "service": "market_data",
+        "amount": 0.1065,
+        "txHash": null,
+        "subTxHash": "0xb786c50a99fdbefaa2ebb2141d486069c768e9cd2a667c33b388afbf21269f6c",
+        "reputationDelta": -1.35,
+        "timestamp": 1774068362715
+      },
+      {
+        "taskId": "c80d6526-7e9d-436a-ace7-2004e53efff5",
+        "service": "market_data",
+        "amount": 0.081919,
+        "txHash": null,
+        "subTxHash": "0xdc7ad5e1856c37d535885fc18fab6f9235b95eeb4b37d5640dec0f35fe8bb596",
+        "reputationDelta": -1.47,
+        "timestamp": 1774073012118
+      },
+      {
+        "taskId": "277dc1f9-ac18-4a6f-bdbe-0d7717992c77",
+        "service": "market_data",
+        "amount": 0.067191,
+        "txHash": null,
+        "subTxHash": "0x78aa644abfcfb74cf47359ec9bac6e04a3f4607a0a0aaf224d7f05615ba6e96d",
+        "reputationDelta": -0.88,
+        "timestamp": 1774073508558
+      },
+      {
+        "taskId": "6d6de7b9-dc38-4905-a77e-ededbde55039",
+        "service": "market_data",
+        "amount": 0.115234,
+        "txHash": null,
+        "subTxHash": "0xa814564743e41fee75604a7249c2fc5966ecd822ff7f435dac65aaab2f9a5614",
+        "reputationDelta": 0.09,
+        "timestamp": 1774074319145
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 1.1811
+  },
+  {
+    "id": "Sentiment_Analyst_1",
+    "name": "Sentiment Analyst 1",
+    "reputation": 90.48,
+    "reputationScore": 0.9048,
+    "costMultiplier": 1.3,
+    "mode": "NUANCE",
+    "chain": "Sepolia",
+    "services": [
+      "sentiment_analysis"
+    ],
+    "totalEarned": 1.89262,
+    "tasksCompleted": 17,
+    "taskHistory": [
+      {
+        "taskId": "04b88922-5802-480a-9526-2522df363878",
+        "service": "sentiment_analysis",
+        "amount": 0.161222,
+        "txHash": null,
+        "subTxHash": "0x6f2c97c9f3a950fd561de72866796718f683b487e7275c92555f129c32e59dd7",
+        "reputationDelta": 0.22,
+        "timestamp": 1773897555210
+      },
+      {
+        "taskId": "aaf1a445-2f43-42e8-bb14-2a5597b6b88e",
+        "service": "sentiment_analysis",
+        "amount": 0.143999,
+        "txHash": null,
+        "subTxHash": "0x0a4a488ab615cab1ae6e9002ee70647ec23f04d74cf49fdb0d18c6986f57294e",
+        "reputationDelta": 0.33,
+        "timestamp": 1773898532507
+      },
+      {
+        "taskId": "06ccb801-7a1c-416c-aeea-7c4c63c968d6",
+        "service": "sentiment_analysis",
+        "amount": 0.078915,
+        "txHash": null,
+        "subTxHash": "0xfaddc76cd121de9f105ffb20bf35dfe6a23c0303b967767aa3e9bb12f1622c93",
+        "reputationDelta": 0.22,
+        "timestamp": 1773899857148
+      },
+      {
+        "taskId": "d5431cf0-b0d5-4cf6-9d4d-5f7a19f10d52",
+        "service": "sentiment_analysis",
+        "amount": 0.107658,
+        "txHash": null,
+        "subTxHash": "0x4d9fff50ccfde387fd9db66d59f2e98b6adc41332799ea30533f7c50425bac0a",
+        "reputationDelta": 0.29,
+        "timestamp": 1773900380432
+      },
+      {
+        "taskId": "96452b7a-6786-45b1-bca3-319cf60dabe3",
+        "service": "sentiment_analysis",
+        "amount": 0.067,
+        "txHash": null,
+        "subTxHash": "0xfc5fdbbc77edab197fa37395c69598cbb517e6ab9365e5f4b9189ed2cb45b26a",
+        "reputationDelta": 0.29,
+        "timestamp": 1773901575450
+      },
+      {
+        "taskId": "200971c0-7856-4bb3-9d0b-0d9b163713eb",
+        "service": "sentiment_analysis",
+        "amount": 0.081944,
+        "txHash": null,
+        "subTxHash": "0xacb3130669072d259896d404506964cec1e46caf625e03d2cd6244cdedf4e6e1",
+        "reputationDelta": 0.2,
+        "timestamp": 1773901698506
+      },
+      {
+        "taskId": "2f746d15-ed1b-4db5-b30d-7b2688aedd5a",
+        "service": "sentiment_analysis",
+        "amount": 0.132,
+        "txHash": null,
+        "subTxHash": "0xc6c42991875f4b90b1c67e22493d99b19bc2d8222be3c99d903af8eeea9b8844",
+        "reputationDelta": 0.29,
+        "timestamp": 1773903318830
+      },
+      {
+        "taskId": "351e49ce-c433-4daf-bfe5-69429e877861",
+        "service": "sentiment_analysis",
+        "amount": 0.13783,
+        "txHash": null,
+        "subTxHash": "0xeaa32418ccc2cbcc7eca39ab0ccc536e3cf9438a8bf6b8d93e2f4c542bd7ec13",
+        "reputationDelta": 0.09,
+        "timestamp": 1773904744452
+      },
+      {
+        "taskId": "3dde2262-197e-485c-9417-0e78dda78cfa",
+        "service": "sentiment_analysis",
+        "amount": 0.078619,
+        "txHash": null,
+        "subTxHash": "0x88a1ba874be7b546dbf9997fa832e2742d54ec193e4ff1ba6caea7ebc0830d56",
+        "reputationDelta": 0.09,
+        "timestamp": 1773904890379
+      },
+      {
+        "taskId": "e14531c8-0c81-407e-85c2-d5282f93d068",
+        "service": "sentiment_analysis",
+        "amount": 0.162841,
+        "txHash": null,
+        "subTxHash": "0x4481a949265acc937e3ce1504506ae472b7ff4439692746a4886ccfe7886709c",
+        "reputationDelta": -1.5,
+        "timestamp": 1773983330584
+      },
+      {
+        "taskId": "c8d3453b-30b1-4090-a5bc-7a8abc03cb19",
+        "service": "sentiment_analysis",
+        "amount": 0.143341,
+        "txHash": null,
+        "subTxHash": "0x229416ad9c1f9d1e73f782becf21f776c3a214862b11bae890a033c6ca3c7358",
+        "reputationDelta": -0.5,
+        "timestamp": 1773984366838
+      },
+      {
+        "taskId": "9484c992-80d7-43dc-bea2-06cc536ba2d1",
+        "service": "sentiment_analysis",
+        "amount": 0.074321,
+        "txHash": null,
+        "subTxHash": "0xdd53d806352ad5eaefe8e0c70a40dbc8f5233c8b8fc6cabf895b424174444860",
+        "reputationDelta": null,
+        "timestamp": 1773984824930
+      },
+      {
+        "taskId": "cc652131-bebe-4a56-99e9-53228bfd7ee4",
+        "service": "sentiment_analysis",
+        "amount": 0.102037,
+        "txHash": null,
+        "subTxHash": "0xb17e986d4d3635a1c76694ee7183c59e1034183b89ad964b8d6329795cf327ac",
+        "reputationDelta": -0.12,
+        "timestamp": 1774021357606
+      },
+      {
+        "taskId": "b95e730b-09e1-4b88-a551-9e767af07985",
+        "service": "sentiment_analysis",
+        "amount": 0.076119,
+        "txHash": null,
+        "subTxHash": "0x1aa339668192af98d6f05aaf13278a4c83446052cead431c18b4666f75b20781",
+        "reputationDelta": -1.54,
+        "timestamp": 1774068362741
+      },
+      {
+        "taskId": "774fe74c-5f51-443e-b113-a5a1c7e6e060",
+        "service": "sentiment_analysis",
+        "amount": 0.069851,
+        "txHash": null,
+        "subTxHash": "0xad259c6a9b8436906ad750228a37a702e00f9e43d13fc59bdf6cf4ad3b50e7b4",
+        "reputationDelta": 0.13,
+        "timestamp": 1774071776458
+      },
+      {
+        "taskId": "33a97e36-2c0f-4da7-ab8d-297b3e02161a",
+        "service": "sentiment_analysis",
+        "amount": 0.135135,
+        "txHash": null,
+        "subTxHash": "0x6c6c77d21fe51e696ee4ffa0fd50ff42e9b29fe3fcd5756bbf44c6cffe733fa0",
+        "reputationDelta": -1.63,
+        "timestamp": 1774071893278
+      },
+      {
+        "taskId": "c80d6526-7e9d-436a-ace7-2004e53efff5",
+        "service": "sentiment_analysis",
+        "amount": 0.155111,
+        "txHash": null,
+        "subTxHash": "0x4dbc06fda235c7500d7f5f8f2f5c2ae329c0110c19b5e0a21d2c9b1cab1421a7",
+        "reputationDelta": -1.56,
+        "timestamp": 1774073012125
+      },
+      {
+        "taskId": "277dc1f9-ac18-4a6f-bdbe-0d7717992c77",
+        "service": "sentiment_analysis",
+        "amount": 0.064361,
+        "txHash": null,
+        "subTxHash": "0x1611b0528661bb1ebbaddcc584fcad970eb00618b712372a495064054130159b",
+        "reputationDelta": -0.87,
+        "timestamp": 1774073508564
+      },
+      {
+        "taskId": "6d6de7b9-dc38-4905-a77e-ededbde55039",
+        "service": "sentiment_analysis",
+        "amount": 0.136765,
+        "txHash": null,
+        "subTxHash": "0x63a6d4fd8093a922060be008c08995380a437a00e25a63a4eb2144b0f4d87a03",
+        "reputationDelta": 0.07,
+        "timestamp": 1774074319148
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 1.8925
+  },
+  {
+    "id": "Sentiment_Analyst_2",
+    "name": "Sentiment Analyst 2",
+    "reputation": 87.64,
+    "reputationScore": 0.8764,
+    "costMultiplier": 0.8,
+    "mode": "BATCH",
+    "chain": "Sepolia",
+    "services": [
+      "sentiment_analysis"
+    ],
+    "totalEarned": 0.173505,
+    "tasksCompleted": 2,
+    "taskHistory": [
+      {
+        "taskId": "e5783d42-1c5f-4b68-aadb-b62fbbe06f90",
+        "service": "sentiment_analysis",
+        "amount": 0.069819,
+        "txHash": null,
+        "subTxHash": "0x55463b68b83b27a0a96bbf63c2b609864018cb1979238a585b21883ae187cd21",
+        "reputationDelta": -0.54,
+        "timestamp": 1773984930349
+      },
+      {
+        "taskId": "8d045286-69a9-463d-9b3e-4cf84d7bb280",
+        "service": "sentiment_analysis",
+        "amount": 0.103686,
+        "txHash": null,
+        "subTxHash": "0x21c4c65b5d109589059f9e7eba643c9067e0c2ce174e01eaaba65d39b64185e1",
+        "reputationDelta": 0.18,
+        "timestamp": 1773986257386
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0.1735
+  },
+  {
+    "id": "Trend_Analyst_1",
+    "name": "Trend Analyst 1",
+    "reputation": 91.36,
+    "reputationScore": 0.9136,
+    "costMultiplier": 1.4,
+    "mode": "DEEP",
+    "chain": "Sepolia",
+    "services": [
+      "trend_analysis"
+    ],
+    "totalEarned": 3.062214,
+    "tasksCompleted": 24,
+    "taskHistory": [
+      {
+        "taskId": "5ff2fed7-7108-4c91-a12e-8b879d3391b0",
+        "service": "trend_analysis",
+        "amount": 0.067819,
+        "txHash": null,
+        "subTxHash": "0x22b84e1e5aeef8b8e5a75cfcadfdbc7a61b054cc5c8310b982e7c5f63030c282",
+        "reputationDelta": 0.37,
+        "timestamp": 1773869257717
+      },
+      {
+        "taskId": "16e6c195-6b1b-4014-9c89-97f95911712c",
+        "service": "trend_analysis",
+        "amount": 0.108511,
+        "txHash": null,
+        "subTxHash": "0x6245cd0463045c6465b686507052014c17294233481a1846d797c09fccd76fa2",
+        "reputationDelta": 0.3,
+        "timestamp": 1773892302085
+      },
+      {
+        "taskId": "04b88922-5802-480a-9526-2522df363878",
+        "service": "trend_analysis",
+        "amount": 0.165,
+        "txHash": null,
+        "subTxHash": "0x56339f838e56b850d8d5695204537791043c317ca151e90f90212898a84b3ce2",
+        "reputationDelta": 0.25,
+        "timestamp": 1773897564358
+      },
+      {
+        "taskId": "c25c770e-70fd-4827-a2a6-677abb708849",
+        "service": "trend_analysis",
+        "amount": 0.149215,
+        "txHash": null,
+        "subTxHash": "0xea7b5c3fc6a167b0dc145107df9d8d09421700fa050c71460fafe230a554403d",
+        "reputationDelta": 0.3,
+        "timestamp": 1773898505166
+      },
+      {
+        "taskId": "aaf1a445-2f43-42e8-bb14-2a5597b6b88e",
+        "service": "trend_analysis",
+        "amount": 0.16038,
+        "txHash": null,
+        "subTxHash": "0x4ba12729ddefa2e5d7967f3811cf213bdfbf483e3d30f3bf5dfe474d60203ec2",
+        "reputationDelta": 0.33,
+        "timestamp": 1773898542896
+      },
+      {
+        "taskId": "aa39a7dd-7d50-4165-ac41-57507526ec23",
+        "service": "trend_analysis",
+        "amount": 0.162191,
+        "txHash": null,
+        "subTxHash": "0x11e2841f22c25e06e50f6394283e6bd57ca40762cfe0ea554334d518b0127751",
+        "reputationDelta": 0.31,
+        "timestamp": 1773898581560
+      },
+      {
+        "taskId": "954ea98f-1432-4a8e-813a-fa6387c0afd5",
+        "service": "trend_analysis",
+        "amount": 0.141343,
+        "txHash": null,
+        "subTxHash": "0xa48def98c0d066543f11a7a3bdaacec72f306e34c7962b831d485e384b754677",
+        "reputationDelta": 0.37,
+        "timestamp": 1773898585250
+      },
+      {
+        "taskId": "06ccb801-7a1c-416c-aeea-7c4c63c968d6",
+        "service": "trend_analysis",
+        "amount": 0.213151,
+        "txHash": null,
+        "subTxHash": "0x495e1aaaaa3a3c72c2576ad53db737e332102ae0710ff9ec4cfae9007997d47b",
+        "reputationDelta": 0.25,
+        "timestamp": 1773899866247
+      },
+      {
+        "taskId": "d5431cf0-b0d5-4cf6-9d4d-5f7a19f10d52",
+        "service": "trend_analysis",
+        "amount": 0.072947,
+        "txHash": null,
+        "subTxHash": "0xda7d02dce8ec4d6cf05a113f8daaec3eeddae8962cde5397bdf6e8691c5e62ae",
+        "reputationDelta": 0.33,
+        "timestamp": 1773900389544
+      },
+      {
+        "taskId": "96452b7a-6786-45b1-bca3-319cf60dabe3",
+        "service": "trend_analysis",
+        "amount": 0.103111,
+        "txHash": null,
+        "subTxHash": "0xfac694224927859ca817ecf6d45d774ad207722aef366e25bbc65cfc76f09c18",
+        "reputationDelta": 0.38,
+        "timestamp": 1773901585356
+      },
+      {
+        "taskId": "200971c0-7856-4bb3-9d0b-0d9b163713eb",
+        "service": "trend_analysis",
+        "amount": 0.154999,
+        "txHash": null,
+        "subTxHash": "0x5dae9c1e88c99cd62ab4dea5d7f676b04c002e7262ed1e1c77855a56ab677c76",
+        "reputationDelta": 0.25,
+        "timestamp": 1773901707658
+      },
+      {
+        "taskId": "2f746d15-ed1b-4db5-b30d-7b2688aedd5a",
+        "service": "trend_analysis",
+        "amount": 0.111931,
+        "txHash": null,
+        "subTxHash": "0xe1c6d86b6e0dfccce954326ab21738ea0b5a001a4234cbe3349fd5de06bc0900",
+        "reputationDelta": 0.3,
+        "timestamp": 1773903328568
+      },
+      {
+        "taskId": "351e49ce-c433-4daf-bfe5-69429e877861",
+        "service": "trend_analysis",
+        "amount": 0.058519,
+        "txHash": null,
+        "subTxHash": "0xb0bf77874bc09f1cd74b1a1abff90718d48494a5c3c6bf9222e26e1b26d25a10",
+        "reputationDelta": 0.03,
+        "timestamp": 1773904744471
+      },
+      {
+        "taskId": "3dde2262-197e-485c-9417-0e78dda78cfa",
+        "service": "trend_analysis",
+        "amount": 0.146111,
+        "txHash": null,
+        "subTxHash": "0x45bd259a6a3fa8db18aefc8bd57025b9ac22eeb30a322f868dafa1dbfa453382",
+        "reputationDelta": 0.03,
+        "timestamp": 1773904890391
+      },
+      {
+        "taskId": "e14531c8-0c81-407e-85c2-d5282f93d068",
+        "service": "trend_analysis",
+        "amount": 0.223311,
+        "txHash": null,
+        "subTxHash": "0x2e46a839241855ab1c2b0c881ac6942373fd2c6aa212ccca047c0cd3af2f1a89",
+        "reputationDelta": -1.5,
+        "timestamp": 1773983330587
+      },
+      {
+        "taskId": "9484c992-80d7-43dc-bea2-06cc536ba2d1",
+        "service": "trend_analysis",
+        "amount": 0.149497,
+        "txHash": null,
+        "subTxHash": "0xf946893182e26208cdf3cb267fa3c6a643d8afa5987f2cdb2220453d0a0436ff",
+        "reputationDelta": null,
+        "timestamp": 1773984824937
+      },
+      {
+        "taskId": "8d045286-69a9-463d-9b3e-4cf84d7bb280",
+        "service": "trend_analysis",
+        "amount": 0.17277,
+        "txHash": null,
+        "subTxHash": "0x5a370210b1059f71a9715dc31984a6713ce1f612f48368a0a36ae6462eec84bc",
+        "reputationDelta": 0.07,
+        "timestamp": 1773986257388
+      },
+      {
+        "taskId": "cc652131-bebe-4a56-99e9-53228bfd7ee4",
+        "service": "trend_analysis",
+        "amount": 0.084691,
+        "txHash": null,
+        "subTxHash": "0x15972b1541fa2515c05c3af9444ba7da555cf7e9f66c3bac47efde680d6278c4",
+        "reputationDelta": 0.07,
+        "timestamp": 1774021357607
+      },
+      {
+        "taskId": "b636665f-1b0c-4437-8e46-857597e619ae",
+        "service": "trend_analysis",
+        "amount": 0.073751,
+        "txHash": null,
+        "subTxHash": "0x0f00cbdde1a981bb173d1b0c1908871f15062583cc78a32e77127d35c70cfd5f",
+        "reputationDelta": 0.09,
+        "timestamp": 1774022508388
+      },
+      {
+        "taskId": "bb19bf8d-a65a-4f08-b11a-c863863a929d",
+        "service": "trend_analysis",
+        "amount": 0.051491,
+        "txHash": null,
+        "subTxHash": "0x6a23fede2993a503f30411f220bc5bbec46b0a2d19725969cf685d5bf062e897",
+        "reputationDelta": 0.08,
+        "timestamp": 1774067434573
+      },
+      {
+        "taskId": "b95e730b-09e1-4b88-a551-9e767af07985",
+        "service": "trend_analysis",
+        "amount": 0.108813,
+        "txHash": null,
+        "subTxHash": "0xc9a2189b964c266cf405ba9533b11df4695d98416cd77f35ce9ddf9027fbb19d",
+        "reputationDelta": -1.31,
+        "timestamp": 1774068362762
+      },
+      {
+        "taskId": "774fe74c-5f51-443e-b113-a5a1c7e6e060",
+        "service": "trend_analysis",
+        "amount": 0.074319,
+        "txHash": null,
+        "subTxHash": "0x0441266d4634da91dff5a17879475c47cde4178f49a32560858e95cea64044c5",
+        "reputationDelta": -0.11,
+        "timestamp": 1774071776477
+      },
+      {
+        "taskId": "33a97e36-2c0f-4da7-ab8d-297b3e02161a",
+        "service": "trend_analysis",
+        "amount": 0.173419,
+        "txHash": null,
+        "subTxHash": "0x34a8de0d0ead019b1d8014eb5abbdf6123954a2e7ab18719dd7636c9dd70ab55",
+        "reputationDelta": -1.44,
+        "timestamp": 1774071893283
+      },
+      {
+        "taskId": "c80d6526-7e9d-436a-ace7-2004e53efff5",
+        "service": "trend_analysis",
+        "amount": 0.152832,
+        "txHash": null,
+        "subTxHash": "0x86673ac524c817cc988b706a45b2dfce829b2b68ffb0e5670cd4e0bd2284b977",
+        "reputationDelta": -1.63,
+        "timestamp": 1774073012137
+      },
+      {
+        "taskId": "6d6de7b9-dc38-4905-a77e-ededbde55039",
+        "service": "trend_analysis",
+        "amount": 0.064611,
+        "txHash": null,
+        "subTxHash": "0x86c5e17b3a2344fd01af163bbf05c04c2d5b63ec9cac64555d4e509baa509907",
+        "reputationDelta": -1.46,
+        "timestamp": 1774074319154
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 3.0622
+  },
+  {
+    "id": "Trend_Analyst_2",
+    "name": "Trend Analyst 2",
+    "reputation": 80.28,
+    "reputationScore": 0.8028,
+    "costMultiplier": 0.75,
+    "mode": "FAST",
+    "chain": "Sepolia",
+    "services": [
+      "trend_analysis"
+    ],
+    "totalEarned": 0.183951,
+    "tasksCompleted": 3,
+    "taskHistory": [
+      {
+        "taskId": "c8d3453b-30b1-4090-a5bc-7a8abc03cb19",
+        "service": "trend_analysis",
+        "amount": 0.062769,
+        "txHash": null,
+        "subTxHash": "0x2629340e675ec5d4de4a6fe7f879ea74190a07da7d072d0ff7faf0c400f900a6",
+        "reputationDelta": -0.5,
+        "timestamp": 1773984366842
+      },
+      {
+        "taskId": "e5783d42-1c5f-4b68-aadb-b62fbbe06f90",
+        "service": "trend_analysis",
+        "amount": 0.069991,
+        "txHash": null,
+        "subTxHash": "0x9ac9b261bb7dfe8fb755d13eabcf101866cf46f124322be7e0b01855627c99f8",
+        "reputationDelta": -0.63,
+        "timestamp": 1773984930376
+      },
+      {
+        "taskId": "277dc1f9-ac18-4a6f-bdbe-0d7717992c77",
+        "service": "trend_analysis",
+        "amount": 0.051191,
+        "txHash": null,
+        "subTxHash": "0xeaf4fc449beb290a9fc547886b3b0e677901c24a49136b6075c51f4654b9bead",
+        "reputationDelta": -0.59,
+        "timestamp": 1774073508577
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0.184
+  },
+  {
+    "id": "Trade_Executor_1",
+    "name": "Trade Executor 1",
+    "reputation": 94.24,
+    "reputationScore": 0.9424,
+    "costMultiplier": 1.2,
+    "mode": "ON_CHAIN",
+    "chain": "Sepolia",
+    "services": [
+      "execution"
+    ],
+    "totalEarned": 1.967394,
+    "tasksCompleted": 18,
+    "taskHistory": [
+      {
+        "taskId": "5ff2fed7-7108-4c91-a12e-8b879d3391b0",
+        "service": "execution",
+        "amount": 0.062995,
+        "txHash": null,
+        "subTxHash": "0x98462695c49492d24faffddb21bc5ba157aa0e432d6653d3e3856468bffe430b",
+        "reputationDelta": 0.26,
+        "timestamp": 1773869292344
+      },
+      {
+        "taskId": "16e6c195-6b1b-4014-9c89-97f95911712c",
+        "service": "execution",
+        "amount": 0.222929,
+        "txHash": null,
+        "subTxHash": "0xc12aa755c5013764282c1f08cff9002e1f7f0c60d1b515066c1c970598c7562f",
+        "reputationDelta": 0.36,
+        "timestamp": 1773892339519
+      },
+      {
+        "taskId": "04b88922-5802-480a-9526-2522df363878",
+        "service": "execution",
+        "amount": 0.158511,
+        "txHash": null,
+        "subTxHash": "0x5de3fb991308b397e1360a2ddc60a056ddac248538ff351f4f9e8d1e914bb924",
+        "reputationDelta": 0.23,
+        "timestamp": 1773897590419
+      },
+      {
+        "taskId": "c25c770e-70fd-4827-a2a6-677abb708849",
+        "service": "execution",
+        "amount": 0.139511,
+        "txHash": null,
+        "subTxHash": "0x1a90f2ab1567a622dbaee7155704078f9926c43dcc2654eba39880f433069eac",
+        "reputationDelta": 0.21,
+        "timestamp": 1773898539211
+      },
+      {
+        "taskId": "06ccb801-7a1c-416c-aeea-7c4c63c968d6",
+        "service": "execution",
+        "amount": 0.064711,
+        "txHash": null,
+        "subTxHash": "0x04b1c0ae6422daba4a78d82f36c5ea879a7f594268dc4c7b691f7b0b9dd38d03",
+        "reputationDelta": 0.25,
+        "timestamp": 1773899893610
+      },
+      {
+        "taskId": "2f746d15-ed1b-4db5-b30d-7b2688aedd5a",
+        "service": "execution",
+        "amount": 0.080036,
+        "txHash": null,
+        "subTxHash": "0xcaa83df5de6574d788c68025f76fcfc3a44ed1d08fe19641c4f7be32e607b882",
+        "reputationDelta": 0.27,
+        "timestamp": 1773903354889
+      },
+      {
+        "taskId": "351e49ce-c433-4daf-bfe5-69429e877861",
+        "service": "execution",
+        "amount": 0.126555,
+        "txHash": null,
+        "subTxHash": "0xc155112f8ae23057b4bf690aab04af371252b198086903e2723dca78d753264e",
+        "reputationDelta": 0,
+        "timestamp": 1773904744538
+      },
+      {
+        "taskId": "3dde2262-197e-485c-9417-0e78dda78cfa",
+        "service": "execution",
+        "amount": 0.086947,
+        "txHash": null,
+        "subTxHash": "0x16b839f9623232dc471e2f37a665d56fb00eeeb6e68b93cd0fecc6b30cd775d9",
+        "reputationDelta": 0,
+        "timestamp": 1773904890422
+      },
+      {
+        "taskId": "e14531c8-0c81-407e-85c2-d5282f93d068",
+        "service": "execution",
+        "amount": 0.053616,
+        "txHash": null,
+        "subTxHash": "0x02b67d78a907146b6704c856b1efe7851ed5813102c0056b192c107e291bc2af",
+        "reputationDelta": -1.5,
+        "timestamp": 1773983330593
+      },
+      {
+        "taskId": "c8d3453b-30b1-4090-a5bc-7a8abc03cb19",
+        "service": "execution",
+        "amount": 0.155111,
+        "txHash": null,
+        "subTxHash": "0x7d3fb7db747843bdaa72eab2430f543ab212b4a57bddd1d4b80893ef92f8b047",
+        "reputationDelta": -0.5,
+        "timestamp": 1773984366848
+      },
+      {
+        "taskId": "9484c992-80d7-43dc-bea2-06cc536ba2d1",
+        "service": "execution",
+        "amount": 0.064491,
+        "txHash": null,
+        "subTxHash": "0x1c61af41cd959ff595499ce62f7f367ccf1852989cff7c83754a48d1157b6abb",
+        "reputationDelta": null,
+        "timestamp": 1773984825002
+      },
+      {
+        "taskId": "8d045286-69a9-463d-9b3e-4cf84d7bb280",
+        "service": "execution",
+        "amount": 0.068551,
+        "txHash": null,
+        "subTxHash": "0x745bcbc54df884a5916809e65f79b3ba7d7300925dd3254fe5143dab4dcf3db8",
+        "reputationDelta": 0.06,
+        "timestamp": 1773986257392
+      },
+      {
+        "taskId": "b636665f-1b0c-4437-8e46-857597e619ae",
+        "service": "execution",
+        "amount": 0.152399,
+        "txHash": null,
+        "subTxHash": "0xd35e1a10ec19610c8f067b632b7768173acca5dec9c9c1b0a3f1ab8763af0df3",
+        "reputationDelta": 0.05,
+        "timestamp": 1774022508431
+      },
+      {
+        "taskId": "bb19bf8d-a65a-4f08-b11a-c863863a929d",
+        "service": "execution",
+        "amount": 0.065791,
+        "txHash": null,
+        "subTxHash": "0x191a6a6b6334e2708849db9fb19f85c2f8834bd52420d18d2640ebc4708084b3",
+        "reputationDelta": 0.06,
+        "timestamp": 1774067434581
+      },
+      {
+        "taskId": "b95e730b-09e1-4b88-a551-9e767af07985",
+        "service": "execution",
+        "amount": 0.133339,
+        "txHash": null,
+        "subTxHash": "0x718e4437130aabb966f015d2f46b93e7e9f86b15ffa9c7bdb82d9279719ca645",
+        "reputationDelta": -1.34,
+        "timestamp": 1774068362989
+      },
+      {
+        "taskId": "774fe74c-5f51-443e-b113-a5a1c7e6e060",
+        "service": "execution",
+        "amount": 0.093391,
+        "txHash": null,
+        "subTxHash": "0x74e9be8051269996e797bae55f0d902b299efa65eef58df910390aed20dde87d",
+        "reputationDelta": 0.06,
+        "timestamp": 1774071776546
+      },
+      {
+        "taskId": "33a97e36-2c0f-4da7-ab8d-297b3e02161a",
+        "service": "execution",
+        "amount": 0.054423,
+        "txHash": null,
+        "subTxHash": "0xf1ee200660b6c8ad2775836067d665d77eb5fc18942067e81bbfd8236e2c11f3",
+        "reputationDelta": -1.45,
+        "timestamp": 1774071893301
+      },
+      {
+        "taskId": "c80d6526-7e9d-436a-ace7-2004e53efff5",
+        "service": "execution",
+        "amount": 0.111978,
+        "txHash": null,
+        "subTxHash": "0xdf4309f8bc1b2b969273df7a00e2615c7de2e729389a0d9e16aa9616b6fb5e03",
+        "reputationDelta": -1.7,
+        "timestamp": 1774073012173
+      },
+      {
+        "taskId": "277dc1f9-ac18-4a6f-bdbe-0d7717992c77",
+        "service": "execution",
+        "amount": 0.223111,
+        "txHash": null,
+        "subTxHash": "0x3e53d21759f3b5970bbdbe4c96c3f07d780df249c4add831b69602249f71fcab",
+        "reputationDelta": -0.63,
+        "timestamp": 1774073508605
+      },
+      {
+        "taskId": "6d6de7b9-dc38-4905-a77e-ededbde55039",
+        "service": "execution",
+        "amount": 0.0625,
+        "txHash": null,
+        "subTxHash": "0xe60e9d4e721a218c0f1b1b79fe555ce3e24dfcdf7f64752a0dd3d0511ac16854",
+        "reputationDelta": 0.13,
+        "timestamp": 1774074319180
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 1.9674
+  },
+  {
+    "id": "Trade_Executor_2",
+    "name": "Trade Executor 2",
+    "reputation": 90.85,
+    "reputationScore": 0.9085,
+    "costMultiplier": 0.4,
+    "mode": "LITE",
+    "chain": "Sepolia",
+    "services": [
+      "execution"
+    ],
+    "totalEarned": 0.837215,
+    "tasksCompleted": 8,
+    "taskHistory": [
+      {
+        "taskId": "954ea98f-1432-4a8e-813a-fa6387c0afd5",
+        "service": "execution",
+        "amount": 0.067911,
+        "txHash": null,
+        "subTxHash": "0x06ee1cc97c4afe197b3265ce6c6ef57f8101edf3c9f0fb347a6cc0705d2ffe9e",
+        "reputationDelta": 0.37,
+        "timestamp": 1773898636140
+      },
+      {
+        "taskId": "aa39a7dd-7d50-4165-ac41-57507526ec23",
+        "service": "execution",
+        "amount": 0.064911,
+        "txHash": null,
+        "subTxHash": "0x3871a4ec12367a2e36edb0a31ca037cb7306ca83d4204537fe9ed0bb664f3406",
+        "reputationDelta": 0.32,
+        "timestamp": 1773898641139
+      },
+      {
+        "taskId": "d5431cf0-b0d5-4cf6-9d4d-5f7a19f10d52",
+        "service": "execution",
+        "amount": 0.127,
+        "txHash": null,
+        "subTxHash": "0x94708ec54a77e183e10010a5b27ef6b8b9ca7cfb936c7b1253998a309fe0a6bd",
+        "reputationDelta": 0.36,
+        "timestamp": 1773900416459
+      },
+      {
+        "taskId": "96452b7a-6786-45b1-bca3-319cf60dabe3",
+        "service": "execution",
+        "amount": 0.158333,
+        "txHash": null,
+        "subTxHash": "0x41c716827c8720a9919a4b9115609d780ab292d5b96a51fc3b4c77b08ba6cdab",
+        "reputationDelta": 0.24,
+        "timestamp": 1773901612272
+      },
+      {
+        "taskId": "200971c0-7856-4bb3-9d0b-0d9b163713eb",
+        "service": "execution",
+        "amount": 0.118419,
+        "txHash": null,
+        "subTxHash": "0x5824cae0af81d7f4772fc3c950f0a7c0a01ca162af1e2893e0589c16382e98a2",
+        "reputationDelta": 0.37,
+        "timestamp": 1773901734356
+      },
+      {
+        "taskId": "e5783d42-1c5f-4b68-aadb-b62fbbe06f90",
+        "service": "execution",
+        "amount": 0.068939,
+        "txHash": null,
+        "subTxHash": "0x9d22af4715222f8b2e4f98bc5ac2aa71ef4bea75dc43fb3de97fdf798b31b772",
+        "reputationDelta": -0.56,
+        "timestamp": 1773984930426
+      },
+      {
+        "taskId": "cc652131-bebe-4a56-99e9-53228bfd7ee4",
+        "service": "execution",
+        "amount": 0.155511,
+        "txHash": null,
+        "subTxHash": "0x53ee322a97c34e7e694a1d6b5962d07c0cea7bb4cdfd1912de5698ecf8b542de",
+        "reputationDelta": 0.16,
+        "timestamp": 1774021357613
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0.8372
+  },
+  {
+    "id": "Strategy_Planner_1",
+    "name": "Strategy Planner 1",
+    "reputation": 89.49,
+    "reputationScore": 0.8949,
+    "costMultiplier": 1.3,
+    "mode": "AGGRESSIVE",
+    "chain": "Sepolia",
+    "services": [
+      "strategy_generation"
+    ],
+    "totalEarned": 0.474938,
+    "tasksCompleted": 5,
+    "taskHistory": [
+      {
+        "taskId": "aa39a7dd-7d50-4165-ac41-57507526ec23",
+        "service": "strategy_generation",
+        "amount": 0.062391,
+        "txHash": null,
+        "subTxHash": "0x786db5134a15dc509107ebc73863bef08d32378095e66470a75b03bcf9f990f7",
+        "reputationDelta": 0.35,
+        "timestamp": 1773898628085
+      },
+      {
+        "taskId": "cc652131-bebe-4a56-99e9-53228bfd7ee4",
+        "service": "strategy_generation",
+        "amount": 0.129845,
+        "txHash": null,
+        "subTxHash": "0x909b1e8fba1bcc029fa1de95593fda1655dc1bbf7691c7551a53432dc11350f1",
+        "reputationDelta": 0.14,
+        "timestamp": 1774021357612
+      },
+      {
+        "taskId": "b95e730b-09e1-4b88-a551-9e767af07985",
+        "service": "strategy_generation",
+        "amount": 0.09,
+        "txHash": null,
+        "subTxHash": "0x56d01eb68209acaa3d6bc2ff3dec37a349f210b8b7e9f4bbf6fe1c3ae0791cd9",
+        "reputationDelta": -1.38,
+        "timestamp": 1774068362862
+      },
+      {
+        "taskId": "33a97e36-2c0f-4da7-ab8d-297b3e02161a",
+        "service": "strategy_generation",
+        "amount": 0.076791,
+        "txHash": null,
+        "subTxHash": "0x131dd222ad27c8c83e421ccc5db59e3917358080a3ef5aee72062c380835fabc",
+        "reputationDelta": -1.34,
+        "timestamp": 1774071893296
+      },
+      {
+        "taskId": "c80d6526-7e9d-436a-ace7-2004e53efff5",
+        "service": "strategy_generation",
+        "amount": 0.115911,
+        "txHash": null,
+        "subTxHash": "0x75b43b5479626d7069fbdac0d0d9e8de82bae6655a83f1eaa95a74d5243c6201",
+        "reputationDelta": -1.28,
+        "timestamp": 1774073012159
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0.4749
+  },
+  {
+    "id": "Strategy_Planner_2",
+    "name": "Strategy Planner 2",
+    "reputation": 89.22,
+    "reputationScore": 0.8922,
+    "costMultiplier": 1.1,
+    "mode": "SAFE_HAVEN",
+    "chain": "Sepolia",
+    "services": [
+      "strategy_generation"
+    ],
+    "totalEarned": 2.222887,
+    "tasksCompleted": 22,
+    "taskHistory": [
+      {
+        "taskId": "5ff2fed7-7108-4c91-a12e-8b879d3391b0",
+        "service": "strategy_generation",
+        "amount": 0.065911,
+        "txHash": null,
+        "subTxHash": "0xea98208f785c5a04ef166610b53037b56332e2595903ed6beec27f248cd97466",
+        "reputationDelta": 0.21,
+        "timestamp": 1773869277927
+      },
+      {
+        "taskId": "16e6c195-6b1b-4014-9c89-97f95911712c",
+        "service": "strategy_generation",
+        "amount": 0.065611,
+        "txHash": null,
+        "subTxHash": "0xa3751220acdf53cf5b8afaf9d2e0e8b32fd6c282c01673c554d96e0c8590451f",
+        "reputationDelta": 0.37,
+        "timestamp": 1773892323136
+      },
+      {
+        "taskId": "04b88922-5802-480a-9526-2522df363878",
+        "service": "strategy_generation",
+        "amount": 0.135145,
+        "txHash": null,
+        "subTxHash": "0x36d0927a403dc51306e0d4a49c26a45584f51bd249b4590a8df6f99f6a538158",
+        "reputationDelta": 0.21,
+        "timestamp": 1773897581983
+      },
+      {
+        "taskId": "c25c770e-70fd-4827-a2a6-677abb708849",
+        "service": "strategy_generation",
+        "amount": 0.065131,
+        "txHash": null,
+        "subTxHash": "0x085a052ab635f9492e0e7f0a14d1c8a0c532f64119b1196b47555d9b1c7a5064",
+        "reputationDelta": 0.35,
+        "timestamp": 1773898525371
+      },
+      {
+        "taskId": "aaf1a445-2f43-42e8-bb14-2a5597b6b88e",
+        "service": "strategy_generation",
+        "amount": 0.054191,
+        "txHash": null,
+        "subTxHash": "0xa1b4b42b97ddfc6389ee48bc24862a9b5169a7c85e2f12bbc176c1b90a56b81a",
+        "reputationDelta": 0.2,
+        "timestamp": 1773898564056
+      },
+      {
+        "taskId": "954ea98f-1432-4a8e-813a-fa6387c0afd5",
+        "service": "strategy_generation",
+        "amount": 0.0975,
+        "txHash": null,
+        "subTxHash": "0x56e2ddedfd54a5d7f7a8c59db28757473162f95c6a54cf934e0036d926aae768",
+        "reputationDelta": 0.26,
+        "timestamp": 1773898622564
+      },
+      {
+        "taskId": "06ccb801-7a1c-416c-aeea-7c4c63c968d6",
+        "service": "strategy_generation",
+        "amount": 0.127993,
+        "txHash": null,
+        "subTxHash": "0x1df38fff4d2403cb560bb2e10d0b180238399e110f20446ae92a22f8217cfb63",
+        "reputationDelta": 0.23,
+        "timestamp": 1773899884558
+      },
+      {
+        "taskId": "d5431cf0-b0d5-4cf6-9d4d-5f7a19f10d52",
+        "service": "strategy_generation",
+        "amount": 0.133842,
+        "txHash": null,
+        "subTxHash": "0x08a6b5e0fcbced1754ecd2e076ba7543830987a4ba1db0908518dee5bc3c5103",
+        "reputationDelta": 0.29,
+        "timestamp": 1773900408005
+      },
+      {
+        "taskId": "96452b7a-6786-45b1-bca3-319cf60dabe3",
+        "service": "strategy_generation",
+        "amount": 0.084834,
+        "txHash": null,
+        "subTxHash": "0x700d5058bc262003df62bbb44a44d502ac8f2660e7af3a8b8961ee76007879cb",
+        "reputationDelta": 0.23,
+        "timestamp": 1773901604113
+      },
+      {
+        "taskId": "200971c0-7856-4bb3-9d0b-0d9b163713eb",
+        "service": "strategy_generation",
+        "amount": 0.067809,
+        "txHash": null,
+        "subTxHash": "0xf23edccced772fa9c70b15da7bbe20a1251b0b2a7aea0a368afb236dad31957f",
+        "reputationDelta": 0.21,
+        "timestamp": 1773901726083
+      },
+      {
+        "taskId": "2f746d15-ed1b-4db5-b30d-7b2688aedd5a",
+        "service": "strategy_generation",
+        "amount": 0.072901,
+        "txHash": null,
+        "subTxHash": "0xb5dbfc10ab841784bcbbaf736b910cf57d60081f61217f72be753bac3bbc5839",
+        "reputationDelta": 0.26,
+        "timestamp": 1773903346520
+      },
+      {
+        "taskId": "351e49ce-c433-4daf-bfe5-69429e877861",
+        "service": "strategy_generation",
+        "amount": 0.221111,
+        "txHash": null,
+        "subTxHash": "0xf6648d9944eb161fe3c6f0a7845b4392569e00540d6d191b440bd0202be08840",
+        "reputationDelta": 0.07,
+        "timestamp": 1773904744521
+      },
+      {
+        "taskId": "3dde2262-197e-485c-9417-0e78dda78cfa",
+        "service": "strategy_generation",
+        "amount": 0.102362,
+        "txHash": null,
+        "subTxHash": "0x6de5a199b8fa72cc64bbb476fdb6f908a5f9560509b0f642a004ffc97c77cc5d",
+        "reputationDelta": 0.04,
+        "timestamp": 1773904890412
+      },
+      {
+        "taskId": "e14531c8-0c81-407e-85c2-d5282f93d068",
+        "service": "strategy_generation",
+        "amount": 0.062355,
+        "txHash": null,
+        "subTxHash": "0x3260bc6a0d508dd4b059458c5d072711eeb445eacaadcddb2a80e488c58fb3ce",
+        "reputationDelta": -1.5,
+        "timestamp": 1773983330591
+      },
+      {
+        "taskId": "c8d3453b-30b1-4090-a5bc-7a8abc03cb19",
+        "service": "strategy_generation",
+        "amount": 0.179999,
+        "txHash": null,
+        "subTxHash": "0xe967491ff1c50b2515c722f838fdfc967f4d7a0205717c59b4328b6dd58200a1",
+        "reputationDelta": -0.5,
+        "timestamp": 1773984366847
+      },
+      {
+        "taskId": "9484c992-80d7-43dc-bea2-06cc536ba2d1",
+        "service": "strategy_generation",
+        "amount": 0.072348,
+        "txHash": null,
+        "subTxHash": "0xe983f0e832ce17df8a567bd171a94a0fa0884a505d57cbcc117b59de6c45c2cd",
+        "reputationDelta": null,
+        "timestamp": 1773984824973
+      },
+      {
+        "taskId": "e5783d42-1c5f-4b68-aadb-b62fbbe06f90",
+        "service": "strategy_generation",
+        "amount": 0.070508,
+        "txHash": null,
+        "subTxHash": "0x10feb66e683edbddee103fe6ae2f69d3655ae0fde7fe7fbb9ff956dc4cbf689a",
+        "reputationDelta": -0.65,
+        "timestamp": 1773984930409
+      },
+      {
+        "taskId": "8d045286-69a9-463d-9b3e-4cf84d7bb280",
+        "service": "strategy_generation",
+        "amount": 0.151111,
+        "txHash": null,
+        "subTxHash": "0xfe73eb672e27e85b36a7fbcf3b5aa951a9a6e2722362a41ee44abffb6c9e2a13",
+        "reputationDelta": 0.17,
+        "timestamp": 1773986257391
+      },
+      {
+        "taskId": "b636665f-1b0c-4437-8e46-857597e619ae",
+        "service": "strategy_generation",
+        "amount": 0.07,
+        "txHash": null,
+        "subTxHash": "0x33a07329a417c7df44214f4f16f4a6b53a4746fdf470b0eea06a7fb5e33eac74",
+        "reputationDelta": 0.18,
+        "timestamp": 1774022508420
+      },
+      {
+        "taskId": "bb19bf8d-a65a-4f08-b11a-c863863a929d",
+        "service": "strategy_generation",
+        "amount": 0.068823,
+        "txHash": null,
+        "subTxHash": "0xe4181ff3ec4dd43845164eeae826014cab9cd08f390ecc431865c9ff81fa1296",
+        "reputationDelta": -0.09,
+        "timestamp": 1774067434578
+      },
+      {
+        "taskId": "774fe74c-5f51-443e-b113-a5a1c7e6e060",
+        "service": "strategy_generation",
+        "amount": 0.194439,
+        "txHash": null,
+        "subTxHash": "0x9d3614243f01f5c79e34b361d00da7c1b16477c772e4d24444ac5c1dd01218ae",
+        "reputationDelta": 0.16,
+        "timestamp": 1774071776527
+      },
+      {
+        "taskId": "277dc1f9-ac18-4a6f-bdbe-0d7717992c77",
+        "service": "strategy_generation",
+        "amount": 0.147958,
+        "txHash": null,
+        "subTxHash": "0x71836d70cb8e76663eb33bbc030248a5e88ecb2ffdbbf8d95263065b3951a654",
+        "reputationDelta": -0.69,
+        "timestamp": 1774073508596
+      },
+      {
+        "taskId": "6d6de7b9-dc38-4905-a77e-ededbde55039",
+        "service": "strategy_generation",
+        "amount": 0.067651,
+        "txHash": null,
+        "subTxHash": "0x25264a6e9a26cbfb174e43ce561b1b5c6b8d0c478a707517769d67254680a53e",
+        "reputationDelta": 0.14,
+        "timestamp": 1774074319168
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 2.2229
+  },
+  {
+    "id": "Report_Writer_1",
+    "name": "Report Writer 1",
+    "reputation": 93.87,
+    "reputationScore": 0.9387,
+    "costMultiplier": 1.4,
+    "mode": "THOROUGH",
+    "chain": "Sepolia",
+    "services": [
+      "report_generation"
+    ],
+    "totalEarned": 1.913742,
+    "tasksCompleted": 16,
+    "taskHistory": [
+      {
+        "taskId": "04b88922-5802-480a-9526-2522df363878",
+        "service": "report_generation",
+        "amount": 0.057841,
+        "txHash": null,
+        "subTxHash": "0xc48b1f2e47ee0751edeacdac9c32ffa0cadc1b655d6ef508db4b0a50bb78bcce",
+        "reputationDelta": 0.21,
+        "timestamp": 1773897600004
+      },
+      {
+        "taskId": "c25c770e-70fd-4827-a2a6-677abb708849",
+        "service": "report_generation",
+        "amount": 0.081004,
+        "txHash": null,
+        "subTxHash": "0x8be3488e8c8bc6c469d7e957f49f4829f88270ab30a29ce2012f84909213ea3c",
+        "reputationDelta": 0.36,
+        "timestamp": 1773898549329
+      },
+      {
+        "taskId": "954ea98f-1432-4a8e-813a-fa6387c0afd5",
+        "service": "report_generation",
+        "amount": 0.151948,
+        "txHash": null,
+        "subTxHash": "0x1930b14c2a9274d90ee73dd17391dec0c010fa5af46d1ab0fc69b7462db8e38b",
+        "reputationDelta": 0.23,
+        "timestamp": 1773898661923
+      },
+      {
+        "taskId": "06ccb801-7a1c-416c-aeea-7c4c63c968d6",
+        "service": "report_generation",
+        "amount": 0.211111,
+        "txHash": null,
+        "subTxHash": "0x9b77244126b9d9b83013732aff678733ec343d4c097f595de8e4742ef6d7c1ab",
+        "reputationDelta": 0.36,
+        "timestamp": 1773899903625
+      },
+      {
+        "taskId": "d5431cf0-b0d5-4cf6-9d4d-5f7a19f10d52",
+        "service": "report_generation",
+        "amount": 0.148432,
+        "txHash": null,
+        "subTxHash": "0xf5bcd1801b11d779dce6a024ffb16ca8bc5cf4e7429eea7c8fd937acf81a4ead",
+        "reputationDelta": 0.38,
+        "timestamp": 1773900426075
+      },
+      {
+        "taskId": "96452b7a-6786-45b1-bca3-319cf60dabe3",
+        "service": "report_generation",
+        "amount": 0.089609,
+        "txHash": null,
+        "subTxHash": "0xa8874ff86d3555373ea6c5a670c37bdf2bb6a1ac5dc614eba0dbaa02cab25b3d",
+        "reputationDelta": 0.29,
+        "timestamp": 1773901622290
+      },
+      {
+        "taskId": "2f746d15-ed1b-4db5-b30d-7b2688aedd5a",
+        "service": "report_generation",
+        "amount": 0.119304,
+        "txHash": null,
+        "subTxHash": "0x30c7caede5b6feb0c54a6c9df38c479a3316bf62d4cfe37193e2fdadc053de5a",
+        "reputationDelta": 0.24,
+        "timestamp": 1773903374733
+      },
+      {
+        "taskId": "351e49ce-c433-4daf-bfe5-69429e877861",
+        "service": "report_generation",
+        "amount": 0.087999,
+        "txHash": null,
+        "subTxHash": "0xe536bd9d2ed71251e48ac3753bea42117e4cdf72a626cf3ebd30d1cf9bd5adf2",
+        "reputationDelta": 0.08,
+        "timestamp": 1773904744553
+      },
+      {
+        "taskId": "3dde2262-197e-485c-9417-0e78dda78cfa",
+        "service": "report_generation",
+        "amount": 0.119511,
+        "txHash": null,
+        "subTxHash": "0x85dc697f3c83a263dc61173f44c240639356e2889f9a661cd47208011ed8975a",
+        "reputationDelta": 0.09,
+        "timestamp": 1773904890446
+      },
+      {
+        "taskId": "e14531c8-0c81-407e-85c2-d5282f93d068",
+        "service": "report_generation",
+        "amount": 0.082623,
+        "txHash": null,
+        "subTxHash": "0xc953b85d9811328d4d06dfb458728bf28c13189ff08da1d0556ee5ff8a2787a2",
+        "reputationDelta": -1.5,
+        "timestamp": 1773983330596
+      },
+      {
+        "taskId": "c8d3453b-30b1-4090-a5bc-7a8abc03cb19",
+        "service": "report_generation",
+        "amount": 0.080615,
+        "txHash": null,
+        "subTxHash": "0x2e3c4933efc01eacfa5270b947cadd41b74d50a93034b4930a83439c4f926c3a",
+        "reputationDelta": -0.5,
+        "timestamp": 1773984366849
+      },
+      {
+        "taskId": "9484c992-80d7-43dc-bea2-06cc536ba2d1",
+        "service": "report_generation",
+        "amount": 0.069696,
+        "txHash": null,
+        "subTxHash": "0x07592d24c18967d0600c51dd63513d700fb3b4247cbb8f0298bf004c9a1ffb49",
+        "reputationDelta": null,
+        "timestamp": 1773984825081
+      },
+      {
+        "taskId": "8d045286-69a9-463d-9b3e-4cf84d7bb280",
+        "service": "report_generation",
+        "amount": 0.223111,
+        "txHash": null,
+        "subTxHash": "0x556d3b8a5b6d126a930fb15d98c5a3502dde7789d7026b0becdf107d5ba34c1a",
+        "reputationDelta": -0.13,
+        "timestamp": 1773986257394
+      },
+      {
+        "taskId": "cc652131-bebe-4a56-99e9-53228bfd7ee4",
+        "service": "report_generation",
+        "amount": 0.095491,
+        "txHash": null,
+        "subTxHash": "0x17c974942d25dedcbc7d329aa30a7bd7edda0056a5fd54952e05b4021c75cb35",
+        "reputationDelta": 0.14,
+        "timestamp": 1774021357614
+      },
+      {
+        "taskId": "774fe74c-5f51-443e-b113-a5a1c7e6e060",
+        "service": "report_generation",
+        "amount": 0.149,
+        "txHash": null,
+        "subTxHash": "0x758d9a072f5d07dee883c3b0d5109d81807c22cb37063d956b456d00c770399c",
+        "reputationDelta": 0.13,
+        "timestamp": 1774071776579
+      },
+      {
+        "taskId": "c80d6526-7e9d-436a-ace7-2004e53efff5",
+        "service": "report_generation",
+        "amount": 0.111648,
+        "txHash": null,
+        "subTxHash": "0xe3612472bd95397e6dac88adc1457566a27395057ae2371dbbab32148669c652",
+        "reputationDelta": -1.59,
+        "timestamp": 1774073012181
+      },
+      {
+        "taskId": "277dc1f9-ac18-4a6f-bdbe-0d7717992c77",
+        "service": "report_generation",
+        "amount": 0.0855,
+        "txHash": null,
+        "subTxHash": "0x29f6edf58358a856a88a230131a92144ff80a68facd80d95ab180a686cecbc58",
+        "reputationDelta": -0.77,
+        "timestamp": 1774073508612
+      },
+      {
+        "taskId": "6d6de7b9-dc38-4905-a77e-ededbde55039",
+        "service": "report_generation",
+        "amount": 0.156809,
+        "txHash": null,
+        "subTxHash": "0xbca013453a8154255a1e5d0e6e0c11c99608cf3421c54ac1345d5c4d6f3b6cde",
+        "reputationDelta": 0.09,
+        "timestamp": 1774074319185
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 1.9136
+  },
+  {
+    "id": "Report_Writer_2",
+    "name": "Report Writer 2",
+    "reputation": 83.49,
+    "reputationScore": 0.8349,
+    "costMultiplier": 0.8,
+    "mode": "BRIEF",
+    "chain": "Sepolia",
+    "services": [
+      "report_generation"
+    ],
+    "totalEarned": 0.424354,
+    "tasksCompleted": 4,
+    "taskHistory": [
+      {
+        "taskId": "aa39a7dd-7d50-4165-ac41-57507526ec23",
+        "service": "report_generation",
+        "amount": 0.109225,
+        "txHash": null,
+        "subTxHash": "0x44f7f75503e95b5af5be03223100825c89267f25038f91f0f5ec106b9a28fc9b",
+        "reputationDelta": 0.22,
+        "timestamp": 1773898668246
+      },
+      {
+        "taskId": "200971c0-7856-4bb3-9d0b-0d9b163713eb",
+        "service": "report_generation",
+        "amount": 0.075119,
+        "txHash": null,
+        "subTxHash": "0xe32cc44a63e49564be3043ec4c86fbc931f8ded342817a00ca9037c069ca95d4",
+        "reputationDelta": 0.35,
+        "timestamp": 1773901744116
+      },
+      {
+        "taskId": "e5783d42-1c5f-4b68-aadb-b62fbbe06f90",
+        "service": "report_generation",
+        "amount": 0.134499,
+        "txHash": null,
+        "subTxHash": "0x00287486c6ee7c267359eb61011f27d0b24b0aa2b61c710430dbe02f77bf2cef",
+        "reputationDelta": -0.58,
+        "timestamp": 1773984930447
+      },
+      {
+        "taskId": "33a97e36-2c0f-4da7-ab8d-297b3e02161a",
+        "service": "report_generation",
+        "amount": 0.105511,
+        "txHash": null,
+        "subTxHash": "0xd75836560c063f038ec6e0f276dc55f92a0c1c7d49b6b6cf8eea89e603907666",
+        "reputationDelta": -1.28,
+        "timestamp": 1774071893310
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0.4243
+  },
+  {
+    "id": "Risk_Auditor_1",
+    "name": "Risk Auditor 1",
+    "reputation": 88.83,
+    "reputationScore": 0.8883,
+    "costMultiplier": 2,
+    "mode": "DEEP_RISK",
+    "chain": "Polygon",
+    "services": [
+      "risk_assessment"
+    ],
+    "totalEarned": 2.734502,
+    "tasksCompleted": 25,
+    "taskHistory": [
+      {
+        "taskId": "5ff2fed7-7108-4c91-a12e-8b879d3391b0",
+        "service": "risk_assessment",
+        "amount": 0.095391,
+        "txHash": null,
+        "subTxHash": "0xc365ad083b227045fd9933e2c05d6dcee8285e4e0337bd05443d5f3a46e29928",
+        "reputationDelta": 0.31,
+        "timestamp": 1773869268920
+      },
+      {
+        "taskId": "16e6c195-6b1b-4014-9c89-97f95911712c",
+        "service": "risk_assessment",
+        "amount": 0.117399,
+        "txHash": null,
+        "subTxHash": "0xc118bf1e987aaebed2ac838d12763fa5c8c0b2acd09f0a694a702313082a076c",
+        "reputationDelta": 0.2,
+        "timestamp": 1773892313167
+      },
+      {
+        "taskId": "04b88922-5802-480a-9526-2522df363878",
+        "service": "risk_assessment",
+        "amount": 0.074515,
+        "txHash": null,
+        "subTxHash": "0x2417c31dce0e6caf57b607b71d492299c97a15ea6a3554034f072a56153ab2a6",
+        "reputationDelta": 0.22,
+        "timestamp": 1773897573169
+      },
+      {
+        "taskId": "c25c770e-70fd-4827-a2a6-677abb708849",
+        "service": "risk_assessment",
+        "amount": 0.161913,
+        "txHash": null,
+        "subTxHash": "0x3aa4349197b581e7ad8e8ad7fcdb00691eecec566b3e2ef60d54487c545066af",
+        "reputationDelta": 0.37,
+        "timestamp": 1773898515836
+      },
+      {
+        "taskId": "aaf1a445-2f43-42e8-bb14-2a5597b6b88e",
+        "service": "risk_assessment",
+        "amount": 0.134511,
+        "txHash": null,
+        "subTxHash": "0x35cef4e0daf6c1d55ac4d38d345b65a75383dbf8e043d51cd64a90fe2c61806e",
+        "reputationDelta": 0.33,
+        "timestamp": 1773898554334
+      },
+      {
+        "taskId": "aa39a7dd-7d50-4165-ac41-57507526ec23",
+        "service": "risk_assessment",
+        "amount": 0.091818,
+        "txHash": null,
+        "subTxHash": "0x45e81682f19e3d7bef035cdc18b4e2e332a8d671dd3510f29a1a8f8ab47d7a24",
+        "reputationDelta": 0.35,
+        "timestamp": 1773898594755
+      },
+      {
+        "taskId": "954ea98f-1432-4a8e-813a-fa6387c0afd5",
+        "service": "risk_assessment",
+        "amount": 0.143551,
+        "txHash": null,
+        "subTxHash": "0x3f7190e41ace526fa57a1d112482e9d38465e8eeafef51323ebe6f36c9cd8c1a",
+        "reputationDelta": 0.27,
+        "timestamp": 1773898604506
+      },
+      {
+        "taskId": "06ccb801-7a1c-416c-aeea-7c4c63c968d6",
+        "service": "risk_assessment",
+        "amount": 0.1369,
+        "txHash": null,
+        "subTxHash": "0xf9d0c9f853e0f2361351fa791006226d5095704511d53c114ca70f11fa6155a3",
+        "reputationDelta": 0.28,
+        "timestamp": 1773899875206
+      },
+      {
+        "taskId": "d5431cf0-b0d5-4cf6-9d4d-5f7a19f10d52",
+        "service": "risk_assessment",
+        "amount": 0.089929,
+        "txHash": null,
+        "subTxHash": "0xa5d6c47fb34dac67bed60958f1be1654f9afd02db18c096f1426623a800c3d0f",
+        "reputationDelta": 0.27,
+        "timestamp": 1773900398811
+      },
+      {
+        "taskId": "96452b7a-6786-45b1-bca3-319cf60dabe3",
+        "service": "risk_assessment",
+        "amount": 0.083575,
+        "txHash": null,
+        "subTxHash": "0xf35df31808bae04c1b2300d256eee7b7fade31c4064ffafb804a2d6f14cd530b",
+        "reputationDelta": 0.33,
+        "timestamp": 1773901594994
+      },
+      {
+        "taskId": "2f746d15-ed1b-4db5-b30d-7b2688aedd5a",
+        "service": "risk_assessment",
+        "amount": 0.057471,
+        "txHash": null,
+        "subTxHash": "0x0aa29956fc150181c53db4100e1ca7149d5c0400f57fbbc72ba0a64e265aa441",
+        "reputationDelta": 0.24,
+        "timestamp": 1773903337717
+      },
+      {
+        "taskId": "351e49ce-c433-4daf-bfe5-69429e877861",
+        "service": "risk_assessment",
+        "amount": 0.078391,
+        "txHash": null,
+        "subTxHash": "0x8a322137a20b3714c0ad9e8c1547b48fffeee457a84a8a95557eaeef1081cc32",
+        "reputationDelta": 0.07,
+        "timestamp": 1773904744495
+      },
+      {
+        "taskId": "3dde2262-197e-485c-9417-0e78dda78cfa",
+        "service": "risk_assessment",
+        "amount": 0.072294,
+        "txHash": null,
+        "subTxHash": "0xca25305e297010b2de89c0b8bad0183338faae6e3ecdd504caa6375b26ec5acc",
+        "reputationDelta": 0.09,
+        "timestamp": 1773904890398
+      },
+      {
+        "taskId": "e14531c8-0c81-407e-85c2-d5282f93d068",
+        "service": "risk_assessment",
+        "amount": 0.115954,
+        "txHash": null,
+        "subTxHash": "0x8cbf8d483cc3f29b73397a9d0a747bbdde3c76b0b1882f1dfbf6509861bbe524",
+        "reputationDelta": -1.5,
+        "timestamp": 1773983330589
+      },
+      {
+        "taskId": "c8d3453b-30b1-4090-a5bc-7a8abc03cb19",
+        "service": "risk_assessment",
+        "amount": 0.089815,
+        "txHash": null,
+        "subTxHash": "0xc9115ce78045bc3030a0d7d3684ff8c0fa0b0fe7cef26ac37a905c7a65ed291e",
+        "reputationDelta": -0.5,
+        "timestamp": 1773984366845
+      },
+      {
+        "taskId": "9484c992-80d7-43dc-bea2-06cc536ba2d1",
+        "service": "risk_assessment",
+        "amount": 0.089888,
+        "txHash": null,
+        "subTxHash": "0x409520bbd67ca11791907da0994334cf1f85b9ea4a5333d89340dd050400b6d4",
+        "reputationDelta": null,
+        "timestamp": 1773984824946
+      },
+      {
+        "taskId": "8d045286-69a9-463d-9b3e-4cf84d7bb280",
+        "service": "risk_assessment",
+        "amount": 0.165231,
+        "txHash": null,
+        "subTxHash": "0xf2032d60e62e2d334007ad2bb21c4900e2df167b5ff0e87be93ec9a49dbd8bac",
+        "reputationDelta": 0.13,
+        "timestamp": 1773986257390
+      },
+      {
+        "taskId": "cc652131-bebe-4a56-99e9-53228bfd7ee4",
+        "service": "risk_assessment",
+        "amount": 0.072991,
+        "txHash": null,
+        "subTxHash": "0xeb376767bfeed94f8ccb73d7709891af823b4b2f697a7d723ac24566349b58ce",
+        "reputationDelta": 0.11,
+        "timestamp": 1774021357609
+      },
+      {
+        "taskId": "b636665f-1b0c-4437-8e46-857597e619ae",
+        "service": "risk_assessment",
+        "amount": 0.151987,
+        "txHash": null,
+        "subTxHash": "0xcca7b6ccb5d31b93eca4965a97e6df640cd5df6a8e6ccc81aef23988e1568845",
+        "reputationDelta": 0.13,
+        "timestamp": 1774022508404
+      },
+      {
+        "taskId": "bb19bf8d-a65a-4f08-b11a-c863863a929d",
+        "service": "risk_assessment",
+        "amount": 0.104419,
+        "txHash": null,
+        "subTxHash": "0x7e335684d05ea2a94c9a9d6c80a414b7223dc0c6798d02141c7a383088213f82",
+        "reputationDelta": -0.14,
+        "timestamp": 1774067434575
+      },
+      {
+        "taskId": "b95e730b-09e1-4b88-a551-9e767af07985",
+        "service": "risk_assessment",
+        "amount": 0.123456,
+        "txHash": null,
+        "subTxHash": "0xd4fe7182cc9fac9692dd771c1988bab55e8a449100c924fa0d20c97e2d2af115",
+        "reputationDelta": -1.61,
+        "timestamp": 1774068362804
+      },
+      {
+        "taskId": "774fe74c-5f51-443e-b113-a5a1c7e6e060",
+        "service": "risk_assessment",
+        "amount": 0.0785,
+        "txHash": null,
+        "subTxHash": "0xeae0fc0d185ec6e0d3cf58cfcde69d7e2f36d24b12abb73c98f97cda9094be73",
+        "reputationDelta": 0.1,
+        "timestamp": 1774071776495
+      },
+      {
+        "taskId": "33a97e36-2c0f-4da7-ab8d-297b3e02161a",
+        "service": "risk_assessment",
+        "amount": 0.080515,
+        "txHash": null,
+        "subTxHash": "0x47f9dadd73602f7864f001f528b7d846acd12f598be7ac5d9db55800323b4d8d",
+        "reputationDelta": -1.56,
+        "timestamp": 1774071893289
+      },
+      {
+        "taskId": "c80d6526-7e9d-436a-ace7-2004e53efff5",
+        "service": "risk_assessment",
+        "amount": 0.109855,
+        "txHash": null,
+        "subTxHash": "0x752b00c86a6284eb96f2881b416f6c10de41b69c2887289157c2d90314cb4554",
+        "reputationDelta": -1.5,
+        "timestamp": 1774073012148
+      },
+      {
+        "taskId": "277dc1f9-ac18-4a6f-bdbe-0d7717992c77",
+        "service": "risk_assessment",
+        "amount": 0.086351,
+        "txHash": null,
+        "subTxHash": "0xe0eae329b0ab535bf4f57172f56d7be1c0ec9370e47c62044d1c9d591876493b",
+        "reputationDelta": -0.46,
+        "timestamp": 1774073508593
+      },
+      {
+        "taskId": "6d6de7b9-dc38-4905-a77e-ededbde55039",
+        "service": "risk_assessment",
+        "amount": 0.123456,
+        "txHash": null,
+        "subTxHash": "0x016056320371e4efdc32da2a879464f1b7e1c23bbd1bf078e5c52f9158effba5",
+        "reputationDelta": -1.37,
+        "timestamp": 1774074319164
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 2.7347
+  },
+  {
+    "id": "Risk_Auditor_2",
+    "name": "Risk Auditor 2",
+    "reputation": 81.49,
+    "reputationScore": 0.8149,
+    "costMultiplier": 0.8,
+    "mode": "QUICK_SCAN",
+    "chain": "Sepolia",
+    "services": [
+      "risk_assessment"
+    ],
+    "totalEarned": 0.170691,
+    "tasksCompleted": 2,
+    "taskHistory": [
+      {
+        "taskId": "200971c0-7856-4bb3-9d0b-0d9b163713eb",
+        "service": "risk_assessment",
+        "amount": 0.105,
+        "txHash": null,
+        "subTxHash": "0x2c0cf7ea20b922f17ccbdd4bb79c70e672d2496d6945ef0d7240f3190165efcd",
+        "reputationDelta": 0.29,
+        "timestamp": 1773901717541
+      },
+      {
+        "taskId": "e5783d42-1c5f-4b68-aadb-b62fbbe06f90",
+        "service": "risk_assessment",
+        "amount": 0.065691,
+        "txHash": null,
+        "subTxHash": "0x51fdbfe9a0924451aff91beaa11389b7ade4b1fb1a3c4b8ab594cdfc3680cd03",
+        "reputationDelta": -0.61,
+        "timestamp": 1773984930392
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0.1707
+  },
+  {
+    "id": "Whale_Tracker_1",
+    "name": "Whale Tracker 1",
+    "reputation": 94.53,
+    "reputationScore": 0.9453,
+    "costMultiplier": 1.8,
+    "mode": "WHALE_SCAN",
+    "chain": "Polygon",
+    "services": [
+      "market_data",
+      "whale_tracking"
+    ],
+    "totalEarned": 0.094391,
+    "tasksCompleted": 1,
+    "taskHistory": [
+      {
+        "taskId": "b95e730b-09e1-4b88-a551-9e767af07985",
+        "service": "whale_tracking",
+        "amount": 0.094391,
+        "txHash": null,
+        "subTxHash": "0x6f34f4bdc7745806e403fac4e42ee7a60454e9451f871f90375eb1a7ecd2b24f",
+        "reputationDelta": -1.47,
+        "timestamp": 1774068362897
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0.0944
+  },
+  {
+    "id": "Whale_Tracker_2",
+    "name": "Whale Tracker 2",
+    "reputation": 88,
+    "reputationScore": 0.88,
+    "costMultiplier": 1,
+    "mode": "STANDARD_WATCH",
+    "chain": "Polygon",
+    "services": [
+      "market_data",
+      "whale_tracking"
+    ],
+    "totalEarned": 0,
+    "tasksCompleted": 0,
+    "taskHistory": [],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0
+  },
+  {
+    "id": "Safety_Enforcer_1",
+    "name": "Safety Enforcer 1",
+    "reputation": 99.05,
+    "reputationScore": 0.9905,
+    "costMultiplier": 1.5,
+    "mode": "STRICT",
+    "chain": "Sepolia",
+    "services": [
+      "safety_enforcement"
+    ],
+    "totalEarned": 0.447696,
+    "tasksCompleted": 3,
+    "taskHistory": [
+      {
+        "taskId": "2f746d15-ed1b-4db5-b30d-7b2688aedd5a",
+        "service": "safety_enforcement",
+        "amount": 0.098239,
+        "txHash": null,
+        "subTxHash": "0xa89c878a792b1135df403c6493f0479a68a3c2a847ab5a1df1c2469313910996",
+        "reputationDelta": 0.23,
+        "timestamp": 1773903364851
+      },
+      {
+        "taskId": "3dde2262-197e-485c-9417-0e78dda78cfa",
+        "service": "safety_enforcement",
+        "amount": 0.094461,
+        "txHash": null,
+        "subTxHash": "0x87c9950daa4e0e571277a21cfe5d0a17cfc2e65b9e7b48e9b733a373bbbd7b40",
+        "reputationDelta": 0.05,
+        "timestamp": 1773904890438
+      },
+      {
+        "taskId": "9484c992-80d7-43dc-bea2-06cc536ba2d1",
+        "service": "safety_enforcement",
+        "amount": 0.208444,
+        "txHash": null,
+        "subTxHash": "0xb0897192fcfe1ab160053a51acc91fb21497f856c24b7d9d1e87fb006118d7ba",
+        "reputationDelta": null,
+        "timestamp": 1773984825044
+      },
+      {
+        "taskId": "8d045286-69a9-463d-9b3e-4cf84d7bb280",
+        "service": "safety_enforcement",
+        "amount": 0.141013,
+        "txHash": null,
+        "subTxHash": "0xa7e16f52d83059a93a9d722714fc44f5e2d767322baa79d5d565397a0f0c182e",
+        "reputationDelta": 0.05,
+        "timestamp": 1773986257393
+      }
+    ],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0.4476
+  },
+  {
+    "id": "Safety_Enforcer_2",
+    "name": "Safety Enforcer 2",
+    "reputation": 85,
+    "reputationScore": 0.85,
+    "costMultiplier": 0.8,
+    "mode": "LENIENT",
+    "chain": "Sepolia",
+    "services": [
+      "safety_enforcement"
+    ],
+    "totalEarned": 0,
+    "tasksCompleted": 0,
+    "taskHistory": [],
+    "status": "ACTIVE",
+    "registeredAt": 1773868493691,
+    "budgetLimit": 10,
+    "budgetSpent": 0
+  }
+]

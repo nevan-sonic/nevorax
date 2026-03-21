@@ -1,0 +1,402 @@
+{
+  "826e6d0c-c131-40d2-af7a-db91682038c7": {
+    "jobId": "826e6d0c-c131-40d2-af7a-db91682038c7",
+    "serviceType": "market_data",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "60000000n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "DataAgent_HighRes",
+        "price": "15840000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407167433
+      },
+      {
+        "agentId": "DataAgent_Quick",
+        "price": "17160000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407168637
+      },
+      {
+        "agentId": "WhaleWatcher_Institutional",
+        "price": "29997000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407169855
+      }
+    ],
+    "createdAt": 1773407167429,
+    "selectedAgent": "DataAgent_HighRes"
+  },
+  "29a8b398-6223-4a57-9b44-c4a75681e896": {
+    "jobId": "29a8b398-6223-4a57-9b44-c4a75681e896",
+    "serviceType": "whale_tracking",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "166666666n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "WhaleWatcher_Institutional",
+        "price": "30888000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407177522
+      }
+    ],
+    "createdAt": 1773407177518,
+    "selectedAgent": "WhaleWatcher_Institutional"
+  },
+  "eecec18c-90ca-4bee-8a51-b6f0fa8fa5f4": {
+    "jobId": "eecec18c-90ca-4bee-8a51-b6f0fa8fa5f4",
+    "serviceType": "market_data",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "60000000n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "DataAgent_HighRes",
+        "price": "15840000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407196114
+      },
+      {
+        "agentId": "DataAgent_Quick",
+        "price": "15840000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407197328
+      },
+      {
+        "agentId": "WhaleWatcher_Institutional",
+        "price": "29700000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407198533
+      }
+    ],
+    "createdAt": 1773407196112,
+    "selectedAgent": "DataAgent_HighRes"
+  },
+  "33b7743b-235c-4928-8a74-dfe0b4eb196b": {
+    "jobId": "33b7743b-235c-4928-8a74-dfe0b4eb196b",
+    "serviceType": "whale_tracking",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "166666666n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "WhaleWatcher_Institutional",
+        "price": "29997000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407206186
+      }
+    ],
+    "createdAt": 1773407206184,
+    "selectedAgent": "WhaleWatcher_Institutional"
+  },
+  "f9144ca7-418a-47ae-b78b-b80c0bf71507": {
+    "jobId": "f9144ca7-418a-47ae-b78b-b80c0bf71507",
+    "serviceType": "report_generation",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "40000000n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "ReportAgent",
+        "price": "16995000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407210373
+      }
+    ],
+    "createdAt": 1773407210367,
+    "selectedAgent": "ReportAgent"
+  },
+  "341f7f67-5256-48e5-8655-f0d8b4b62191": {
+    "jobId": "341f7f67-5256-48e5-8655-f0d8b4b62191",
+    "serviceType": "sentiment_analysis",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "111111111n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "SentimentAgent_Nuance",
+        "price": "17325000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407216782
+      },
+      {
+        "agentId": "SentimentAgent_Batch",
+        "price": "15840000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407218000
+      }
+    ],
+    "createdAt": 1773407216775,
+    "selectedAgent": "SentimentAgent_Batch"
+  },
+  "0d61c3ae-0d6b-4a5f-99a1-87d0a6e51155": {
+    "jobId": "0d61c3ae-0d6b-4a5f-99a1-87d0a6e51155",
+    "serviceType": "trend_analysis",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "111111111n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "AnalysisAgent_Deep",
+        "price": "16830000n",
+        "reputation": 0.97,
+        "metadata": {},
+        "timestamp": 1773407228906
+      },
+      {
+        "agentId": "AnalysisAgent_Fast",
+        "price": "16995000n",
+        "reputation": 0.82,
+        "metadata": {},
+        "timestamp": 1773407230111
+      }
+    ],
+    "createdAt": 1773407228901,
+    "selectedAgent": "AnalysisAgent_Deep"
+  },
+  "ceeb6623-805b-4cac-b020-ccc607133e5d": {
+    "jobId": "ceeb6623-805b-4cac-b020-ccc607133e5d",
+    "serviceType": "market_data",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "111111111n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "DataAgent_HighRes",
+        "price": "16500000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407240750
+      },
+      {
+        "agentId": "DataAgent_Quick",
+        "price": "16005000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407241965
+      },
+      {
+        "agentId": "WhaleWatcher_Institutional",
+        "price": "31185000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407243176
+      }
+    ],
+    "createdAt": 1773407240746,
+    "selectedAgent": "DataAgent_HighRes"
+  },
+  "39817efe-1869-4b5e-8e21-2f45c8cc49d1": {
+    "jobId": "39817efe-1869-4b5e-8e21-2f45c8cc49d1",
+    "serviceType": "market_data",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "83333333n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "DataAgent_HighRes",
+        "price": "16170000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407424009
+      },
+      {
+        "agentId": "DataAgent_Quick",
+        "price": "15840000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407425220
+      },
+      {
+        "agentId": "WhaleWatcher_Institutional",
+        "price": "29700000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407426437
+      }
+    ],
+    "createdAt": 1773407424004,
+    "selectedAgent": "DataAgent_HighRes"
+  },
+  "b5fb4ade-7b34-4ad6-8a78-2324843eb2f6": {
+    "jobId": "b5fb4ade-7b34-4ad6-8a78-2324843eb2f6",
+    "serviceType": "trend_analysis",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "55555555n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "AnalysisAgent_Deep",
+        "price": "16500000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407440228
+      },
+      {
+        "agentId": "AnalysisAgent_Fast",
+        "price": "16170000n",
+        "reputation": 0.82,
+        "metadata": {},
+        "timestamp": 1773407441436
+      }
+    ],
+    "createdAt": 1773407440219,
+    "selectedAgent": "AnalysisAgent_Fast"
+  },
+  "dcc2a96e-9dac-4c02-8659-0c5e03e2e09d": {
+    "jobId": "dcc2a96e-9dac-4c02-8659-0c5e03e2e09d",
+    "serviceType": "sentiment_analysis",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "55555555n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "SentimentAgent_Nuance",
+        "price": "17160000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407454463
+      },
+      {
+        "agentId": "SentimentAgent_Batch",
+        "price": "15840000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407455665
+      }
+    ],
+    "createdAt": 1773407454455,
+    "selectedAgent": "SentimentAgent_Batch"
+  },
+  "068e1ee1-c351-428a-b0c2-5be8fe9a6592": {
+    "jobId": "068e1ee1-c351-428a-b0c2-5be8fe9a6592",
+    "serviceType": "report_generation",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "55555555n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "ReportAgent",
+        "price": "15675000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407466854
+      }
+    ],
+    "createdAt": 1773407466849,
+    "selectedAgent": "ReportAgent"
+  },
+  "ea0bf6c4-c310-4775-b4ad-7ec91e4a3d15": {
+    "jobId": "ea0bf6c4-c310-4775-b4ad-7ec91e4a3d15",
+    "serviceType": "market_data",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "83333333n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "DataAgent_HighRes",
+        "price": "16500000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407623421
+      },
+      {
+        "agentId": "DataAgent_Quick",
+        "price": "16665000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407624631
+      },
+      {
+        "agentId": "WhaleWatcher_Institutional",
+        "price": "31185000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407625842
+      }
+    ],
+    "createdAt": 1773407623412,
+    "selectedAgent": "DataAgent_HighRes"
+  },
+  "a215a750-23d1-47e3-9fb1-f209992bc5d6": {
+    "jobId": "a215a750-23d1-47e3-9fb1-f209992bc5d6",
+    "serviceType": "sentiment_analysis",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "55555555n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "SentimentAgent_Nuance",
+        "price": "16830000n",
+        "reputation": 0.9,
+        "metadata": {},
+        "timestamp": 1773407637563
+      },
+      {
+        "agentId": "SentimentAgent_Batch",
+        "price": "17160000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407638773
+      }
+    ],
+    "createdAt": 1773407637559,
+    "selectedAgent": "SentimentAgent_Nuance"
+  },
+  "d242703f-f0a5-47a2-bbe8-678cfe8c4888": {
+    "jobId": "d242703f-f0a5-47a2-bbe8-678cfe8c4888",
+    "serviceType": "trend_analysis",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "55555555n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "AnalysisAgent_Deep",
+        "price": "15675000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407649812
+      },
+      {
+        "agentId": "AnalysisAgent_Fast",
+        "price": "16335000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407651025
+      }
+    ],
+    "createdAt": 1773407649806,
+    "selectedAgent": "AnalysisAgent_Deep"
+  },
+  "db2041cd-5f5c-482b-833d-a77e3ab7414d": {
+    "jobId": "db2041cd-5f5c-482b-833d-a77e3ab7414d",
+    "serviceType": "report_generation",
+    "requesterAgent": "OrchestratorAgent",
+    "maxBudget": "55555555n",
+    "status": "SELECTED",
+    "bids": [
+      {
+        "agentId": "ReportAgent",
+        "price": "16335000n",
+        "reputation": 0.9500000000000001,
+        "metadata": {},
+        "timestamp": 1773407661861
+      }
+    ],
+    "createdAt": 1773407661856,
+    "selectedAgent": "ReportAgent"
+  }
+}

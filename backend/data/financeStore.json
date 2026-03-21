@@ -1,0 +1,173 @@
+{
+  "OrchestratorAgent": {
+    "agentId": "OrchestratorAgent",
+    "revenue": "30000000",
+    "expenses": "4583886",
+    "profit": "25416114",
+    "capital": "75416114",
+    "profitMargin": 0.847,
+    "totalJobs": 3
+  },
+  "Market_Data_1": {
+    "agentId": "Market_Data_1",
+    "revenue": "0",
+    "expenses": "0",
+    "profit": "0",
+    "capital": "50000000",
+    "profitMargin": 0,
+    "totalJobs": 0
+  },
+  "Market_Data_2": {
+    "agentId": "Market_Data_2",
+    "revenue": "528688",
+    "expenses": "0",
+    "profit": "528688",
+    "capital": "50528688",
+    "profitMargin": 1,
+    "totalJobs": 6
+  },
+  "Sentiment_Analyst_1": {
+    "agentId": "Sentiment_Analyst_1",
+    "revenue": "712474",
+    "expenses": "0",
+    "profit": "712474",
+    "capital": "50712474",
+    "profitMargin": 1,
+    "totalJobs": 6
+  },
+  "Sentiment_Analyst_2": {
+    "agentId": "Sentiment_Analyst_2",
+    "revenue": "0",
+    "expenses": "0",
+    "profit": "0",
+    "capital": "50000000",
+    "profitMargin": 0,
+    "totalJobs": 0
+  },
+  "Trend_Analyst_1": {
+    "agentId": "Trend_Analyst_1",
+    "revenue": "434886",
+    "expenses": "0",
+    "profit": "434886",
+    "capital": "50434886",
+    "profitMargin": 1,
+    "totalJobs": 4
+  },
+  "Trend_Analyst_2": {
+    "agentId": "Trend_Analyst_2",
+    "revenue": "102382",
+    "expenses": "0",
+    "profit": "102382",
+    "capital": "50102382",
+    "profitMargin": 1,
+    "totalJobs": 2
+  },
+  "Trade_Executor_1": {
+    "agentId": "Trade_Executor_1",
+    "revenue": "795178",
+    "expenses": "0",
+    "profit": "795178",
+    "capital": "50795178",
+    "profitMargin": 1,
+    "totalJobs": 6
+  },
+  "Trade_Executor_2": {
+    "agentId": "Trade_Executor_2",
+    "revenue": "0",
+    "expenses": "0",
+    "profit": "0",
+    "capital": "50000000",
+    "profitMargin": 0,
+    "totalJobs": 0
+  },
+  "Strategy_Planner_1": {
+    "agentId": "Strategy_Planner_1",
+    "revenue": "231822",
+    "expenses": "0",
+    "profit": "231822",
+    "capital": "50231822",
+    "profitMargin": 1,
+    "totalJobs": 2
+  },
+  "Strategy_Planner_2": {
+    "agentId": "Strategy_Planner_2",
+    "revenue": "431218",
+    "expenses": "0",
+    "profit": "431218",
+    "capital": "50431218",
+    "profitMargin": 1,
+    "totalJobs": 4
+  },
+  "Report_Writer_1": {
+    "agentId": "Report_Writer_1",
+    "revenue": "707914",
+    "expenses": "0",
+    "profit": "707914",
+    "capital": "50707914",
+    "profitMargin": 1,
+    "totalJobs": 6
+  },
+  "Report_Writer_2": {
+    "agentId": "Report_Writer_2",
+    "revenue": "0",
+    "expenses": "0",
+    "profit": "0",
+    "capital": "50000000",
+    "profitMargin": 0,
+    "totalJobs": 0
+  },
+  "Risk_Auditor_1": {
+    "agentId": "Risk_Auditor_1",
+    "revenue": "639324",
+    "expenses": "0",
+    "profit": "639324",
+    "capital": "50639324",
+    "profitMargin": 1,
+    "totalJobs": 6
+  },
+  "Risk_Auditor_2": {
+    "agentId": "Risk_Auditor_2",
+    "revenue": "0",
+    "expenses": "0",
+    "profit": "0",
+    "capital": "50000000",
+    "profitMargin": 0,
+    "totalJobs": 0
+  },
+  "Whale_Tracker_1": {
+    "agentId": "Whale_Tracker_1",
+    "revenue": "0",
+    "expenses": "0",
+    "profit": "0",
+    "capital": "50000000",
+    "profitMargin": 0,
+    "totalJobs": 0
+  },
+  "Whale_Tracker_2": {
+    "agentId": "Whale_Tracker_2",
+    "revenue": "0",
+    "expenses": "0",
+    "profit": "0",
+    "capital": "50000000",
+    "profitMargin": 0,
+    "totalJobs": 0
+  },
+  "Safety_Enforcer_1": {
+    "agentId": "Safety_Enforcer_1",
+    "revenue": "0",
+    "expenses": "0",
+    "profit": "0",
+    "capital": "50000000",
+    "profitMargin": 0,
+    "totalJobs": 0
+  },
+  "Safety_Enforcer_2": {
+    "agentId": "Safety_Enforcer_2",
+    "revenue": "0",
+    "expenses": "0",
+    "profit": "0",
+    "capital": "50000000",
+    "profitMargin": 0,
+    "totalJobs": 0
+  }
+}

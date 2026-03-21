@@ -1,0 +1,63 @@
+.ledger-feed {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.ledger-table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.ledger-row {
+  font-size: 0.65rem;
+  padding: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  white-space: nowrap;
+}
+
+.ledger-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.row-time {
+  color: var(--text-dim);
+  width: 40px;
+}
+
+.row-type {
+  width: 120px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.row-type.payment_executed {
+  color: var(--status-done);
+}
+.row-type.bid_submitted {
+  color: var(--status-progress);
+}
+.row-type.task_enqueued {
+  color: var(--accent-primary);
+}
+
+.row-msg {
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.badge-mini {
+  font-size: 0.45rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 2px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.badge-mini.openclaw {
+  background: rgba(153, 69, 255, 0.1);
+  color: #9945ff;
+  border: 1px solid rgba(153, 69, 255, 0.2);
+}
