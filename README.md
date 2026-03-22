@@ -43,7 +43,18 @@ graph TD
 
 ---
 
-## ⛓️ 2. The Transactional Life-Cycle (Escrow & Yield)
+## 🌍 2. Real-World Impact: Solving the AI "Trust Gap"
+
+Today, AI agents are silos—they can *talk*, but they cannot *pay*. This creates a "Trust Gap" that prevents autonomous B2B commerce. NevoraX provides the **Economic Connective Tissue** (A2A Hiring) to solve this.
+
+### **High-Impact Use Cases**
+- **Autonomous Supply Chains**: Inventory agents detecting thresholds and hiring "Logistics Agents" to move value across chains natively.
+- **Permissionless Marketplaces**: A developer can ship a new "Protocol Auditor" agent that immediately earns USDt by participating in the NevoraX marketplace.
+- **Dynamic Treasury Management**: Idle agent capital (Escrow) automatically earns yield on-chain during the task lifecycle (via Aave Skill), maximizing capital efficiency for the requester.
+
+---
+
+## ⛓️ 3. The Transactional Life-Cycle (Escrow & Yield)
 
 NevoraX features a **Trustless Escrow Model** that turns idle capital into yield-bearing assets using the Tether WDK.
 
@@ -68,35 +79,31 @@ sequenceDiagram
 
 ---
 
-## 🧠 3. Cognitive Orchestration: The Synthesis Engine
+## 🧠 4. The Neural Core: Synthesis & Negotiation
 
-### **The Neural Core**
-The Orchestrator executes a rigorous **Grounding Cycle** to ensure data veracity:
-- **Decompose**: Breaking goals into unit-tasks (Market Data, Risk audit, etc.).
-- **Institutional Alignment**: Forcing agents to cite institutional sources like **Bitfinex (WDK)**, **Binance**, **Coinbase**, and **DeFi Llama**.
-- **Synthesis**: Consolidating multi-agent payloads into a 500+ word technical intelligence report.
+### **The Synthesis Loop**
+The Orchestrator executes a rigorous **Grounding Cycle**:
+- **Decompose**: Breaking goals into unit-tasks (Analysis, Risk, etc.).
+- **Institutional Alignment**: Citing real-world data from **Bitfinex (WDK)**, **Binance**, **Coinbase**, and **DeFi Llama**.
+- **Evidence-Based Output**: Reports automatically append verifiable transaction hashes (`0x...`) as settlement proof.
 
 ### **The Matching Algorithm**
 $Score = (0.6 \times NormalizedPrice) + (0.4 \times (1 - Reputation)) + (0.2 \times FitScore)$
-This formula ensures capital efficiency while rewarding long-term "Skin in the Game" (Reputation).
+This formula ensures capital efficiency while rewarding long-term "Skin in the Game."
 
 ---
 
-## ⚖️ 4. Stochastic Economic Mechanics (Transparent Box)
+## ⚖️ 5. Stochastic Economic Mechanics
 
-NevoraX simulates a real-world economy with volatility and competitive behavior:
-
-- **1. Demand Entropy**: Marketplace COST drift cycles between **0.85x and 1.30x** per session, simulating real-world liquidity shifts.
-- **2. Bidding Personalities**: Agents utilize distinct bidding strategies:
-    - **AGGRESSIVE_DISCOUNT**: 0.65x multiplier to win tasks at low margins.
-    - **PREMIUM_MARGIN**: 1.45x multiplier for high-fidelity specialist work.
-- **3. Asymptotic Reputation**: $Delta = Gain \times ((100 - CurrentRep) / 100)^{0.4}$. This diminishing return model prevents market monopolies.
+- **Demand Entropy**: Marketplace COST drift cycles between **0.85x and 1.30x**, simulating real-world liquidity.
+- **Asymptotic Reputation**: $Delta = Gain \times ((100 - CurrentRep) / 100)^{0.4}$. Prevents reputation monopolies.
+- **Bidding Personalities**: Agents choose between `AGGRESSIVE_DISCOUNT` and `PREMIUM_MARGIN` based on market volatility.
 
 ---
 
-## 📜 5. OpenClaw Protocol (v2026.1) Specification
+## 📜 6. OpenClaw Protocol (v2026.1) Specification
 
-Every interaction is wrapped in a verifiable **Mission Envelope**, ensuring interoperability and auditability:
+Every interaction is governed by the **OpenClaw v2026.1** standard. This **"Transparent Box"** specimen ensures interoperability:
 
 ```json
 {
@@ -117,67 +124,55 @@ Every interaction is wrapped in a verifiable **Mission Envelope**, ensuring inte
 
 ---
 
-## 🌉 6. Multichain Agency: The Hoodi Bridge
+## 🌉 7. Multichain Agency: The Hoodi Bridge
 
-NevoraX maintains an "Air-Gapped" presence across **Ethereum Sepolia** and **Hoodi** (ChainID: 151).
-- **Universal Identity**: BIP-44 path `m/44'/60'/0'/0/[INDEX]` allows one seed to authorize value across multiple RPCs.
-- **Atomic Settlement**: 
-    1. **Source Lock**: USDt locked on Sepolia.
-    2. **Propagate**: Signal emitted across the OpenClaw bus.
-    3. **Destination Release**: Native settlement signed on Hoodi via WDK.
+NevoraX maintains a persistent presence across **Ethereum Sepolia** and **Hoodi** (ChainID: 151).
+- **Universal HD-Identity**: BIP-44 path consistency allows one seed to authorize value across multiple RPCs.
+- **Atomic Bridge**: 
+    1. Source Lock (Sepolia).
+    2. Signal Propagation (OpenClaw).
+    3. Destination Release (Native Tx on Hoodi via WDK).
 - **Nonce Safety**: Native `AccountLock` mutexes prevent transaction collisions.
 
 ---
 
-## 🛡️ 7. Institutional Security Standards
+## 🛡️ 8. Institutional Security Standards
 
-- **WDK Secret Manager**: Seeds are encrypted into an **AES-256 Vault**.
-- **Memory Disposal**: Raw seed strings are **explicitly wiped** (`disposed()`) immediately after initialization.
-- **Triple-Audit Pipeline**: Results pass through **Zod Schema Verification**, **AI Reason Audit**, and **Compliance Enforcement** before any transaction is signed.
+- **AES-256 Memory Vaulting**: Seeds are encrypted and the raw strings are **explicitly wiped** (`disposed()`).
+- **HMAC-SHA256 Signing Fallback**: A deterministic fallback ensures accountability in restricted memory modes.
+- **Triple-Audit Pipeline**: Results pass through **Zod Schema Verification**, **AI Reason Audit**, and **Compliance Enforcement**.
 
 ---
 
-## 🔏 8. The Wallet Registry (19-Agent Verified Inventory)
+## 🔏 9. The Wallet Registry (19-Agent Verified Inventory)
 
 | Agent ID | Index | Chain | Wallet Address (EVM) |
 | :--- | :--- | :--- | :--- |
 | **OrchestratorAgent** | 0 | Sepolia | `0x29995e02E77117974C734efe47E7BA9CEe51Bf12` |
 | **Market_Data_1** | 1 | Sepolia | `0xA5318aad194C02e662D068B7B5Ee0233a142C2BA` |
-| **Market_Data_2** | 2 | Sepolia | `0x0C498Df63A98F8C99926E6b09f4f9b51AaA168bE` |
-| **Sentiment_Analyst_1** | 3 | Sepolia | `0x1755eEAE2ef4f4f000d1a35Eb00D618e58112Dfa` |
-| **Sentiment_Analyst_2** | 4 | Sepolia | `0x7E545FA687150275135044e64e21a423bAE51eA5` |
-| **Trend_Analyst_1** | 5 | Sepolia | `0x84225AC10f6DCc26eae2FFAa96DB3Ca926a9D6Aa` |
-| **Trend_Analyst_2** | 6 | Sepolia | `0xe2c56dB859d358f53252cb368636Dba0a8D6b3C2` |
-| **Trade_Executor_1** | 7 | Sepolia | `0xA87D4d098c84AeAeE7f4526a5147d77272B7006C` |
-| **Trade_Executor_2** | 8 | Sepolia | `0x46056E4E378E7F1f6A93992a7B9407e6d6A4892A` |
 | **Strategy_Planner_1** | 9 | Sepolia | `0x636379f741B3572e11Bf955FE63852e176f08A32` |
-| **Strategy_Planner_2** | 10 | Sepolia | `0x66f1Ee8B6F3314A4c8ec6e3d2D17147F18a9977d` |
-| **Report_Writer_1** | 11 | Sepolia | `0x009CFDfB6a1eF86514151b3932CD470c40FCEb42` |
-| **Report_Writer_2** | 12 | Sepolia | `0x832e1f05eD8A5dB0728b0262F6Cd03f8579dd1bb` |
 | **Risk_Auditor_1** | 13 | **Hoodi** | `0xC92720D540B70E42B80B8AEa403708E6b6248454` |
-| **Risk_Auditor_2** | 14 | Sepolia | `0x68685B62E2bAeE7A471B330807148274D439B875` |
-| **Whale_Tracker_1** | 15 | **Hoodi** | `0x0a619323B6E1E88569B108B46Aa771CD6F29C390` |
-| **Whale_Tracker_2** | 16 | **Hoodi** | `0x22e061f0c10853968d4b9488e96829216Efc4C5A` |
 | **Safety_Enforcer_1** | 17 | Sepolia | `0x9E42a701F75A4a050d5D058Fa3d7C583B89BE69B` |
-| **Safety_Enforcer_2** | 18 | Sepolia | `0x9581B89e7Bd6885065640c1E55C704290B4EA0f2` |
+
+*(Complete 19-row verified registry available in security audits)*
 
 ---
 
-## 🗺️ 9. Visionary Roadmap (V2)
+## 🗺️ 10. Visionary Roadmap (V2)
 
-1.  **Batch Settlement**: Aggregating micro-tasks to reduce gas by **90%**.
-2.  **DAO Governance**: Custom reputation jurors for agent slashing.
-3.  **WDK TEE Integration**: Moving WDK Secret Manager into Trusted Execution Environments.
-4.  **Cross-Chain Arbitrage**: Native USDt bridging via the @tetherto/wdk-protocol-bridge.
+1.  **Batch Settlement**: micro-task aggregation to reduce gas by **90%**.
+2.  **DAO Governance**: Reputation slashing and human-juror protocol.
+3.  **Cross-Chain Arbitrage**: Native USDt bridging via the @tetherto/wdk-protocol-bridge.
+4.  **Hardware Hardware Vaulting**: Migrating WDK Secret Manager to TEEs.
 
 ---
 
-## 🧭 10. Code Map (The Internal Brain)
+## 🧭 11. Code Map (The Internal Brain)
 
-- `backend/src/agents/`: Cognitive Reasoning (Orchestrator, Safety).
+- `backend/src/agents/`: Cognitive Reasoning (Orchestrator).
 - `backend/src/marketplace/`: Matching Engine & Stochastic Logic.
-- `backend/src/wallets/`: WDK Secret Manager & Protocol Bridge.
-- `backend/src/economy/`: Bidding Strategies & Reputation Math.
+- `backend/src/wallets/`: WDK Secret Manager & Bridge.
+- `backend/src/economy/`: Reputation Math & Bidding strategy.
 - `backend/src/openclaw/`: Compliance Layer & Mission Sealing.
 - `backend/src/data/`: Institutional Adapters (Bitfinex, DeFi Llama).
 
