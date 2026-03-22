@@ -12,7 +12,15 @@
 
 ---
 
-## 🏁 1. Hackathon Track Fulfillment: Agent Wallets
+## 🎬 1. Technical Demo Video
+
+[![NevoraX Demo](https://img.shields.io/badge/Watch_Demo-YouTube-red?style=for-the-badge&logo=youtube)](https://youtu.be/PLACEHOLDER_LINK)
+
+> **Submission Note**: This 5-minute technical walkthrough demonstrates the full A2A mission lifecycle—from Orchestrator decomposition and competitive bidding to multi-chain WDK settlement on Sepolia and Hoodi.
+
+---
+
+## 🏁 2. Hackathon Track Fulfillment: Agent Wallets
 
 NevoraX is a technical flagship for the **Agent Wallets** track, engineered to turn agents into real financial actors.
 
@@ -24,7 +32,7 @@ NevoraX is a technical flagship for the **Agent Wallets** track, engineered to t
 
 ---
 
-## 🌍 2. Real-World Impact: Solving the AI "Trust Gap"
+## 🌍 3. Real-World Impact: Solving the AI "Trust Gap"
 
 AI agents currently "talk" but cannot "pay." NevoraX provides the **Economic Connective Tissue** (A2A Hiring) to enable autonomous B2B commerce.
 - **Autonomous Supply Chains**: Inventory agents hiring logistics agents natively via USDt escrow.
@@ -33,7 +41,7 @@ AI agents currently "talk" but cannot "pay." NevoraX provides the **Economic Con
 
 ---
 
-## 🏗️ 3. Core Ecosystem Architecture
+## 🏗️ 4. Core Ecosystem Architecture
 
 ```mermaid
 graph TD
@@ -64,7 +72,7 @@ graph TD
 
 ---
 
-## ⛓️ 4. The Transactional Life-Cycle (Escrow & Yield)
+## ⛓️ 5. The Transactional Life-Cycle (Escrow & Yield)
 
 ```mermaid
 sequenceDiagram
@@ -87,7 +95,7 @@ sequenceDiagram
 
 ---
 
-## 🛡️ 5. Triple-Audit Validation Pipeline
+## 🛡️ 6. Triple-Audit Validation Pipeline
 
 NevoraX enforces **Adversarial Resilience** through a 3-layer validation gate before any WDK transaction is signed.
 
@@ -104,7 +112,7 @@ graph LR
 
 ---
 
-## ⚖️ 6. Stochastic Economic Mechanics (The "Brain")
+## ⚖️ 7. Stochastic Economic Mechanics (The "Brain")
 
 NevoraX is an elite simulation of real-world machine economics:
 
@@ -116,7 +124,7 @@ NevoraX is an elite simulation of real-world machine economics:
 
 ---
 
-## 🌉 7. Multichain Agency: The Hoodi Bridge
+## 🌉 8. Multichain Agency: The Hoodi Bridge
 
 - **Universal Identity**: BIP-44 consistency (`m/44'/60'/0'/0/[INDEX]`) allows one seed to authorize value across multiple rpcs.
 - **Atomic Bridge Lifecycle**: Source Lock (Sepolia) -> Signal Propagation (OpenClaw) -> Destination Release (Hoodi Native via WDK).
@@ -124,14 +132,14 @@ NevoraX is an elite simulation of real-world machine economics:
 
 ---
 
-## 🛡️ 8. Institutional Security Standards
+## 🛡️ 9. Institutional Security Standards
 
 - **"Burn-After-Reading" Seed Disposal**: Seeds are AES-256 encrypted; raw strings are **disposed()** and wiped from memory immediately after key load.
 - **HMAC Signing Fallback**: Deterministic fallback for restricted memory environments.
 
 ---
 
-## 📜 9. OpenClaw Protocol (v2026.1) Specimen
+## 📜 10. OpenClaw Protocol (v2026.1) Specimen
 
 ```json
 {
@@ -152,7 +160,7 @@ NevoraX is an elite simulation of real-world machine economics:
 
 ---
 
-## 🔏 10. The Wallet Registry (Full 19-Agent Verified Inventory)
+## 🔏 11. The Wallet Registry (Full 19-Agent Verified Inventory)
 
 | Agent ID | Index | Chain | Wallet Address (EVM) |
 | :--- | :--- | :--- | :--- |
@@ -178,7 +186,7 @@ NevoraX is an elite simulation of real-world machine economics:
 
 ---
 
-## 🗺️ 11. Visionary Roadmap (V2)
+## 🗺️ 12. Visionary Roadmap (V2)
 
 1.  **Batch Settlement**: Aggregating micro-tasks to reduce gas fees by **90%**.
 2.  **DAO Jury Protocol**: Community-driven reputation slashing for malicious agents.
