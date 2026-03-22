@@ -68,26 +68,28 @@ sequenceDiagram
 
 ---
 
-## 🌉 3. Multichain Agency: The Hoodi Bridge
+## 🌉 3. Deep Dive: The Hoodi Settlement Engine
 
 NevoraX is natively multichain. We maintain a persistent economic presence across **Ethereum Sepolia** and **Hoodi** using a hybrid WDK Bridge architecture.
 
-### **The Bridge Sequence (Sepolia -> Hoodi)**
-1.  **Phase 1: Source Lock**: The `BridgeEngine` executes a real `WalletAccountEvm.transfer()` of Sepolia USDt (`0xd077a4a0...`) to the Lock Recipient.
-2.  **Phase 2: Propagation**: The `OpenClaw` compliance layer cross-references the transaction hash and propagates the value signal across the A2A bus.
-3.  **Phase 3: Destination Release**: The `WalletAccountEvm.sendTransaction()` is triggered on the **Hoodi** network (ChainID: 151) using the same HD-derived agent identity, settling the work in native assets.
+### **A. Universal HD-Identity (`BIP-44`)**
+Every agent in the NevoraX economy (e.g., `Risk_Auditor_1`) possesses a **Universal Identity**. By deriving wallets using the consistent BIP-44 path `m/44'/60'/0'/0/[INDEX]`, the same agent can sign for value on Sepolia and authorize releases on Hoodi without requiring new seeds.
 
-### **Multichain RPC Configuration**
-- **Sepolia**: `process.env.EVM_RPC`
-- **Hoodi**: `process.env.HOODI_RPC`
-- **Concurrency**: Native `AccountLock` mutexes prevent nonce collisions across chains for the same HD index.
+### **B. Atomic Bridge Sequence**
+The `BridgeEngine.js` orchestrates a 3-phase cross-chain settlement:
+1.  **Phase 1 — Source Lock**: The `WalletAccountEvm.transfer()` method is called on the `ethereum` module (Sepolia) to lock reward USDt (`0xd077a4a0...`).
+2.  **Phase 2 — Signal Propagation**: The `OpenClaw` bus emits a `MISSION_DEPLOYMENT` signal across the A2A network.
+3.  **Phase 3 — Destination Release**: The `WalletAccountEvm.sendTransaction()` method is called on the `hoodi` module. Because WDK supports multiple registered wallet modules, the engine simply switches the `chain` parameter to `hoodi` (ChainID: 151) and signs the native release using the same HD index.
+
+### **C. Concurrency Safety: Nonce Mutexes**
+To prevent **Nonce Collisions** during parallel cross-chain operations, NevoraX implements an `AccountLock` class. This ensures that only one transaction per HD index is in-flight at any time, even when the agent is operating on multiple RPCs simultaneously.
 
 ---
 
-## 🧠 4. Final Boss Technical Nuances
+## 🧠 4. Technical Nuances: The WDK Advantage
 
 ### **A. Robust Cryptographic Resilience**
-NevoraX implements a **Deterministic HMAC-SHA256 Signing Fallback** in the `WalletBridge`. If the WDK seed is unavailable in memory (Security Isolation), agents produce a deterministic proof of agreement.
+NevoraX implements a **Deterministic HMAC-SHA256 Signing Fallback**. If the WDK seed is unavailable in memory (Security Isolation), agents produce a deterministic proof of agreement.
 
 ### **B. BigInt Financial Rigour**
 Every economic calculation (Revenue, Profit, Margin) is handled via **Native BigInt** to ensure zero floating-point drift during institutional settlements.
@@ -120,7 +122,7 @@ Agents exhibit distinct fiscal behaviors in the negotiation phase:
 | **Risk_Auditor_1** | 13 | **Hoodi** | `0xC92720D540B70E42B80B8AEa403708E6b6248454` |
 | **Safety_Enforcer_1** | 17 | Sepolia | `0x9E42a701F75A4a050d5D058Fa3d7C583B89BE69B` |
 
-*(Note: Every agent in the registry has a shadow identity on Hoodi derived from the same seed)*
+*(Note: Every agent has a shadow identity on Hoodi derived from the same seed for cross-chain settlement)*
 
 ---
 
