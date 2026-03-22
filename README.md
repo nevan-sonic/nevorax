@@ -1,11 +1,11 @@
 # 🪐 NevoraX: The Autonomous Agent Economy
-### **Hackathon Galáctica: WDK Edition 1 — [THE_INSTITUTIONAL_FLAGSHIP]**
+### **Hackathon Galáctica: WDK Edition 1 — [THE_ULTIMATE_SUBMISSION]**
 
 [![WDK Verified](https://img.shields.io/badge/Tether_WDK-Verified-blue?style=for-the-badge&logo=tether)](https://github.com/tetherto/wdk)
 [![OpenClaw Compliant](https://img.shields.io/badge/OpenClaw-Compliant-success?style=for-the-badge)](https://openclaw.io)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 
-NevoraX is a **live economic infrastructure** where AI agents collaborate, compete, and settle value using **Tether USDt**. This project represents an "Institutional Standard" implementation, exposing every layer of reasoning, data acquisition, and cryptographic settlement.
+NevoraX is a **live economic infrastructure** where AI agents collaborate, compete, and settle value using **Tether USDt**. This project represents an "Institutional Standard" implementation, exposing every layer of reasoning, institutional data acquisition, and cryptographic settlement for a "Final Boss" hackathon submission.
 
 ---
 
@@ -68,70 +68,64 @@ sequenceDiagram
 
 ---
 
-## 🤖 3. The Peer Personality Matrix
+## 🧠 3. Final Boss Technical Nuances
 
-Unlike static markets, NevoraX agents have distinct fiscal "Postures." The **Negotiation Engine** assigns a personality to every bid evaluation:
+### **A. Robust Cryptographic Resilience**
+NevoraX implements a **Deterministic HMAC-SHA256 Signing Fallback** in the `WalletBridge`. If the WDK seed is unavailable in memory (Security Isolation), agents produce a deterministic proof of agreement, ensuring the mission cycle never breaks while maintaining cryptographic accountability.
 
-| Persona | Cost Bias | Logic | Best For |
-| :--- | :--- | :--- | :--- |
-| **SHREWD** | 1.05x | High reputation focus; prioritizes multi-source audit. | Mission-Critical Audits |
-| **RATIONAL** | 1.00x | Pure market parity; optimizes for median pricing. | Standard Data Extraction |
-| **AGGRESSIVE** | 0.90x | High speed / low cost; tolerates higher volatility. | High-Volume micro-tasks |
+### **B. BigInt Financial Rigour**
+Every economic calculation (Revenue, Profit, Margin) is handled via **Native BigInt**.
+- **Yield Logic**: `actualMargin = Number((profit * 100n) / reward) / 100`.
+- **Precision**: 6-decimal USDt units (MNT/micro-units) are maintained across the entire stack.
+
+### **C. "Burn-After-Reading" Seed Disposal**
+Security is not an afterthought. The `WdkSecretManager` executes a **Memory Disposal Cycle**:
+1. Seed is fetched from `process.env`.
+2. Seed is encrypted into an AES-256 Vault.
+3. Raw seed strings are `disposed()` and garbage-collected immediately.
+4. The LLM Reasoning layer has *zero* physical access to the signing keys.
 
 ---
 
-## 📜 4. OpenClaw Mission Envelope (Technical Spec)
+## 🤖 4. Peer Personality Matrix
 
-Judges can audit the exact data structure used for agent-to-agent missions. This **"Transparent Box"** specimen ensures interoperability:
+Agents exhibit distinct fiscal behaviors in the negotiation phase:
+
+| Persona | Cost Bias | Logic | Best For |
+| :--- | :--- | :--- | :--- |
+| **SHREWD** | 1.05x | High reputation focus; multi-source institutional audit. | Critical Infrastructure |
+| **RATIONAL** | 1.00x | Pure market parity; optimizes for median pricing. | Data Extraction |
+| **AGGRESSIVE** | 0.90x | Speed over cost; tolerates higher market drift. | High-Volume Search |
+
+---
+
+## 📜 5. OpenClaw Mission Specimen (JSON)
+
+Our missions are governed by the **OpenClaw v2026.1** standard, ensuring "Transparent Box" auditability:
 
 ```json
 {
   "protocol": "OpenClaw",
   "version": "2026.1",
   "envelope": {
-    "signal_id": "nu-9f2d-4b1a-...",
-    "timestamp": 1729012345678,
-    "sender": "nu-orchestrator-main",
-    "recipient": "nu-data-agent-specialist",
+    "signal_id": "nu-9f2d-4b...",
+    "sender": "nu-orchestrator",
     "type": "MISSION_DEPLOYMENT"
   },
   "payload": {
-    "goal": "Audit real-time USDt yield on Aave V3",
-    "budget": "50000000000000000",
-    "deadline": "2026-03-22T18:00:00Z"
-  },
-  "integrity": {
-    "governed_by": "NevoraX_Safety_Enforcer",
-    "compliance_check": "WDK_PROTOCOL_PASS"
+    "goal": "Audit USDt yield on Aave V3",
+    "budget": "50000000",
+    "integrity": { "governed_by": "Safety_Enforcer" }
   }
 }
 ```
 
 ---
 
-## 📊 5. Stochastic Economic Mechanics
-
-- **Weighted Matching**: $Score = (0.6 \times Price) + (0.4 \times (1 - Reputation)) + (0.2 \times FitScore)$.
-- **Demand Entropy**: Marketplace COST drift cycles between **0.85x and 1.30x** per session, simulating real-world liquidity.
-- **Asymptotic Reputation**: $Delta = Gain \times ((100 - CurrentRep) / 100)^{0.4}$. This prevents reputation "rent-seeking."
-
----
-
-## 🧭 6. The Code Map (Internal Brain)
-
-- `backend/src/agents/`: Core LLM reasoning (Orchestrator, Negotiation, Safety).
-- `backend/src/marketplace/`: Matching Engine algorithm and bid registry.
-- `backend/src/wallets/`: WDK Secret Manager (AES-256) & Protocol Bridge.
-- `backend/src/economy/`: Stochastic Pricing & Reputation Models.
-- `backend/src/openclaw/`: Compliance Layer & Mission Sealing.
-- `backend/src/data/`: Institutional Adapters (Bitfinex, DeFi Llama).
-
----
-
-## 🛡️ Key Safety Addresses (Sepolia)
-- **Native USDt**: `0xaA8E23Fb1079EA71e0a56F48a2aA51851D8433D0`
+## 🛡️ 6. Key Protocol Addresses (Sepolia)
+- **Native USDt**: `0xd077a400968890eacc75cdc901f0356c943e4fdb`
 - **Aave V3 Pool**: `0x6Ae43d3271ff6888e7Fc43Fd7321a503ff738951`
-- **Marketplace Registry**: `0x29995e02E77117974C734efe47E7BA9CEe51Bf12`
+- **NevoraX Registry**: `0x29995e02E77117974C734efe47E7BA9CEe51Bf12`
 
 ---
 
@@ -140,12 +134,7 @@ Judges can audit the exact data structure used for agent-to-agent missions. This
 | Agent ID | Index | Chain | Wallet Address (EVM) |
 | :--- | :--- | :--- | :--- |
 | **OrchestratorAgent** | 0 | Sepolia | `0x29995e02E77117974C734efe47E7BA9CEe51Bf12` |
-| **Market_Data_1** | 1 | Sepolia | `0xA5318aad194C02e662D068B7B5Ee0233a142C2BA` |
-| **Market_Data_2** | 2 | Sepolia | `0x0C498Df63A98F8C99926E6b09f4f9b51AaA168bE` |
-| **Sentiment_Analyst_1** | 3 | Sepolia | `0x1755eEAE2ef4f4f000d1a35Eb00D618e58112Dfa` |
 | **Safety_Enforcer_1** | 17 | Sepolia | `0x9E42a701F75A4a050d5D058Fa3d7C583B89BE69B` |
-
-*(Complete 19-row registry available in technical audits)*
 
 ---
 
@@ -154,5 +143,4 @@ Judges can audit the exact data structure used for agent-to-agent missions. This
 2.  **Env**: Set `WDK_SEED_PHRASE`, `GROQ_API_KEY`, `EVM_RPC`.
 3.  **Run**: `npm run dev:all`
 
-Licensed under **Apache 2.0**.
-Built for **Hackathon Galáctica 2026** by the NevoraX Team.
+Built for **Hackathon Galáctica 2026**. Licensed under **Apache 2.0**.
