@@ -1,11 +1,14 @@
 # 🪐 NevoraX: The Autonomous Agent Economy
-### **Hackathon Galáctica: WDK Edition 1 — [THE_DEFINITIVE_TRANSPARENT_BOX]**
+### **Hackathon Galáctica: WDK Edition 1 — [ULTIMATE_TRANSPARENT_BOX_SUBMISSION]**
 
 [![WDK Verified](https://img.shields.io/badge/Tether_WDK-Verified-blue?style=for-the-badge&logo=tether)](https://github.com/tetherto/wdk)
 [![OpenClaw Compliant](https://img.shields.io/badge/OpenClaw-Compliant-success?style=for-the-badge)](https://openclaw.io)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 
-NevoraX is a **"Transparent Box" autonomous economic infrastructure** where AI agents collaborate, compete, and settle value trustlessly using **Tether USDt**. This project exposes every layer of cognitive reasoning, institutional data acquisition, and cryptographic settlement to prove its status as an elite hackathon submisson.
+> [!IMPORTANT]
+> **Project Scope**: NevoraX is a peer-to-peer **Agent-to-Agent (A2A) Marketplace**. While the ecosystem supports full autonomous agency, the current demonstration specifically showcases the **market dynamics, competitive bidding, and cryptographic settlement** layers that enable a trustless machine economy.
+
+NevoraX is a **"Transparent Box" autonomous economic infrastructure** where AI agents collaborate, compete, and settle value trustlessly using **Tether USDt**. Unlike opaque AI platforms, NevoraX exposes every layer of cognitive reasoning, institutional data acquisition, and cryptographic settlement to prove its status as an elite hackathon submission.
 
 ---
 
@@ -22,7 +25,7 @@ Today, AI agents are silos—they can *talk*, but they cannot *pay*. This create
 
 ## 🏗️ 2. Core Ecosystem Architecture
 
-NevoraX enforced a strict separation between cognitive reasoning (LLM) and on-chain execution (WDK), governed by the **OpenClaw Protocol v2026.1**.
+NevoraX enforces a strict separation between cognitive reasoning (LLM) and on-chain action (WDK), governed by the **OpenClaw Protocol v2026.1**.
 
 ```mermaid
 graph TD
@@ -84,7 +87,7 @@ sequenceDiagram
 - **1. Demand Entropy**: Marketplace COST drift cycles between **0.85x and 1.30x**, simulating real-world liquidity.
 - **2. The Matching Equation**: $Score = (0.6 \times Price) + (0.4 \times (1 - Reputation)) + (0.2 \times FitScore)$.
 - **3. Bidding Personalities**: Agents choose between `AGGRESSIVE_DISCOUNT` and `PREMIUM_MARGIN` multipliers.
-- **4. Asymptotic Reputation**: $Delta = Gain \times ((100 - CurrentRep) / 100)^{0.4}$. This diminishing returns model prevents monopolies.
+- **4. Asymptotic Reputation**: $Delta = Gain \times ((100 - CurrentRep) / 100)^{0.4}$. This diminishing returns model prevents market monopolies.
 - **5. BigInt Financial Rigour**: All USDt settlements use 6-decimal precision with native BigInt to prevent floating-point drift.
 
 ---
@@ -101,7 +104,7 @@ sequenceDiagram
 
 - **Universal Identity**: BIP-44 consistency (`m/44'/60'/0'/0/[INDEX]`) enables cross-chain authority from one seed.
 - **Atomic Bridge Lifecycle**: Source Lock (Sepolia) -> Signal Propagation (OpenClaw) -> Destination Release (Hoodi Native via WDK).
-- **Nonce Mutex**: Native `AccountLock` prevents transaction collisions.
+- **Nonce Safety**: Native `AccountLock` prevents transaction collisions.
 
 ---
 
