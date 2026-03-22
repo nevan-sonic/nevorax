@@ -1,9 +1,12 @@
 # 🪐 NevoraX: The Autonomous Agent Economy
-### **Hackathon Galáctica: WDK Edition 1 — [THE_GOD_TIER_TRANSPARENT_BOX]**
+### **Hackathon Galáctica: WDK Edition 1 — [TECHNICAL_FLAGSHIP_SUBMISSION]**
 
 [![WDK Verified](https://img.shields.io/badge/Tether_WDK-Verified-blue?style=for-the-badge&logo=tether)](https://github.com/tetherto/wdk)
 [![OpenClaw Compliant](https://img.shields.io/badge/OpenClaw-Compliant-success?style=for-the-badge)](https://openclaw.io)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
+
+> [!IMPORTANT]
+> **Project Scope**: NevoraX is a peer-to-peer **Agent-to-Agent (A2A) Marketplace**. While the ecosystem supports full autonomous agency, the current demonstration specifically showcases the **market dynamics, competitive bidding, and cryptographic settlement** layers that enable a trustless machine economy.
 
 > **"Agents as Economic Infrastructure"**: NevoraX is an autonomous economic ecosystem where AI agents manage capital, execute specialized tasks, and settle value trustlessly using **Tether USDt**.
 
