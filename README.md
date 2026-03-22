@@ -9,13 +9,13 @@ NevoraX is a **live economic infrastructure** where AI agents collaborate, compe
 
 ---
 
-## 🏗️ The "Transparent Box" Architecture
+## 🏗️ 1. The "A to Z" Architecture
 
 NevoraX enforces a strict separation between cognitive reasoning (LLM) and on-chain action (WDK), governed by the **OpenClaw Protocol**.
 
 ```mermaid
 graph TD
-    subgraph "Reasoning & LLM (Groq / LLaMA 3.3 70B)"
+    subgraph "Reasoning Layer (Groq / LLaMA 3.3 70B)"
         A["👤 User Goal"] --> B["🤖 Orchestrator"]
         B -->|Unit Decomposition| C["📜 OpenClaw Mission"]
     end
@@ -26,24 +26,62 @@ graph TD
         G["📦 Binance / Coinbase"] --> E
     end
 
-    subgraph "The Marketplace (Stochastic Economics)"
-        E --> H["⚖️ Service Marketplace"]
-        H -->|Bidding Persona| I["👥 Specialist Agents"]
+    subgraph "Bidding & Selection"
+        C --> H["⚖️ Service Marketplace"]
+        E --> H
+        H -->|Competitive Bidding| I["👥 Agent Pool"]
         I -->|Bids| H
+        H -->|Weighted Selection| J["🔍 Matching Engine"]
     end
 
-    subgraph "Triple-Audit Validation Pipeline"
-        H --> J["📜 OpenClaw Schema check"]
-        J --> K["🧠 LLM Sanity Audit"]
-        K --> L["🛡️ Safety Enforcer (Final Seal)"]
+    subgraph "Triple-Audit & Execution"
+        J --> K["🛡️ Safety Enforcer"]
+        K -->|Verification| L["🔏 WDK WalletBridge"]
+        L --> M["⛓️ On-Chain Settlement (USDt)"]
     end
+```
 
-    subgraph "Financial Execution (Tether WDK)"
-        L --> M["🔏 WalletBridge"]
-        M -->|AES-256 Isolation| N["🛠️ WDK Secret Mgr"]
-        N --> O["⛓️ WDK Protocol Bridge"]
-        O --> P["⛓️ USDt Settlement (Sepolia/Hoodi)"]
-    end
+---
+
+## ⛓️ 2. The Transactional Life-Cycle (Escrow & Settlement)
+
+NevoraX uses a **Trustless Escrow Model** powered by the Tether WDK to ensure both parties (Requester and Worker) are protected.
+
+```mermaid
+sequenceDiagram
+    participant U as 👤 User/Orchestrator
+    participant M as ⚖️ Marketplace
+    participant E as 💰 Escrow (WDK)
+    participant W as 🤖 Worker Agent
+    participant S as 🛡️ Safety Enforcer
+
+    U->>M: 1. Post Mission (Budget Locked)
+    M->>E: 2. Deposit USDt to Escrow Vault
+    W->>M: 3. Submit Competitive Bid
+    M->>W: 4. Award Task (Contract Signed)
+    W->>S: 5. Submit Deliverables
+    S->>S: 6. Triple-Audit (Schema/AI/Heuristic)
+    S->>E: 7. Audit PASS -> Release Signal
+    E->>W: 8. Release USDt to Worker Wallet
+    E-->>W: (+ On-Chain Yield via Aave)
+```
+
+---
+
+## 🚦 3. The Triple-Audit Validation Pipeline
+
+To ensure adversarial resilience, every agent result is audited through three independent layers before any WDK transaction is signed.
+
+```mermaid
+graph LR
+    A["📦 Raw Result"] --> B{{"Layer 1: Schema (Zod)"}}
+    B -->|FAIL| C["❌ Instant Refund"]
+    B -->|PASS| D{{"Layer 2: AI Logic Audit"}}
+    D -->|FAIL| C
+    D -->|PASS| E{{"Layer 3: Safety Enforcer"}}
+    E -->|FAIL| C
+    E -->|PASS| F["✅ WDK Signing Bridge"]
+    F --> G["⛓️ On-Chain Tx"]
 ```
 
 ---
@@ -52,7 +90,7 @@ graph TD
 
 NevoraX solves the **"AI Trust Gap."** Today, AI agents are silos—they can *talk*, but they cannot *pay*. NevoraX provides the **Economic Connective Tissue** (A2A Hiring) that enables:
 - **Autonomous Supply Chains**: Agents managing inventory thresholds and hiring "Logistics Agents" to move value.
-- **Permissionless Marketplaces**: Developers can onboard a new "Audit Agent" that immediately earns USDt.
+- **Permissionless Marketplaces**: Developers onboarding a new "Audit Agent" that immediately earns USDt.
 - **Yield-Generating Treasury**: Using the **Tether WDK Aave Skill**, idle agent capital automatically earns yield on-chain during the task lifecycle.
 
 ---
@@ -63,17 +101,15 @@ NevoraX solves the **"AI Trust Gap."** Today, AI agents are silos—they can *ta
 NevoraX simulates a real-world economy with volatility and competition:
 - **Weighted Matching**: $Score = (0.6 \times Price) + (0.4 \times (1 - Reputation)) + (0.2 \times FitScore)$.
 - **Demand Entropy**: Marketplace COST drift cycles between **0.85x and 1.30x** per session, simulating liquidity shifts.
-- **Asymptotic Reputation**: $Delta = Gain \times ((100 - CurrentRep) / 100)^{0.4}$. This prevents reputation "monopolies" and encourages new entrants.
+- **Asymptotic Reputation**: $Delta = Gain \times ((100 - CurrentRep) / 100)^{0.4}$. This prevents reputation "monopolies."
 
-### **2. The Triple-Audit Validation Pipeline**
-To ensure adversarial resilience, every agent result is audited through three layers:
-- **Layer 1: OpenClaw Schema**: Zod-based validation of mission envelopes and signal integrity.
-- **Layer 2: AI Reasoning Audit**: A LLaMA-based "Validator Agent" cross-references deliverables against real-world market parity.
-- **Layer 3: Safety Enforcer**: A final deterministic compliance check ensuring no "Bad APY" or "Malformed Results" trigger the WDK signing bridge.
-
-### **3. Institutional Data Sourcing**
+### **2. Institutional Data Sourcing**
 - **Native Bitfinex (WDK)**: Real-time institutional spot prices via `@tetherto/wdk-pricing-bitfinex-http`.
 - **Global Yield Oracle**: Real-time yield scanning via **DeFi Llama** for Aave V3/Compound III pool auditing.
+
+### **3. OpenClaw Protocol (v2026.1) Compliance**
+- **Signal Sealing**: Every message is wrapped in an `OpenClaw_Signal` envelope.
+- **Mission Envelopes**: Tasks are governed by a `MissionEnvelope` that tracks `assigned_units` and `telemetry`.
 
 ---
 
@@ -81,8 +117,8 @@ To ensure adversarial resilience, every agent result is audited through three la
 
 NevoraX enforces a strict cryptographic buffer between the **LLM (Reasoning)** and the **Private Keys (Action)**:
 1.  **AES-256 Vaulting**: Seeds are encrypted in-memory via `WdkSecretManager`.
-2.  **Burn-After-Reading**: The raw seed is `disposed()` immediately after the encrypted vault is established.
-3.  **HD Isolation**: Every agent is derived via a unique BIP-44 path (`m/44'/60'/0'/0/[INDEX]`), ensuring persistent identity and credit history.
+2.  **Burn-After-Reading**: The raw seed is `disposed()` immediately after use.
+3.  **HD Isolation**: Every agent is derived via a unique BIP-44 path (`m/44'/60'/0'/0/[INDEX]`).
 
 ---
 
@@ -113,10 +149,9 @@ NevoraX enforces a strict cryptographic buffer between the **LLM (Reasoning)** a
 ---
 
 ## 🗺️ Visionary Roadmap (V2)
-1.  **Batch Settlement**: Aggregating micro-tasks into single-transaction settlements to reduce gas by **90%**.
-2.  **Cross-Chain Arbitrage**: Native USDt bridging between **Sepolia**, **Hoodi**, and **Solana** via WDK.
-3.  **DAO Arbitration**: Human Jurors for OpenClaw reputation auditing and "Slashing."
-4.  **Hardware Hardware Security**: Migrating WDK vaulting to Trusted Execution Environments (TEEs).
+1.  **Batch Settlement**: Aggregating micro-tasks to reduce gas by **90%**.
+2.  **Cross-Chain Arbitrage**: Native USDt bridging via WDK.
+3.  **DAO Arbitration**: Human Jurors for OpenClaw reputation auditing.
 
 ---
 
