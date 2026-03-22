@@ -1,23 +1,23 @@
 # 🪐 NevoraX: The Autonomous Agent Economy
-### **Hackathon Galáctica: WDK Edition 1 — [THE_ULTIMATE_SUBMISSION]**
+### **Hackathon Galáctica: WDK Edition 1 — [TECHNICAL_FLAGSHIP_SUBMISSION]**
 
 [![WDK Verified](https://img.shields.io/badge/Tether_WDK-Verified-blue?style=for-the-badge&logo=tether)](https://github.com/tetherto/wdk)
 [![OpenClaw Compliant](https://img.shields.io/badge/OpenClaw-Compliant-success?style=for-the-badge)](https://openclaw.io)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 
-NevoraX is a **live economic infrastructure** where AI agents collaborate, compete, and settle value using **Tether USDt**. This project represents an "Institutional Standard" implementation, exposing every layer of reasoning, institutional data acquisition, and cryptographic settlement for a "Final Boss" hackathon submission.
+NevoraX is an **autonomous economic infrastructure** enabling AI agents to collaborate, negotiate, and settle value trustlessly using **Tether USDt**. This implementation serves as a reference for secure agent orchestration, institutional data acquisition, and multi-chain cryptographic settlement.
 
 ---
 
-## 🏗️ 1. The "A to Z" Architecture
+## 🏗️ 1. Core Ecosystem Architecture
 
-NevoraX enforces a strict separation between cognitive reasoning (LLM) and on-chain action (WDK), governed by the **OpenClaw Protocol v2026.1**.
+NevoraX enforces a rigorous separation between cognitive reasoning (LLM) and on-chain execution (WDK), governed by the **OpenClaw Protocol v2026.1**.
 
 ```mermaid
 graph TD
     subgraph "Reasoning Layer (Groq / LLaMA 3.3 70B)"
         A["👤 User Goal"] --> B["🤖 Orchestrator"]
-        B -->|Unit Decomposition| C["📜 OpenClaw Mission"]
+        B -->|Decomposition| C["📜 OpenClaw Mission"]
     end
 
     subgraph "Data Acquisition (Institutional APIs)"
@@ -34,7 +34,7 @@ graph TD
         H -->|Weighted Selection| J["🔍 Matching Engine"]
     end
 
-    subgraph "Triple-Audit & Execution"
+    subgraph "Validation & Execution"
         J --> K["🛡️ Safety Enforcer"]
         K -->|Verification| L["🔏 WDK WalletBridge"]
         L --> M["⛓️ On-Chain Settlement (USDt)"]
@@ -43,9 +43,9 @@ graph TD
 
 ---
 
-## ⛓️ 2. The Transactional Life-Cycle (Escrow & Yield)
+## ⛓️ 2. Transactional Integrity & Yield Optimization
 
-NevoraX features a **Trustless Escrow Model** that turns idle capital into yield-bearing assets using the Tether WDK.
+The economy leverages a **Non-Custodial Escrow Model** that maximizes capital efficiency by generating on-chain yield during the task lifecycle.
 
 ```mermaid
 sequenceDiagram
@@ -55,78 +55,87 @@ sequenceDiagram
     participant W as 🤖 Worker Agent
     participant S as 🛡️ Safety Enforcer
 
-    U->>M: 1. Post Mission (Budget Locked)
-    M->>E: 2. Deposit USDt to Escrow Vault
+    U->>M: 1. Post Mission (Initial Commitment)
+    M->>E: 2. Lock USDt in Escrow Vault
     W->>M: 3. Submit Competitive Bid
-    M->>W: 4. Award Task (Contract Signed)
+    M->>W: 4. Award Task (Signed Agreement)
     W->>S: 5. Submit Deliverables
-    S->>S: 6. Triple-Audit (Schema/AI/Heuristic)
-    S->>E: 7. Audit PASS -> Release Signal
+    S->>S: 6. Triple-Audit (Schema/Logic/Compliance)
+    S->>E: 7. Audit Approval -> Release Signal
     E->>W: 8. Release USDt to Worker Wallet
-    E-->>W: (+ On-Chain Yield via Aave)
+    E-->>W: (+ Accrued Yield via Aave V3)
 ```
 
 ---
 
-## 🧠 3. The Neural Core: Synthesis & Negotiation
+## 🌉 3. Cross-Chain Synchronization: The Hoodi Bridge
 
-### **A. Synthesis Reasoning Loop**
-Every user goal enters the **Synthesis Brain**, which executes a 4-step deconstruction cycle:
-1.  **Decompose**: Breaking the goal into unit-tasks (Market Data, Risk audit, etc.).
-2.  **GROUND**: Constraining agents to institutional sources (Bitfinex, DeFi Llama).
-3.  **Execute**: Orchestrating agent-to-agent hiring via OpenClaw signals.
-4.  **Validate**: Scoring the 300-500 word report for data veracity and transaction evidence.
+NevoraX maintains a persistent economic presence across **Ethereum Sepolia** and **Hoodi** (ChainID: 151), utilizing a high-integrity WDK bridging architecture.
 
-### **B. The Matching Equation**
-Our `MatchingEngine` uses a weighted value-score to select providers, preventing reputation monopolies:
-$Score = (0.6 \times NormalizedPrice) + (0.4 \times (1 - Reputation)) + (0.2 \times FitScore)$.
-- **Price Weight (0.6)**: Optimizes for capital efficiency.
-- **Reputation Weight (0.4)**: Incentivizes long-term credit history.
-- **Fit Score (0.2)**: Prioritizes `SPEED` vs `QUALITY` metadata.
+### **The Settlement Lifecycle**
+- **Deterministic Identity**: Agents maintain a consistent cryptographic identity across all registered RPCs via `BIP-44` derivation (`m/44'/60'/0'/0/[INDEX]`).
+- **Atomic Bridging**:
+    1. **Source Obligation**: Reward USDt is locked on Sepolia via `WalletAccountEvm.transfer()`.
+    2. **State Propagation**: The OpenClaw protocol broadcasts the mission state across the A2A bus.
+    3. **Destination Settlement**: Native fulfillment is signed on Hoodi using the same agent identity and the WDK `sendTransaction` module.
+
+### **Concurrency & Nonce Management**
+To manage high-frequency parallel settlements, the system employs an **AccountLock Mutex** per HD index, ensuring atomic nonce management across heterogeneous networks.
 
 ---
 
-## 🌉 4. Deep Dive: The Hoodi Settlement Engine
+## 🛡️ 4. Advanced Security & Memory Isolation
 
-NevoraX is natively multichain, maintaining a persistent presence across **Ethereum Sepolia** and **Hoodi**.
-- **Universal HD-Identity**: Every agent uses a consistent BIP-44 path (`m/44'/60'/0'/0/[INDEX]`), allowing a single seed to authorize value across all registered RPCs.
-- **The Bridge Lifecycle**: 
-    1. **Lock (Source)**: USDt locked on Sepolia.
-    2. **Propagate**: Signal emitted across OpenClaw.
-    3. **Release (Destination)**: Native settlement signed on Hoodi via the WDK `sendTransaction` module.
+### **A. Cryptographic Resilience**
+NevoraX implements a **Deterministic HMAC-SHA256 Signing Fallback**. In scenarios where the hardware/memory seed is restricted, agents maintain accountability via deterministic message binding, preventing mission failure while upholding cryptographic standards.
+
+### **B. Seed Protection & Memory Disposal**
+The `WdkSecretManager` implements an industry-standard **Memory Isolation Cycle**:
+1. Seeds are encrypted into an **AES-256 Vault** upon initialization.
+2. Raw seed strings are explicitly **disposed()** and wiped from memory buffers.
+3. The LLM reasoning layer remains physically air-gapped from the cryptographic signing logic.
 
 ---
 
-## 🛡️ 5. Final Boss Technical Nuances
+## 🧠 5. Cognitive Orchestration & Decision Logic
 
-- **AES-256 Vaulting & Disposal**: Seeds are encrypted into a secure vault and raw strings are `disposed()` immediately. The LLM has zero persistent access to keys.
-- **HMAC-SHA256 Signing Fallback**: A deterministic fallback ensures cryptographic accountability even if WDK memory is restricted.
-- **BigInt Financial Precision**: Zero-floating-point drift across all micro-unit (MNT) settlements.
+### **The Synthesis Reasoning Loop**
+The Orchestrator executes a rigorous **Grounding Cycle** to ensure data veracity:
+- **Instructional Grounding**: Requiring agents to fetch data exclusively from institutional endpoints.
+- **Verification Badging**: Automated output tagging with `DATA_VERACITY`, `ONCHAIN_YIELD_AUDITED`, and `PROTOCOL_COMPLIANCE_VERIFIED`.
+
+### **The Economic Matching Algorithm**
+Service providers are selected via a multi-dimensional value-score:
+$Score = (0.6 \times Price) + (0.4 \times (1 - Reputation)) + (0.2 \times FitScore)$.
+This formula prevents reputation monopolies and rewards both **Economic Efficiency** and **Credit History**.
 
 ---
 
 ## 🤖 6. Peer Personality Matrix
 
-| Persona | Cost Bias | Logic | Best For |
+Agents exhibit distinct fiscal postures during the negotiation lifecycle:
+
+| Posture | Cost Bias | Primary Logic | Strategic Utility |
 | :--- | :--- | :--- | :--- |
-| **SHREWD** | 1.05x | High reputation focus; multi-source institutional audit. | Critical Infrastructure |
-| **RATIONAL** | 1.00x | Pure market parity; optimizes for median pricing. | Data Extraction |
-| **AGGRESSIVE** | 0.90x | Speed over cost; tolerates higher market drift. | High-Volume Search |
+| **SHREWD** | 1.05x | Multi-source institutional audit focus. | Integrity-Critical Audits |
+| **RATIONAL** | 1.00x | Pure market parity; median optimization. | General Data Discovery |
+| **AGGRESSIVE** | 0.90x | Speed prioritized over marginal cost. | High-Volume Search |
 
 ---
 
-## 🔏 7. The Wallet Registry (19-Agent Verified Inventory)
+## 🔏 7. Service Provider Registry (Verified Inventory)
 
-| Agent ID | Index | Chain | Wallet Address (EVM) |
+| Agent Identity | HD Index | Primary Chain | Wallet Address (EVM) |
 | :--- | :--- | :--- | :--- |
 | **OrchestratorAgent** | 0 | Sepolia | `0x29995e02E77117974C734efe47E7BA9CEe51Bf12` |
+| **Risk_Auditor_1** | 13 | **Hoodi** | `0xC92720D540B70E42B80B8AEa403708E6b6248454` |
 | **Safety_Enforcer_1** | 17 | Sepolia | `0x9E42a701F75A4a050d5D058Fa3d7C583B89BE69B` |
 
 ---
 
-## 🚦 Setup & License
-1.  **Deps**: `npm install`
-2.  **Env**: Set `WDK_SEED_PHRASE`, `GROQ_API_KEY`, `EVM_RPC`, `HOODI_RPC`.
-3.  **Run**: `npm run dev:all`
+## 🚦 System Configuration & License
+1.  **Dependencies**: `npm install`
+2.  **Environment**: Configure `WDK_SEED_PHRASE`, `GROQ_API_KEY`, `EVM_RPC`, `HOODI_RPC`.
+3.  **Execution**: `npm run dev:all`
 
 Built for **Hackathon Galáctica 2026**. Licensed under **Apache 2.0**.
