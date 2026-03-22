@@ -52,7 +52,7 @@ graph TD
         H -->|Matching Engine| J["🔍 Weighted Selection"]
     end
 
-    subgraph "WDK Execution Kernel"
+    subgraph "Validation & Execution"
         J --> K["🛡️ Safety Enforcer"]
         K -->|Verification| L["🔏 WDK WalletBridge"]
         L --> M["⛓️ On-Chain Settlement (USDt)"]
@@ -61,7 +61,7 @@ graph TD
 
 ---
 
-## ⛓️ 4. Transactional Life-Cycle (Escrow & Yield)
+## ⛓️ 4. The Transactional Life-Cycle (Escrow & Yield)
 
 ```mermaid
 sequenceDiagram
@@ -84,38 +84,51 @@ sequenceDiagram
 
 ---
 
-## ⚖️ 5. Stochastic Economic Mechanics (The "Brain")
+## 🛡️ 5. Triple-Audit Validation Pipeline
+
+NevoraX enforces **Adversarial Resilience** through a 3-layer validation gate before any WDK transaction is signed.
+
+```mermaid
+graph LR
+    A["📦 Raw Result"] --> B["🔍 Schema Verify (Zod)"]
+    B -->|Pass| C["🧠 AI Reasoning Audit"]
+    C -->|Pass| D["🛡️ Safety Enforcer"]
+    D -->|Release| E["💰 WDK Settlement"]
+    B -->|Fail| F["❌ Reject"]
+    C -->|Fail| F
+    D -->|Fail| F
+```
+
+---
+
+## ⚖️ 6. Stochastic Economic Mechanics (The "Brain")
 
 NevoraX is an elite simulation of real-world machine economics:
 
 - **1. Demand Entropy**: Marketplace COST drift cycles between **0.85x and 1.30x**, simulating real-world liquidity shifts.
 - **2. The Matching Equation**: $Score = (0.6 \times Price) + (0.4 \times (1 - Reputation)) + (0.2 \times FitScore)$.
 - **3. Asymptotic Reputation**: $Delta = Gain \times ((100 - CurrentRep) / 100)^{0.4}$. This diminishing returns model prevents market dominance.
-- **4. Bidding Personaltieis**: Agents utilize `AGGRESSIVE_DISCOUNT` (0.65x) or `PREMIUM_MARGIN` (1.45x) multipliers.
-- **5. BigInt Precision**: All settlements use **BigInt** to maintain zero drift on 6-decimal USDt units.
+- **4. Bidding Personalities**: Agents utilize `AGGRESSIVE_DISCOUNT` (0.65x) or `PREMIUM_MARGIN` (1.45x) multipliers.
+- **5. BigInt Financial Rigour**: All settlements use **BigInt** to maintain zero drift on 6-decimal USDt units.
 
 ---
 
-## 🌉 6. Multichain Agency: The Hoodi Bridge
+## 🌉 7. Multichain Agency: The Hoodi Bridge
 
 - **Universal Identity**: BIP-44 consistency (`m/44'/60'/0'/0/[INDEX]`) allows one seed to authorize value across multiple rpcs.
-- **Atomic Bridge Lifecycle**: 
-    1. **Source Lock**: USDt locked on Sepolia via WDK.
-    2. **Propagate**: Signal emitted across the OpenClaw mission bus.
-    3. **Destination Release**: Native settlement signed on Hoodi (ChainID: 151) via WDK.
+- **Atomic Bridge Lifecycle**: Source Lock (Sepolia) -> Signal Propagation (OpenClaw) -> Destination Release (Hoodi Native via WDK).
 - **Nonce Safety**: Native `AccountLock` mutexes prevent transaction collisions.
 
 ---
 
-## 🛡️ 7. Institutional Security Standards
+## 🛡️ 8. Institutional Security Standards
 
 - **"Burn-After-Reading" Seed Disposal**: Seeds are AES-256 encrypted; raw strings are **disposed()** and wiped from memory immediately after key load.
-- **Triple-Audit Pipeline**: Results pass through **Zod Schema**, **AI Logic Audit**, and **Compliance Enforcement**.
 - **HMAC Signing Fallback**: Deterministic fallback for restricted memory environments.
 
 ---
 
-## 📜 8. OpenClaw Protocol (v2026.1) Specimen
+## 📜 9. OpenClaw Protocol (v2026.1) Specimen
 
 ```json
 {
@@ -136,9 +149,9 @@ NevoraX is an elite simulation of real-world machine economics:
 
 ---
 
-## 🔏 9. The Wallet Registry (Full 19-Agent Verified Inventory)
+## 🔏 10. The Wallet Registry (Full 19-Agent Verified Inventory)
 
-| Agent ID | Index | Primary Chain | Wallet Address (EVM) |
+| Agent ID | Index | Chain | Wallet Address (EVM) |
 | :--- | :--- | :--- | :--- |
 | **OrchestratorAgent** | 0 | Sepolia | `0x29995e02E77117974C734efe47E7BA9CEe51Bf12` |
 | **Market_Data_1** | 1 | Sepolia | `0xA5318aad194C02e662D068B7B5Ee0233a142C2BA` |
@@ -162,7 +175,7 @@ NevoraX is an elite simulation of real-world machine economics:
 
 ---
 
-## 🗺️ 10. Visionary Roadmap (V2)
+## 🗺️ 11. Visionary Roadmap (V2)
 
 1.  **Batch Settlement**: Aggregating micro-tasks to reduce gas fees by **90%**.
 2.  **DAO Jury Protocol**: Community-driven reputation slashing for malicious agents.
