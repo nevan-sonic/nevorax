@@ -1,5 +1,3 @@
-![NevoraX Hero Banner](file:///C:/Users/Nevan%20R%20G/.gemini/antigravity/brain/57660e29-b0ad-417e-bbc4-a196838502af/nevorax_hero_banner_1774175087957.png)
-
 # 🪐 NevoraX: The Autonomous Agent Economy
 ### **Hackathon Galáctica: WDK Edition 1 — White Box Documentation**
 
@@ -7,7 +5,7 @@
 [![OpenClaw Compliant](https://img.shields.io/badge/OpenClaw-Compliant-success?style=for-the-badge)](https://openclaw.io)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 
-NevoraX is not just a dashboard; it is a **live economic infrastructure** where autonomous AI agents collaborate, compete, and settle value using **Tether USDt**. This project moves beyond "demo-ware" to provide a hardened, "white box" architecture for a self-sustaining agentic economy on **Sepolia**.
+NevoraX is not just a dashboard; it is a **live economic infrastructure** where autonomous AI agents collaborate, compete, and settle value using **Tether USDt**. This project moves beyond "demo-ware" to provide a hardened, "white box" architecture for a self-sustaining agentic economy on **Sepolia** and **Hoodi**.
 
 ---
 
@@ -116,6 +114,8 @@ graph LR
 
 ## 🤖 Agent Classes & Capabilities
 
+NevoraX features a diverse class-based agent registry, each with OpenClaw-certified skills.
+
 | Agent Class | Variants | Core Responsibility | WDK Skill |
 | :--- | :--- | :--- | :--- |
 | **Orchestrator** | Standard | Goal decomposition & mission governance. | `WDK_Wallet_Manager` |
@@ -126,7 +126,57 @@ graph LR
 
 ---
 
-## 📂 Project Navigation (White Box)
+## 🔏 The Wallet Registry (White Box)
+
+Every agent in the NevoraX ecosystem operates with a deterministic, self-custodial wallet derived from the master **Tether WDK Seed Phrase**. Below is the complete mapping of autonomous actors and their identities.
+
+| Agent ID | HD Index | Chain | Role |
+| :--- | :--- | :--- | :--- |
+| **OrchestratorAgent** | 0 | Sepolia | Mission Governor |
+| **Market_Data_1** | 1 | Sepolia | High-Res Pricing |
+| **Market_Data_2** | 2 | Sepolia | Quick Feed |
+| **Sentiment_Analyst_1** | 3 | Sepolia | Nuance Extraction |
+| **Sentiment_Analyst_2** | 4 | Sepolia | Batch Analysis |
+| **Trend_Analyst_1** | 5 | Sepolia | Deep Technicals |
+| **Trend_Analyst_2** | 6 | Sepolia | Fast Discovery |
+| **Trade_Executor_1** | 7 | Sepolia | On-Chain Swap |
+| **Trade_Executor_2** | 8 | Sepolia | Lite Routing |
+| **Strategy_Planner_1** | 9 | Sepolia | Aggressive Alpha |
+| **Strategy_Planner_2** | 10 | Sepolia | Safe Haven |
+| **Report_Writer_1** | 11 | Sepolia | Thorough Docs |
+| **Report_Writer_2** | 12 | Sepolia | Brief Summary |
+| **Risk_Auditor_1** | 13 | **Hoodi** | Deep Risk Scan |
+| **Risk_Auditor_2** | 14 | Sepolia | Quick Scan |
+| **Whale_Tracker_1** | 15 | **Hoodi** | Whale Scan |
+| **Whale_Tracker_2** | 16 | **Hoodi** | Standard Watch |
+| **Safety_Enforcer_1** | 17 | Sepolia | Strict Audit |
+| **Safety_Enforcer_2** | 18 | Sepolia | Lenient Audit |
+
+> [!TIP]
+> All addresses are derived using the standard BIP-44 path: `m/44'/60'/0'/0/[INDEX]`. This ensures that even if the application is restarted, agent identities and financial history remain persistent.
+
+---
+
+## 📈 Economic Mechanics: Beyond the Dashboard
+
+NevoraX simulates a real agentic economy using several mathematical models.
+
+### 1. Market Demand Entropy
+Global liquidity shifts based on task volume. With every job post, a `MARKET_DEMAND_FACTOR` drifts by ±5% to simulate market noise, affecting agent bids in real-time.
+
+### 2. Diminishing Reputation Gain
+We use an **asymptotic reputation model**. An agent with 50% reputation gains status faster than one at 98%. This prevents "Reputation Monopolies" and encourages new high-quality entrants.
+- **Formula**: `Delta = Gain * ((100 - CurrentRep) / 100)^0.4`
+
+### 3. Negotiation Personalities
+The `NegotiationAgent` doesn't just lower prices; it uses LLM reasoning to evaluate the provider's history.
+- **SHREWD**: Matches current market mean.
+- **RATIONAL**: Targets 5% under bid.
+- **AGGRESSIVE**: Targets 10% under bid if provider reputation < 90%.
+
+---
+
+## 📂 Project Navigation
 
 ```text
 nevorax/
@@ -142,19 +192,17 @@ nevorax/
 
 ---
 
-## ⚠️ Known Limitations & Future Roadmap
-
-- **Batch Transactions**: Currently, each task settles individually. We plan to implement batching to reduce gas fees by 60%.
-- **Live Governance**: A "Safety Enforcer" agent currently monitors limits; future versions will support DAO-style agent arbitration.
-- **Cross-Chain Arb**: Re-allocating USDt between Sepolia and Hoodi using WDK's multi-chain primitives.
-
----
-
-## 🚦 Setup & Installation
+## 🚦 Quick Start
 
 1.  **Dependencies**: `npm install`
 2.  **Environment**: Create `backend/.env` with your `WDK_SEED_PHRASE`, `GROQ_API_KEY`, and `EVM_RPC`.
 3.  **Launch**: `npm run dev:all`
+
+---
+
+## ⚠️ Known Limitations
+- **Individual Settlement**: Each task currently requires a separate tx on Sepolia. Batching is the #1 priority for V2.
+- **Centralized RPC**: Currently relies on Alchemy/Infura; P2P node support is in research.
 
 ---
 
