@@ -1,132 +1,110 @@
-# 🪐 NevoraX: Autonomous Agent Economy
+# 🪐 NevoraX: The Autonomous Agent Economy
+### **Hackathon Galáctica: WDK Edition 1 — White Box Documentation**
 
-### **Hackathon Galáctica: WDK Edition 1 — Submission**
-
-NevoraX is a high-fidelity autonomous agent economy where specialized AI agents collaborate, negotiate, and settle value on-chain using **Tether USDt** via the **WDK (Wallet Development Kit)**. By treating agents as economic infrastructure, NevoraX enables a self-sustaining ecosystem where autonomous systems execute complex tasks, manage capital, and interact with onchain logic under strict cryptographic constraints.
+NevoraX is not just a dashboard; it is a **live economic infrastructure** where autonomous AI agents collaborate, compete, and settle value using **Tether USDt**. This document provides an "A to Z" technical breakdown of the system, transforming NevoraX from a "black box" into a fully transparent "white box" for judges and developers.
 
 ---
 
-## 🚀 Submission Overview
-
+## 🎬 Submission Quick Links
 - **Product Name**: NevoraX
 - **Track**: 🤖 Agent Wallets (WDK / OpenClaw and Agents Integration)
 - **Teammates**: [Nevan R G](https://github.com/nevan-sonic)
-- **Location**: [Your Location, e.g., India]
 - **Public Repo**: [https://github.com/nevan-sonic/nevorax](https://github.com/nevan-sonic/nevorax)
 - **Technical Demo**: [Loom/YouTube Video Link Placeholder]
+- **License**: Apache 2.0
 
 ---
 
-## 🎬 Live Demo: The Autonomous Lifecycle
+## 🏗️ The "A to Z" Workflow: Life of a Task
 
-Experience how NevoraX turns agents into real financial actors:
+The NevoraX lifecycle handles everything from high-level "human" goals to granular on-chain settlements.
 
-1.  **Dashboard Hub**: Observe the **Hero Stats Bar** reflecting real-time on-chain `TOTAL TASKS` and `USDT VOLUME`.
-2.  **Mission Launch**: Enter a high-level goal like: *"Analyze Ethereum market volatility and execute a defensive strategy for my USDT holdings."*
-3.  **Agent Reasoning**: Watch the **Economic Activity** feed. The **Orchestrator** decomposes the goal, triggering competitive bidding among specialized agents (`Data`, `Sentiment`, `Analysis`).
-4.  **On-Chain Settlement**: Once agents reach a consensus, the **WalletBridge** initiates WDK-powered transfers.
-5.  **Verifiable Proof**: Click the **ON-CHAIN PROOF** hashes in the **Active Workflows** card to view the real USDt transfers on **Sepolia Etherscan**.
+### 1. Goal Decomposition (The Orchestrator)
+The user submits a mission (e.g., *"Defend my USDT against market volatility"*). The **OrchestratorAgent** (Groq LLaMA 3.3 70B) breaks this into a `Mission Envelope` (OpenClaw Compliance Layer).
+- **Result**: A set of discrete tasks (e.g., `market_data`, `risk_assessment`, `execution`).
 
----
+### 2. The Competitive Marketplace (Bidding)
+Each task is posted as a **Job** to the `ServiceMarketplace`.
+- **Dynamic Demand**: Every new job shifts the `MARKET_DEMAND_FACTOR` (0.85x - 1.30x), simulating real-world price volatility.
+- **Agent Bidding**: 19+ specialized agent variants (from the `AgentRegistry`) calculate their bids.
+  - **Strategies**: Agents randomly adopt one of three bidding personas:
+    - 🔴 **AGGRESSIVE_DISCOUNT**: 35% discount to win volume.
+    - 🔵 **BALANCED**: Standard market rates.
+    - 🟡 **PREMIUM_MARGIN**: 45% markup for "High-Res" or "Strict" service variants.
 
-## 🏗️ Technical Architecture: Reasoning vs. Execution
+### 3. The Matching Engine (Weighted Selection)
+Bids are scored using a multi-dimensional weighted formula:
+$$Score = (0.6 \times NormalizedPrice) + (0.4 \times (1 - Reputation)) + (0.2 \times InputFit)$$
+- **InputFit**: If a user prioritizes **SPEED**, the engine gives a bonus to `QUICK/FAST` variants. If **QUALITY** is prioritized, `HIGH_RES/DEEP` variants win.
 
-NevoraX enforces a **strict separation** between cognitive logic and financial execution to ensure safety and auditability.
+### 4. LLM-Driven Negotiation (The Counter-Offer)
+Instead of accepting the bid blindly, a **NegotiationAgent** intervenes. It uses LLM reasoning to assume one of three negotiation personalities:
+- **SHREWD**: Targets a conservative 1-3% discount.
+- **RATIONAL**: Targets a market-fair 5-7% discount.
+- **AGGRESSIVE**: Hard-nosed auditor demanding 10-15% discounts.
+- **Outcome**: A final negotiated price, capped by the user's `maxBudget`.
 
-### 1. Agent Reasoning Layer (Intelligence)
-Powered by **OpenClaw**, agents operate as autonomous "Units" with specific capabilities.
-- **Orchestrator**: The "Mission Control" that plans, hires, and governs.
-- **Specialists**: Competitive agents providing data, sentiment, and strategy.
+### 5. On-Chain Execution (Tether WDK)
+The **WalletBridge** takes over, enforcing a strict separation between "Reasoning" and "Keys".
+- **HD Indexing**: Each agent has a deterministic wallet derived from the master **WDK Seed Phrase**.
+- **Cryptographic Signing**: The provider signs the service agreement via WDK as proof of commitment.
+- **USDt Settlement**: The Orchestrator initiates an autonomous `sendTokenTransaction` via WDK on **Sepolia**.
 
-### 2. Wallet Execution Layer (Tether WDK)
-All financial actions are routed through the **WalletBridge**, which uses the **Tether WDK** for:
-- **HD Wallet Management**: Deterministic derivation of individual agent wallets from a single master seed.
-- **Cryptographic Signing**: Agreements are signed by agent wallets before execution, creating a non-repudiable audit trail.
-- **Autonomous Transfers**: Native USDt transfers between agents for service fulfillment.
-
-```mermaid
-graph TD
-    subgraph "Reasoning Layer (OpenClaw)"
-        OR["Orchestrator Unit"]
-        DA["Data Unit"]
-        SA["Sentiment Unit"]
-    end
-
-    subgraph "Compliance & Intelligence"
-        OCR["OpenClaw Registry"]
-        NE["Negotiation Engine"]
-    end
-
-    subgraph "Security Layer"
-        WB["WalletBridge.js"]
-    end
-
-    subgraph "Execution Layer (Tether WDK)"
-        WDK["@tetherto/wdk"]
-        WM["Wallet Manager"]
-    end
-
-    subgraph "Blockchain (Sepolia)"
-        USDT["USDt ERC-20"]
-        TX["On-chain Settlement"]
-    end
-
-    OR --> OCR
-    OCR -- "compliance_check" --> WB
-    WB -- "Derive/Sign/Transfer" --> WDK
-    WDK -- "USDt Transfer" --> USDT
-    USDT --> TX
-```
+### 6. Post-Mission Settlement (Reputation & Ledger)
+The `MarketplaceService` updates persistent storage (`marketplaceStore.json`).
+- **Dynamic Reputation**: Reputation deltas are calculated based on performance.
+  - **Asymptotic Gain**: It's harder to go from 98% to 99% than from 50% to 60%.
+  - **Economic Entropy**: Every session applies a ±3% global "Economic Shock" to keep the marketplace alive.
 
 ---
 
-## 🛠️ Tech Stack & Integrations
+## 🤖 The Agents: Roles & Capabilities
 
-- **Wallet Infrastructure**: [Tether WDK](https://github.com/tether/wdk) (EVM, Secret Manager, Pricing Bitfinex)
-- **Agent Framework**: **OpenClaw** (Modular agent reasoning and Compliance Layer)
-- **Intelligence**: Groq LLaMA 3.3 70B (High-speed reasoning)
-- **Frontend**: React 18, Vite, TailwindCSS (Glassmorphism & Micro-animations)
-- **Backend**: Node.js, Express (Event-driven architecture)
-- **Blockchain**: Ethereum Sepolia (Testnet)
+NevoraX features a diverse class-based agent registry, each with OpenClaw-certified skills.
+
+| Agent Class | Variants | Core Responsibility | WDK Skill |
+| :--- | :--- | :--- | :--- |
+| **Orchestrator** | Standard | Goal decomposition & mission governance. | `WDK_Wallet_Manager` |
+| **Market Data** | High-Res, Quick | Real-time price feeds & volatility metrics. | `WDK_Pricing_Bitfinex` |
+| **Sentiment** | Nuanced, Batch | Social/Market alpha detection. | `Groq_Reasoning_Bridge` |
+| **Risk Auditor** | Deep, Quick | Protocol health & exploit detection. | `Safety_Enforcer_Core` |
+| **Trade Executor**| On-Chain, Lite | Autonomous USDt swaps & gas optimization.| `WDK_Protocol_Bridge` |
+| **Whale Tracker** | Scanner, Watch | Wallet clustering & large flow detection. | `WDK_Whale_Watch` |
 
 ---
 
-## 🚦 Getting Started
+## 💰 The Budget & Safety System
+
+- **Hard Spending Limits**: 
+  - Orchestrator: **10,000 USDT** cap per session.
+  - Specialist Agents: **1,000 USDT** cap per task.
+- **Non-Custodial Design**: Agent keys are never exposed to the LLM. The `WalletBridge` acts as an air-gapped security layer.
+- **Compliance Trace**: Every financial move is wrapped in an `OpenClaw_Signal` event, visible in the `Economic Ledger`.
+
+---
+
+## 🧩 Agent Onboarding: OpenClaw Protocol
+
+NevoraX supports seamless onboarding for both internal and external agents:
+1.  **Identity**: Every agent gets a unique `unit_id` (e.g., `nu-8f2a1c`).
+2.  **Capabilities**: Assigned skills (e.g., `on_chain_tx`, `markdown_synthesis`).
+3.  **WDK Linkage**: Initialized with a zeroed balance, ready to earn USDt through competitive bidding.
+
+---
+
+## 🚦 Setup & Installation
 
 ### Prerequisites
-- Node.js v18+
-- Sepolia RPC URL (Alchemy/Infura)
-- Groq API Key (For reasoning)
-- **WDK Seed Phrase**: A 12-word mnemonic with Sepolia ETH and USDt.
+- **WDK Seed Phrase**: 12 words with Sepolia ETH and USDt.
+- **API Keys**: Groq (LLM), Alchemy/Infura (Sepolia RPC).
 
-### Installation & Setup
-1.  **Clone the Repo**:
-    ```bash
-    git clone https://github.com/nevan-sonic/nevorax && cd nevorax
-    ```
-2.  **Environment Configuration**:
-    Create `backend/.env` with:
-    ```env
-    GROQ_API_KEY=your_key
-    EVM_RPC=your_sepolia_rpc
-    WDK_SEED_PHRASE="your twelve words..."
-    ```
-3.  **Run Out-of-the-Box**:
-    ```bash
-    npm install
-    npm run dev:all
-    ```
+### Deployment
+1.  **Install**: `npm install`
+2.  **Configure**: Create `backend/.env` (see `.env.example`).
+3.  **Launch**: `npm run dev:all` (Starts Concurrent Backend + Frontend).
 
 ---
 
-## ⚖️ Governance & Safety
-
-NevoraX implements **Programmable Safety Constraints**:
-- **Spending Limits**: Orchestrator (10k USDT), Specialists (1k USDT).
-- **Role Separation**: Reasoning agents cannot access private keys directly; they must submit signing requests to the `WalletBridge`.
-- **Compliance Traces**: Every action is wrapped in an `OpenClaw_Signal` envelope for full telemetry.
-
----
-
-## 📄 License
-Licensed under the **Apache License 2.0**. Built with ❤️ for the **Tether Hackathon Galáctica 2026**.
+## ⚖️ License
+Licensed under **Apache 2.0**.
+Built for **Hackathon Galáctica 2026** by the NevoraX Team.
