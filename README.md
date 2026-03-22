@@ -70,45 +70,28 @@ sequenceDiagram
 
 ---
 
+## 🌍 Real-World Impact: The Vision for NevoraX
+
+### **The Problem: AI Silos and Trust Gaps**
+Today, AI agents are "Social Experiments" or "Chatbots." They lack **economic agency**. An agent can *think*, but it cannot *hire* another agent to solve a sub-problem safely. This creates a "Trust Gap" where human intervention is required for every coordinate move.
+
+### **The NevoraX Solution: Autonomous Economic Coordination**
+NevoraX provides the **Economic Connective Tissue** for the agentic era. By combining **OpenClaw** (Compliance) with **Tether WDK** (Value Settlement), we enable:
+- **Agent-to-Agent (A2A) Hiring**: An Orchestrator can hire 10 specialists in parallel, negotiate their rates, and settle their invoices in USDt without a single human click.
+- **Self-Sustaining Protocols**: Use cases like **Autonomous Supply Chains** can now exist, where agents manage inventory, bid for logistics, and pay for services natively on-chain.
+- **Permissionless Marketplaces**: Any third-party developer can "Onboard" a new agent into the NevoraX marketplace, immediately earning USDt for their agent's specialized skills.
+
+---
+
 ## 🛡️ Tether WDK: The Technical Backbone
 
-NevoraX enforces a **strict separation** between cognitive logic and financial execution using the **Tether WDK**.
+NevoraX enforces a **strict separation** between cognitive logic and financial execution using the **Tether WDK**. This is the key to shipping a "Real World" application: the LLM never sees the private keys.
 
-### Core WDK Modules Used:
-- **`@tetherto/wdk`**: Core framework for agentic wallet orchestration.
-- **`@tetherto/wdk-wallet-evm`**: Native support for **Ethereum Sepolia** and **Hoodi**.
-- **`@tetherto/wdk-secret-manager`**: Used to encrypt agent seeds in memory (AES-256). Seeds are `disposed()` immediately after encryption.
-- **`@tetherto/wdk-pricing-bitfinex-http`**: Real-time USDt pricing feeds.
-- **`@tetherto/wdk-protocol-bridge-usdt0-evm`**: Handles native USDt-to-USDt settlements via the Protocol Bridge.
-
-```mermaid
-graph LR
-    subgraph "Reasoning Layer (Groq LLM)"
-        OR["Orchestrator"]
-        NC["Negotiation Agent"]
-    end
-
-    subgraph "Compliance (OpenClaw)"
-        OC["OpenClaw Registry"]
-        EL["Economic Ledger"]
-    end
-
-    subgraph "Security Bridge"
-        WB["WalletBridge.js"]
-        SM["WdkSecretManager"]
-    end
-
-    subgraph "Execution (WDK)"
-        WDK["@tetherto/wdk"]
-    end
-
-    OR --> OC
-    NC --> EL
-    OC --> WB
-    SM --> WB
-    WB --> WDK
-    WDK --> Blockchain
-```
+### Why WDK?
+- **Native USDt Settlement**: No "wrapped" assets. By using the `wdk-protocol-bridge`, we settle in the world's most liquid stablecoin natively.
+- **Air-Gapped Keys**: `WdkSecretManager` ensures seeds are AES-encrypted in memory and `disposed()` immediately.
+- **Infinite Scalability**: Using WDK's HD derivation, a single seed can spawn thousands of unique agent identities, each with its own ledger and credit history.
+- **Real-Time Pricing**: Integration with `wdk-pricing-bitfinex` ensures agents bid based on real-world market parity, not static placeholders.
 
 ---
 
@@ -128,7 +111,7 @@ NevoraX features a diverse class-based agent registry, each with OpenClaw-certif
 
 ## 🔏 The Wallet Registry (Flagship Inventory)
 
-Every agent in the NevoraX ecosystem operates with a deterministic, self-custodial wallet derived from the master **Tether WDK Seed Phrase**. Below is the exhaustive inventory of all 19 autonomous actors.
+Every agent in the NevoraX ecosystem operates with a deterministic, self-custodial wallet derived from the master **Tether WDK Seed Phrase**.
 
 | Agent ID | HD Index | Chain | Wallet Address (EVM) |
 | :--- | :--- | :--- | :--- |
@@ -152,9 +135,6 @@ Every agent in the NevoraX ecosystem operates with a deterministic, self-custodi
 | **Safety_Enforcer_1** | 17 | Sepolia | `0x9E42a701F75A4a050d5D058Fa3d7C583B89BE69B` |
 | **Safety_Enforcer_2** | 18 | Sepolia | `0x9581B89e7Bd6885065640c1E55C704290B4EA0f2` |
 
-> [!TIP]
-> All addresses are derived using the BIP-44 path: `m/44'/60'/0'/0/[INDEX]`. This architecture ensures persistence of cross-agent credit history and reputation scoring.
-
 ---
 
 ## 📈 Economic Mechanics: Beyond the Dashboard
@@ -162,22 +142,27 @@ Every agent in the NevoraX ecosystem operates with a deterministic, self-custodi
 NevoraX simulates a real agentic economy using several mathematical models.
 
 ### 1. Market Demand Entropy
-Global liquidity shifts based on task volume. With every job post, a `MARKET_DEMAND_FACTOR` (initialized at 1.0) drifts by ±5% to simulate market noise, affecting agent bids in real-time. This ensures that the economy feels "alive" even in a sandbox environment.
+Global liquidity shifts based on task volume. With every job post, a `MARKET_DEMAND_FACTOR` drifts by ±5% to simulate market noise, affecting agent bids in real-time.
 
 ### 2. Diminishing Reputation Gain
-We use an **asymptotic reputation model**. An agent with 50% reputation gains status faster than one at 98%. This prevents "Reputation Monopolies" and encourages new high-quality entrants.
-- **Goal**: Reward consistency while allowing for market mobility.
+We use an **asymptotic reputation model**. An agent at 50% reputation gains status faster than one at 98%.
 - **Formula**: `Delta = Gain * ((100 - CurrentRep) / 100)^0.4`
 
 ### 3. Negotiation Personalities (LLM-Driven)
-The `NegotiationAgent` doesn't just lower prices; it uses LLM reasoning to evaluate the provider's history.
-- **SHREWD**: Targets a conservative 1-3% discount based on provider reputation.
-- **RATIONAL**: Targets a market-fair 5-7% discount.
-- **AGGRESSIVE**: Targets a hard-nosed 10-15% discount if provider reputation < 90%.
+The `NegotiationAgent` evaluated provider history to determine its posture: **SHREWD** (1-3%), **RATIONAL** (5-7%), or **AGGRESSIVE** (10-15%).
 
 ---
 
-## 📁 Project Navigation (White Box)
+## 🗺️ The Path to V2: Future Roadmap
+
+1.  **Batch Settlement (L2 Rollups)**: Aggregating thousands of agent micro-tasks into single-transaction settlements to reduce gas by 90%.
+2.  **DAO Governance**: Implementation of an OpenClaw Arbitration DAO to slash reputation for malicious actors.
+3.  **Cross-Chain Arbitrage**: Autonomous rebalancing of USDt pools between Sepolia, Hoodi, and Solana using WDK's multi-chain primitives.
+4.  **Hardware Enclaves**: Moving the WDK Secret Manager into TEEs (Trusted Execution Environments) for absolute key safety.
+
+---
+
+## 📂 Project Navigation (White Box)
 
 ```text
 nevorax/
@@ -198,12 +183,6 @@ nevorax/
 1.  **Dependencies**: `npm install`
 2.  **Environment**: Create `backend/.env` with your `WDK_SEED_PHRASE`, `GROQ_API_KEY`, and `EVM_RPC`.
 3.  **Launch**: `npm run dev:all`
-
----
-
-## ⚠️ Known Limitations
-- **Individual Settlement**: Each task currently requires a separate tx on Sepolia. Batching is the #1 priority for the production roadmap.
-- **Centralized RPC**: Currently relies on public/private providers; full P2P node support is in research.
 
 ---
 
