@@ -49,12 +49,28 @@ sequenceDiagram
     N->>O: FINALIZE price
 ```
 
-### 3. The Matching Engine (Weighted Selection)
-Bids are scored using a multi-dimensional weighted formula:
-$$Score = (0.6 \times NormalizedPrice) + (0.4 \times (1 - Reputation)) + (0.2 \times InputFit)$$
+---
 
-### 4. LLM-Driven Negotiation (The Counter-Offer)
-Instead of accepting the bid blindly, a **NegotiationAgent** intervenes. It uses LLM reasoning to assume one of three negotiation personalities (`SHREWD`, `RATIONAL`, `AGGRESSIVE`).
+## ⛓️ Tether WDK: Integration Depth
+
+NevoraX is built as a native extension of the **Tether Wallet Development Kit (WDK)**. We utilize a modular architecture to handle non-custodial agent finances across multiple chains.
+
+### Core WDK Modules Used:
+- **`@tetherto/wdk`**: Core framework for agentic wallet orchestration.
+- **`@tetherto/wdk-wallet-evm`**: Native EVM support for Ethereum Sepolia and Hoodi.
+- **`@tetherto/wdk-secret-manager`**: **The Gold Standard for Safety.** Used to encrypt agent seeds in memory, ensuring the raw mnemonic is never exposed to the reasoning layer.
+- **`@tetherto/wdk-pricing-bitfinex-http`**: Real-time USDt pricing for the Bidding Engine.
+- **`@tetherto/wdk-protocol-bridge-usdt0-evm`**: Specialized bridge logic for USDt-native settlements.
+
+### Technical Implementation:
+- **HD Wallet Derivation**: Every agent (e.g., `Market_Data_1`) is assigned a deterministic index in the WDK HD hierarchy.
+- **Secure Memory Lifecycle**: We use `WdkSecretManager` to encrypt the seed at boot. The manager is `disposed()` immediately after encryption, leaving only an encrypted payload in RAM.
+- **Multi-Chain Registration**:
+  ```javascript
+  const wdk = new WDK(seedPhrase)
+    .registerWallet("ethereum", WalletManagerEvm, { provider: SEPOLIA_RPC })
+    .registerWallet("hoodi", WalletManagerEvm, { provider: HOODI_RPC });
+  ```
 
 ---
 
@@ -97,11 +113,10 @@ nevorax/
 │   ├── src/
 │   │   ├── agents/          # Core agent logic & personas
 │   │   ├── marketplace/     # Bidding, Matching, and Registry
-│   │   ├── wallets/         # Tether WDK Integration (WalletBridge)
+│   │   ├── wallets/         # Tether WDK Integration (SecretManager, WalletBridge)
 │   │   ├── openclaw/        # OpenClaw Compliance & Telemetry
 │   │   └── ledger/          # Economic Event Logging
 ├── frontend/                # React Dashboard UI (Vite)
-├── api/                     # External agent API endpoints
 └── scripts/                 # Validation & environment utilities
 ```
 
@@ -116,14 +131,6 @@ nevorax/
 | **Sentiment** | Nuanced, Batch | Social/Market alpha detection. | `Groq_Reasoning_Bridge` |
 | **Risk Auditor** | Deep, Quick | Protocol health & exploit detection. | `Safety_Enforcer_Core` |
 | **Trade Executor**| On-Chain, Lite | Autonomous USDt swaps & gas optimization.| `WDK_Protocol_Bridge` |
-
----
-
-## ⚠️ Known Limitations & Future Roadmap
-
-- **Gas Optimization**: Current agent settlements on Sepolia do not aggregate transactions (Batching planned for V2).
-- **Offline Reasoning**: Agents require an active Groq API connection for high-level mission planning.
-- **Dynamic Dispute Resolution**: Currently, "Safety Enforcer" agents flag issues, but a full on-chain arbitration court is in the roadmap.
 
 ---
 
