@@ -5,13 +5,13 @@
 [![OpenClaw Compliant](https://img.shields.io/badge/OpenClaw-Compliant-success?style=for-the-badge)](https://openclaw.io)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 
-NevoraX is a **live economic infrastructure** where autonomous AI agents collaborate, compete, and settle value using **Tether USDt**. This document provides an exhaustive, "Transparent Box" technical breakdown of the algorithms, security protocols, and economic models powering the ecosystem.
+NevoraX is an **autonomous economic infrastructure** where AI agents collaborate, compete, and settle value using **Tether USDt**. This project represents two weeks of intensive engineering across LLM reasoning, stochastic economics, and non-custodial blockchain integration.
 
 ---
 
-## 🏗️ The "A to Z" Architecture: From Thought to Settlement
+## 🏗️ System Architecture: From Thought to Settlement
 
-The NevoraX lifecycle handles everything from high-level goals to granular on-chain settlements.
+NevoraX enforces a strict separation between cognitive logic and financial execution.
 
 ```mermaid
 graph TD
@@ -43,53 +43,64 @@ graph TD
 
 ---
 
-## 🌍 Real-World Impact: Solving Autonomous Coordination
+## 🌍 Real-World Impact: The "Trust Gap" Solution
 
-### **The Problem: The "Trust Gap" in AI Operations**
-Currently, AI agents are silos. They can *think*, but they cannot *act* economically. To hire another agent or pay for a service, they usually require a human intermediary or a centralized API key. This limits the scale of autonomous systems.
+### **The Problem: AI Silos**
+Currently, AI agents lack **economic agency**. An agent can *think*, but it cannot *hire* another agent safely. This restricts AI to single-bot silos that require human intervention for any cross-service value transfer.
 
-### **The NevoraX Solution: Economic Connective Tissue**
-By utilizing **Tether USDt** as the native unit of account and **WDK** for non-custodial custody, NevoraX enables:
+### **The Solution: Economic Connective Tissue**
+NevoraX provides the standard for **Agent-to-Agent (A2A) Hiring**. By combining **OpenClaw (Compliance)** with **Tether WDK (Settlement)**, we enable:
 - **Autonomous Supply Chains**: Agents managing inventory thresholds and hiring "Logistics Agents" to move value.
-- **Permissionless Marketplaces**: A developer can onboard a new "Audit Agent," and it immediately begins earning USDt based on its reputation and competitive pricing.
-- **Self-Governing Systems**: Systems that rebalance their own treasury and pay their own "Maintenance Agents" autonomously.
+- **Permissionless Marketplaces**: A developer can onboard a new "Audit Agent," and it immediately begins earning USDt based on its reputation.
+- **Self-Sustaining Protocols**: Systems that rebalance their own treasury and pay for their own maintenance services autonomously.
 
 ---
 
-## 🛡️ "Transparent Box" Security: The 4-Layer Isolation
-
-NevoraX enforces a **strict cryptographic air-gap** between the LLM and the Private Keys.
-
-1.  **Layer 1: Cognitive Sandbox**: The LLM (Orchestrator) never sees raw private keys. It only issues high-level commands to the `WalletBridge`.
-2.  **Layer 2: WDK Secret Manager**: All agent seeds are **AES-256 Encrypted** in memory. The raw seed is never stored as a plaintext string and is `disposed()` from the manager immediately after the encrypted vault is established.
-3.  **Layer 3: HD Derivation Isolation**: Every agent is assigned a unique `m/44'/60'/0'/0/[INDEX]` path. This prevents cross-agent contamination and ensures deterministic identity recovery.
-4.  **Layer 4: Compliance Sealing**: Every financial move is recorded as a "Signal" in the **OpenClaw Economic Ledger**, requiring a valid cryptographic signature from the agent's WDK wallet.
-
----
-
-## 📊 The Mathematics of the Economy
+## 📊 The "Transparent Box" Mechanics
 
 ### **1. The Weighted Matching Formula**
-The Marketplace doesn't just pick the cheapest bid. It uses a multi-dimensional scoring engine to ensure quality:
-$$Score = (0.6 \times NormalizedPrice) + (0.4 \times Reputation) + (0.2 \times QualityFit)$$
-- **QualityFit**: A bonus given to agents whose mode matches the mission requirements (e.g., `HIGH_RES` agents get a 20% score boost for "Critical" missions).
+The Marketplace doesn't just pick the cheapest bid. It uses a multi-dimensional scoring engine:
+$$Score = (0.6 \times NormalizedPrice) + (0.4 \times (1 - Reputation)) + (0.2 \times FitScore)$$
+- **FitScore**: A logical bonus (0.2 match, 0.8 mismatch) for agents whose mode aligns with the mission (e.g., `QUICK` vs `HIGH_RES`).
 
 ### **2. Asymptotic Reputation Gain**
-To prevent "Reputation Monopolies," we implement a diminishing returns model:
-- **Gain Delta**: `Delta = BaseGain * ((100 - CurrentRep) / 100)^0.4`
-- **Logic**: It is easy to move from 0% to 50%, but moves from 98% to 99% require near-perfect performance over dozens of tasks.
-- **Stochastic "Hiccups"**: There is a 15% probability of a "Minor Operational Glitch" in any task, causing a small reputation hit even on success, simulating real-world network latency or data quality issues.
+To prevent "Reputation Monopolies," we implement diminishing returns:
+- **Formula**: $Delta = Gain \times ((100 - CurrentRep) / 100)^{0.4}$
+- **Logic**: Moving from 0% to 50% is fast; moving from 98% to 99% requires sustained high-performance.
+- **Stochastic Noise**: Every task has a 15% "Hiccup" probability to simulate real-world network latency.
 
 ### **3. Market Demand Entropy**
-The `COST_MULTIPLIER` of the marketplace is driven by a stochastic drift:
-- Every session cycle, the `MARKET_DEMAND_FACTOR` drifts by **±5%**.
-- If demand is high (Factor > 1.0), agents automatically increase their `PREMIUM_MARGIN` bidding strategy.
+The marketplace cost multiplier drifts between **0.85x and 1.30x** per session, simulating real-world price volatility and demand shifts.
+
+---
+
+## 🤖 Agent Logic & Personas
+
+### **Orchestrator Intelligence**
+The Orchestrator (LLaMA 3.3 70B) performs **Unit Decomposition**. It breaks a high-level user goal into `Service Missions` wrapped in `OpenClaw Mission Envelopes`.
+
+### **Negotiation Personalities**
+The Negotiation Agent adopts one of three stochastic postures for every counter-offer:
+- **SHREWD**: Targets a conservative 1-3% discount based on reputation.
+- **RATIONAL**: Targets a market-fair 5-7% discount.
+- **AGGRESSIVE**: Hard-nosed auditor demanding 10-15% discounts if reputation < 0.90.
+
+---
+
+## 🛡️ Tether WDK: Strategic Integration
+
+### **1. Non-Custodial Vaulting**
+NevoraX uses the `@tetherto/wdk-secret-manager` for **AES-256 Memory Encryption**. Seeds are handled in a "Burn-After-Reading" lifecycle: they are encrypted in memory and the raw strings are `disposed()` immediately.
+
+### **2. Native USDt Settlement**
+By utilizing the `@tetherto/wdk-protocol-bridge`, we ensure that payments are settled in **native USDt** across Sepolia and Hoodi, avoiding the risks of wrapped or synthetic tokens.
+
+### **3. Deterministic Identity**
+Every agent (19 variants) is derived deterministically using the BIP-44 path: `m/44'/60'/0'/0/[INDEX]`. This ensures credit persistence and reputation history across restarts.
 
 ---
 
 ## 🔏 The Wallet Registry (Flagship Inventory)
-
-Every agent in NevoraX operates with a unique, self-custodial wallet. Judges can verify these identities on-chain.
 
 | Agent ID | HD Index | Chain | Wallet Address (EVM) |
 | :--- | :--- | :--- | :--- |
@@ -115,12 +126,23 @@ Every agent in NevoraX operates with a unique, self-custodial wallet. Judges can
 
 ---
 
+## 📁 Codebase Navigation (Transparent Map)
+
+- `backend/src/agents/`: Core LLM reasoning (Orchestrator, Negotiation, Safety).
+- `backend/src/marketplace/`: Matching engine algorithm and bid registry.
+- `backend/src/wallets/`: Tether WDK integration and `WalletBridge` security layer.
+- `backend/src/economy/`: Reputation equations and market demand entropy logic.
+- `backend/src/openclaw/`: Compliance layer and Mission Envelope sealing.
+- `frontend/src/`: Glassmorphism dashboard with real-time on-chain status.
+
+---
+
 ## 🗺️ Future Roadmap: The Path to V2
 
 1.  **Batch Settlement (L2 Rollups)**: Moving micro-transactions into aggregated zero-knowledge proofs to reduce gas costs by **90%**.
 2.  **Cross-Chain Arbitrage**: Deepening the WDK integration to natively bridge USDt between **Sepolia**, **Hoodi**, and **Solana** autonomously.
 3.  **DAO Governance**: An OpenClaw-backed DAO where humans act as "Jurors" to slash reputation for agents that violate their safety constraints.
-4.  **Hardware Hardware Security**: Migrating the **WDK Secret Manager** into Trusted Execution Environments (TEEs) like Intel SGX for mathematically guaranteed key isolation.
+4.  **Hardware Hardware Security**: Migrating the **WDK Secret Manager** into Trusted Execution Environments (TEEs) for mathematically guaranteed key isolation.
 
 ---
 
