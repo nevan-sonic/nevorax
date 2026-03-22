@@ -26,11 +26,10 @@ graph TD
 
 ### 1. Goal Decomposition (The Orchestrator)
 The user submits a mission (e.g., *"Defend my USDT against market volatility"*). The **OrchestratorAgent** (Groq LLaMA 3.3 70B) breaks this into a `Mission Envelope` (OpenClaw Compliance Layer).
-- **Result**: A set of discrete tasks (e.g., `market_data`, `risk_assessment`, `execution`).
 
 ### 2. The Competitive Marketplace (Bidding)
 Each task is posted as a **Job** to the `ServiceMarketplace`.
-- **Dynamic Demand**: Every new job shifts the `MARKET_DEMAND_FACTOR` (0.85x - 1.30x), simulating real-world price volatility.
+- **Dynamic Demand**: Every new job shifts the `MARKET_DEMAND_FACTOR` simulating real-world price volatility.
 - **Agent Bidding**: 19+ specialized agent variants calculate their bids using stochastic strategies.
 
 ```mermaid
@@ -53,13 +52,9 @@ sequenceDiagram
 ### 3. The Matching Engine (Weighted Selection)
 Bids are scored using a multi-dimensional weighted formula:
 $$Score = (0.6 \times NormalizedPrice) + (0.4 \times (1 - Reputation)) + (0.2 \times InputFit)$$
-- **InputFit**: If a user prioritizes **SPEED**, the engine gives a bonus to `QUICK/FAST` variants. If **QUALITY** is prioritized, `HIGH_RES/DEEP` variants win.
 
 ### 4. LLM-Driven Negotiation (The Counter-Offer)
-Instead of accepting the bid blindly, a **NegotiationAgent** intervenes. It uses LLM reasoning to assume one of three negotiation personalities:
-- **SHREWD**: Targets a conservative 1-3% discount.
-- **RATIONAL**: Targets a market-fair 5-7% discount.
-- **AGGRESSIVE**: Hard-nosed auditor demanding 10-15% discounts.
+Instead of accepting the bid blindly, a **NegotiationAgent** intervenes. It uses LLM reasoning to assume one of three negotiation personalities (`SHREWD`, `RATIONAL`, `AGGRESSIVE`).
 
 ---
 
@@ -94,14 +89,21 @@ graph LR
     WDK --> Blockchain
 ```
 
-### 1. Agent Reasoning (OpenClaw)
-Agents operate as autonomous "Units" with specific capabilities, governed by the `OpenClawRegistry`. Every action is wrapped in an `OpenClaw_Signal` for full telemetry.
+### 📂 Directory Structure
 
-### 2. Wallet Execution (Tether WDK)
-The **WalletBridge** acts as the security layer.
-- **HD Indexing**: Deterministic derivation of agent wallets from the master **WDK Seed Phrase**.
-- **Signing**: The provider signs the agreement via WDK as proof of commitment.
-- **Settlement**: Orchestrator initiates autonomous `sendTokenTransaction` via WDK on **Sepolia**.
+```text
+nevorax/
+├── backend/
+│   ├── src/
+│   │   ├── agents/          # Core agent logic & personas
+│   │   ├── marketplace/     # Bidding, Matching, and Registry
+│   │   ├── wallets/         # Tether WDK Integration (WalletBridge)
+│   │   ├── openclaw/        # OpenClaw Compliance & Telemetry
+│   │   └── ledger/          # Economic Event Logging
+├── frontend/                # React Dashboard UI (Vite)
+├── api/                     # External agent API endpoints
+└── scripts/                 # Validation & environment utilities
+```
 
 ---
 
@@ -114,6 +116,14 @@ The **WalletBridge** acts as the security layer.
 | **Sentiment** | Nuanced, Batch | Social/Market alpha detection. | `Groq_Reasoning_Bridge` |
 | **Risk Auditor** | Deep, Quick | Protocol health & exploit detection. | `Safety_Enforcer_Core` |
 | **Trade Executor**| On-Chain, Lite | Autonomous USDt swaps & gas optimization.| `WDK_Protocol_Bridge` |
+
+---
+
+## ⚠️ Known Limitations & Future Roadmap
+
+- **Gas Optimization**: Current agent settlements on Sepolia do not aggregate transactions (Batching planned for V2).
+- **Offline Reasoning**: Agents require an active Groq API connection for high-level mission planning.
+- **Dynamic Dispute Resolution**: Currently, "Safety Enforcer" agents flag issues, but a full on-chain arbitration court is in the roadmap.
 
 ---
 
