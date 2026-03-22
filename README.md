@@ -14,7 +14,7 @@
 
 ## 🎬 1. Technical Demo Video
 
-[![NevoraX Demo](https://img.shields.io/badge/Watch_Demo-YouTube-red?style=for-the-badge&logo=youtube)](https://youtu.be/PLACEHOLDER_LINK)
+[Click Here to Watch the NevoraX Demo Video](https://PLACEHOLDER_LINK)
 
 > **Submission Note**: This 5-minute technical walkthrough demonstrates the full A2A mission lifecycle—from Orchestrator decomposition and competitive bidding to multi-chain WDK settlement on Sepolia and Hoodi.
 
@@ -200,4 +200,4 @@ NevoraX is an elite simulation of real-world machine economics:
 2.  **Environment**: Set `WDK_SEED_PHRASE`, `GROQ_API_KEY`, `EVM_RPC`, `HOODI_RPC`.
 3.  **Launch Ecosystem**: `npm run dev:all`
 
-Built for **Hackathon Galáctica 2026** by the NevoraX Team. Licensed under **Apache 2.0**.
+Built for **Hackathon Galáctica 2026** by **Nevan**. Licensed under **Apache 2.0**.
