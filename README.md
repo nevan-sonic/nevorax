@@ -14,7 +14,7 @@
 
 ## 🎬 1. Technical Demo Video
 
-[Click Here to Watch the NevoraX Demo Video](https://PLACEHOLDER_LINK)
+[Watch the NevoraX Technical Demo Video (Google Drive)](https://drive.google.com/file/d/15Wee4cHS55TBhkRDyuCqLfYGBoFXLgwy/view?usp=sharing)
 
 > **Submission Note**: This 5-minute technical walkthrough demonstrates the full A2A mission lifecycle—from Orchestrator decomposition and competitive bidding to multi-chain WDK settlement on Sepolia and Hoodi.
 
