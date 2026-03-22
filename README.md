@@ -1,5 +1,5 @@
 # 🪐 NevoraX: The Autonomous Agent Economy
-### **Hackathon Galáctica: WDK Edition 1 — [THE_INSTITUTIONAL_FLAGSHIP]**
+### **Hackathon Galáctica: WDK Edition 1 — [THE_ULTIMATE_SUBMISSION]**
 
 [![WDK Verified](https://img.shields.io/badge/Tether_WDK-Verified-blue?style=for-the-badge&logo=tether)](https://github.com/tetherto/wdk)
 [![OpenClaw Compliant](https://img.shields.io/badge/OpenClaw-Compliant-success?style=for-the-badge)](https://openclaw.io)
@@ -68,43 +68,44 @@ sequenceDiagram
 
 ---
 
-## 🌉 3. Deep Dive: The Hoodi Settlement Engine
+## 🧠 3. The Neural Core: Synthesis & Negotiation
 
-NevoraX is natively multichain. We maintain a persistent economic presence across **Ethereum Sepolia** and **Hoodi** using a hybrid WDK Bridge architecture.
+### **A. Synthesis Reasoning Loop**
+Every user goal enters the **Synthesis Brain**, which executes a 4-step deconstruction cycle:
+1.  **Decompose**: Breaking the goal into unit-tasks (Market Data, Risk audit, etc.).
+2.  **GROUND**: Constraining agents to institutional sources (Bitfinex, DeFi Llama).
+3.  **Execute**: Orchestrating agent-to-agent hiring via OpenClaw signals.
+4.  **Validate**: Scoring the 300-500 word report for data veracity and transaction evidence.
 
-### **A. Universal HD-Identity (`BIP-44`)**
-Every agent in the NevoraX economy (e.g., `Risk_Auditor_1`) possesses a **Universal Identity**. By deriving wallets using the consistent BIP-44 path `m/44'/60'/0'/0/[INDEX]`, the same agent can sign for value on Sepolia and authorize releases on Hoodi without requiring new seeds.
-
-### **B. Atomic Bridge Sequence**
-The `BridgeEngine.js` orchestrates a 3-phase cross-chain settlement:
-1.  **Phase 1 — Source Lock**: The `WalletAccountEvm.transfer()` method is called on the `ethereum` module (Sepolia) to lock reward USDt (`0xd077a4a0...`).
-2.  **Phase 2 — Signal Propagation**: The `OpenClaw` bus emits a `MISSION_DEPLOYMENT` signal across the A2A network.
-3.  **Phase 3 — Destination Release**: The `WalletAccountEvm.sendTransaction()` method is called on the `hoodi` module. Because WDK supports multiple registered wallet modules, the engine simply switches the `chain` parameter to `hoodi` (ChainID: 151) and signs the native release using the same HD index.
-
-### **C. Concurrency Safety: Nonce Mutexes**
-To prevent **Nonce Collisions** during parallel cross-chain operations, NevoraX implements an `AccountLock` class. This ensures that only one transaction per HD index is in-flight at any time, even when the agent is operating on multiple RPCs simultaneously.
-
----
-
-## 🧠 4. Technical Nuances: The WDK Advantage
-
-### **A. Robust Cryptographic Resilience**
-NevoraX implements a **Deterministic HMAC-SHA256 Signing Fallback**. If the WDK seed is unavailable in memory (Security Isolation), agents produce a deterministic proof of agreement.
-
-### **B. BigInt Financial Rigour**
-Every economic calculation (Revenue, Profit, Margin) is handled via **Native BigInt** to ensure zero floating-point drift during institutional settlements.
-
-### **C. "Burn-After-Reading" Seed Disposal**
-The `WdkSecretManager` executes a **Memory Disposal Cycle**:
-1. Seed is encrypted into an AES-256 Vault.
-2. Raw seed strings are `disposed()` immediately.
-3. The LLM Reasoning layer is physically air-gapped from the signing logic.
+### **B. The Matching Equation**
+Our `MatchingEngine` uses a weighted value-score to select providers, preventing reputation monopolies:
+$Score = (0.6 \times NormalizedPrice) + (0.4 \times (1 - Reputation)) + (0.2 \times FitScore)$.
+- **Price Weight (0.6)**: Optimizes for capital efficiency.
+- **Reputation Weight (0.4)**: Incentivizes long-term credit history.
+- **Fit Score (0.2)**: Prioritizes `SPEED` vs `QUALITY` metadata.
 
 ---
 
-## 🤖 5. Peer Personality Matrix
+## 🌉 4. Deep Dive: The Hoodi Settlement Engine
 
-Agents exhibit distinct fiscal behaviors in the negotiation phase:
+NevoraX is natively multichain, maintaining a persistent presence across **Ethereum Sepolia** and **Hoodi**.
+- **Universal HD-Identity**: Every agent uses a consistent BIP-44 path (`m/44'/60'/0'/0/[INDEX]`), allowing a single seed to authorize value across all registered RPCs.
+- **The Bridge Lifecycle**: 
+    1. **Lock (Source)**: USDt locked on Sepolia.
+    2. **Propagate**: Signal emitted across OpenClaw.
+    3. **Release (Destination)**: Native settlement signed on Hoodi via the WDK `sendTransaction` module.
+
+---
+
+## 🛡️ 5. Final Boss Technical Nuances
+
+- **AES-256 Vaulting & Disposal**: Seeds are encrypted into a secure vault and raw strings are `disposed()` immediately. The LLM has zero persistent access to keys.
+- **HMAC-SHA256 Signing Fallback**: A deterministic fallback ensures cryptographic accountability even if WDK memory is restricted.
+- **BigInt Financial Precision**: Zero-floating-point drift across all micro-unit (MNT) settlements.
+
+---
+
+## 🤖 6. Peer Personality Matrix
 
 | Persona | Cost Bias | Logic | Best For |
 | :--- | :--- | :--- | :--- |
@@ -114,15 +115,12 @@ Agents exhibit distinct fiscal behaviors in the negotiation phase:
 
 ---
 
-## 🔏 6. The Wallet Registry (19-Agent Verified Inventory)
+## 🔏 7. The Wallet Registry (19-Agent Verified Inventory)
 
 | Agent ID | Index | Chain | Wallet Address (EVM) |
 | :--- | :--- | :--- | :--- |
 | **OrchestratorAgent** | 0 | Sepolia | `0x29995e02E77117974C734efe47E7BA9CEe51Bf12` |
-| **Risk_Auditor_1** | 13 | **Hoodi** | `0xC92720D540B70E42B80B8AEa403708E6b6248454` |
 | **Safety_Enforcer_1** | 17 | Sepolia | `0x9E42a701F75A4a050d5D058Fa3d7C583B89BE69B` |
-
-*(Note: Every agent has a shadow identity on Hoodi derived from the same seed for cross-chain settlement)*
 
 ---
 
