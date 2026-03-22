@@ -113,7 +113,7 @@ const VARIANTS = {
     mode: "DEEP_RISK",
     costMultiplier: 2.0,
     reputationScore: 0.95,
-    chain: "Polygon",
+    chain: "Hoodi",
     services: ["risk_assessment"],
   },
   Risk_Auditor_2: {
@@ -127,14 +127,14 @@ const VARIANTS = {
     mode: "WHALE_SCAN",
     costMultiplier: 1.8,
     reputationScore: 0.96,
-    chain: "Polygon",
+    chain: "Hoodi",
     services: ["market_data", "whale_tracking"],
   },
   Whale_Tracker_2: {
     mode: "STANDARD_WATCH",
     costMultiplier: 1.0,
     reputationScore: 0.88,
-    chain: "Polygon",
+    chain: "Hoodi",
     services: ["market_data", "whale_tracking"],
   },
   Safety_Enforcer_1: {

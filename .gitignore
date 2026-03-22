@@ -1,43 +1,12 @@
-# Dependencies
 node_modules
-frontend/node_modules
-backend/node_modules
-
-# Secrets & Environment
 .env
-.env.local
-.env.*.local
 backend/.env
-frontend/.env
-*.key
-*.pem
-
-# Build & Output
-dist
-build
-.vercel
-out.txt
-test-out.log
 *.log
-debug_log.txt
-error_log.txt
-trace_log.txt
-
-# IDE & System
-.vscode
-.idea
-.DS_Store
-Thumbs.db
-
-# Others
-tmp
-.gemini
-.antigravity
+*_log.txt
+out.txt
+tmp/
 nodeps.txt
 patch-bindings.cjs
-bridge_debug.log
-check_hoodi_balance.js
 test.cjs
 test.js
-out.txt
-nodeps.txt
+check_hoodi_balance.js

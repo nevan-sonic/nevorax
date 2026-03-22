@@ -87,7 +87,7 @@ export function MarketplaceManifesto({ isOpen, onClose }) {
                 </div>
                 <div className="usecase-node">
                   <span className="node-type">SPECIALIST</span>
-                  <span className="node-chain">POLYGON (WDK)</span>
+                  <span className="node-chain">HOODI (WDK)</span>
                 </div>
               </div>
             </div>

@@ -90,16 +90,17 @@ export function extractTransactionIntent(goal) {
 
   // Detect Bridge chains
   const bridgeMatch = goal.match(/bridge|cross-chain|rebalance/i);
-  const targetChainMatch = goal.match(/(polygon|arbitrum|ethereum|hoodi)/i);
+  const targetChainMatch = goal.match(/(?:to|into|on)\s+(arbitrum|ethereum|hoodi|sepolia)/i) || 
+                           goal.match(/(arbitrum|ethereum|hoodi|sepolia)/i);
 
   if (bridgeMatch && targetChainMatch && amountMatch) {
     const res = {
       action: "BRIDGE",
-      targetChain: targetChainMatch[1],
+      targetChain: targetChainMatch[1].toLowerCase(),
       targetAmount: amountMatch[1],
       asset: amountMatch ? (amountMatch[3] || "USDT").toUpperCase() : "USDT",
     };
-    console.log(`[DEBUG][Intent] Bridge Extracted: ${JSON.stringify(res)}`);
+    logEconomy("BRIDGE_INTENT_EXTRACTED", res);
     return res;
   }
 
@@ -611,7 +612,7 @@ export async function runOrchestratedTask(goal, budgetObj, onProgress, taskId) {
             const bridgeValue = Number(bestBid.price) / 1e6;
             updateProgress({
               currentStep: "BRIDGING",
-              details: `Active liquidity rebalance: Moving ${bridgeValue} USDT to ${providerChain} via WDK Settlement Rail...`,
+              details: `Autonomous fee settlement: Moving ${bridgeValue} USDT to ${providerChain} via WDK Settlement Rail...`,
               currentAgent: "OrchestratorAgent",
             });
             executionTrace.push(`Auto-Liquidity: Bridging to ${providerChain}`);

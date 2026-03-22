@@ -117,7 +117,7 @@ export function BridgeConsole({ latestTaskTime }) {
       await EconomyServices.bridgeAssets(
         parseFloat(amount),
         "Sepolia",
-        "Polygon",
+        "Hoodi",
       );
       console.log("[BridgeUI] Manual bridge API call returned success");
     } catch (err) {

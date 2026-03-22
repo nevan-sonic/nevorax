@@ -122,7 +122,7 @@ router.get("/agents/multichain-wallets", async (req, res) => {
 
     const CHAINS = [
       { id: "sepolia",          name: "Ethereum Sepolia",   chainId: 11155111, rpc: "https://rpc.sepolia.org",                  live: true  },
-      { id: "polygon_mumbai",   name: "Polygon Mumbai",     chainId: 80001,    rpc: "https://rpc-mumbai.maticvigil.com",         live: false },
+      { id: "hoodi",            name: "Hoodi Network",      chainId: 1000,     rpc: "https://rpc.hoodi.io",                      live: true  },
       { id: "arbitrum_sepolia", name: "Arbitrum Sepolia",   chainId: 421614,   rpc: "https://sepolia-rollup.arbitrum.io/rpc",    live: false },
       { id: "optimism_sepolia", name: "Optimism Sepolia",   chainId: 11155420, rpc: "https://sepolia.optimism.io",               live: false },
       { id: "base_sepolia",     name: "Base Sepolia",       chainId: 84532,    rpc: "https://sepolia.base.org",                  live: false },

@@ -594,8 +594,8 @@ export default function Marketplace() {
                             : null;
                           const txLink =
                             h.subTxHash || h.txHash
-                              ? selectedAgent.chain === "Polygon"
-                                ? `https://polygonscan.com/tx/${h.subTxHash || h.txHash}`
+                              ? selectedAgent.chain === "Hoodi"
+                                ? `https://hoodi.etherscan.io/tx/${h.subTxHash || h.txHash}`
                                 : `https://sepolia.etherscan.io/tx/${h.subTxHash || h.txHash}`
                               : null;
 

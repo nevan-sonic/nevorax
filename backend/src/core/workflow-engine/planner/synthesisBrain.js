@@ -36,7 +36,7 @@ ${Object.entries(results)
 6. TRANSACTION EVIDENCE: ONLY if there is a "BRIDGE_EXECUTION" or "EXECUTION" payload containing a valid "txHash", you MUST include a section titled "### ⛓️ TRANSACTION SETTLED" at the VERY BOTTOM of your report. 
    - PROHIBITION: Do NOT narrate the full transaction hash (0x...) inside your analytical paragraphs. 
    - STYLE MANDATE: The transaction hash link MUST be on its own separate line to prevent layout cutting. 
-   - DATA MAPPING: You MUST replace the bracketed placeholders below with the ACTUAL data found in the payloads (e.g., replace [Amount] with "50", [Chain] with "Polygon", etc.). If no data exists for a field, omit that specific line.
+   - DATA MAPPING: You MUST replace the bracketed placeholders below with the ACTUAL data found in the payloads (e.g., replace [Amount] with "50", [Chain] with "Hoodi", etc.). If no data exists for a field, omit that specific line.
    - FORMAT:
      ### ⛓️ TRANSACTION SETTLED
      Confirmed WDK bridge of **[Amount] USDT** to **[Chain]**.

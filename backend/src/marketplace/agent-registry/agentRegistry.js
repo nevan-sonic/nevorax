@@ -180,7 +180,7 @@ CORE_AGENT_IDS.forEach((id, idx) => {
   const variantData = variants[id] || {};
   const chain =
     id.includes("Whale_Tracker") || id === "Risk_Auditor_1"
-      ? "Polygon"
+      ? "Hoodi"
       : "Sepolia";
 
   // OpenClaw Capability Enrichment

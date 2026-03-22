@@ -24,12 +24,10 @@ function fsLog(msg) {
 // https://docs.wdk.tether.io  §  Sepolia Testnet
 const SEPOLIA_USDT = "0xd077a400968890eacc75cdc901f0356c943e4fdb";
 
-// Bridge recipient — a well-known Polygon PoS bridge contract used as the
-// "lock" destination to make the tx semantically meaningful on-chain.
+// Bridge recipient — the destination address to make the tx semantically meaningful on-chain.
 const LOCK_RECIPIENT = "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf";
 
 const TARGET_CHAIN_LABELS = {
-  Polygon: "Polygon",
   Arbitrum: "Arbitrum",
   Ethereum: "Ethereum",
   Hoodi: "Hoodi",

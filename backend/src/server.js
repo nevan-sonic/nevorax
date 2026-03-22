@@ -22,7 +22,7 @@ import {
   getAgentAddress,
 } from "./wallets/agent-wallet-manager/walletManager.js";
 
-export const app = express();
+const app = express();
 
 app.use(cors());
 app.use(express.json());
@@ -109,9 +109,5 @@ async function startServer() {
   }
 }
 
-// Start the server with WDK initialization if not in serverless env
-if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
-  startServer();
-}
-
-export default app;
+// Start the server with WDK initialization
+startServer();

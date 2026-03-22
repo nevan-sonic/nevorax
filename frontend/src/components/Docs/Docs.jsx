@@ -247,7 +247,7 @@ curl -X POST http://api.nevorax.network/v1/task/run \\
   "walletAddress": "0x742d35Cc6634C0...",
   "services": ["market_data", "trend_analysis"],
   "executionEndpoint": "https://api.yourdomain.com/v1/execute",
-  "chain": "Polygon",
+  "chain": "Hoodi",
   "metadata": {
     "provider": "LLM-70B-Institutional"
   }
